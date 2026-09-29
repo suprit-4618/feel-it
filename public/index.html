@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Feel It 💖 — Multiplayer Empathy Party Game</title>
-  <meta name="description" content="Feel It: The real-time multiplayer party game about empathy, myth-busting, and stepping into someone else's shoes.">
-  <meta name="theme-color" content="#0a0f1d">
+  <title>Feel It — Multiplayer Empathy Party Game</title>
+  <meta name="description" content="Feel It: A real-time multiplayer party game about emotional intelligence, myth-busting, and stepping into someone else's shoes.">
+  <meta name="theme-color" content="#09090b">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Fullscreen Particle / Confetti Canvas -->
+  <!-- Canvas for endgame milestone particles -->
   <canvas id="confetti-canvas" class="confetti-canvas"></canvas>
 
   <div id="app" class="app-container">
@@ -18,7 +18,7 @@
       <div class="header-inner">
         <div class="meter-container">
           <div class="meter-info">
-            <span class="meter-label">✨ Team Empathy</span>
+            <span class="meter-label">Team Empathy</span>
             <span id="meter-percent" class="meter-percent">0%</span>
           </div>
           <div class="meter-bar-track">
@@ -35,39 +35,155 @@
     <!-- MAIN VIEW CONTAINER -->
     <main id="view-container" class="view-container">
 
-      <!-- 1. HOME SCREEN -->
-      <section id="view-home" class="view active">
-        <div class="hero-card">
-          <div class="sound-top-right">
-            <button id="btn-sound-toggle-home" class="btn-sound-mini" title="Toggle Sound" aria-label="Unmute sound">🔇</button>
-          </div>
-          <div class="logo-emoji-wrap">
-            <div class="logo-emoji">💖👀🤝</div>
-          </div>
-          <h1 class="brand-title">Feel It</h1>
-          <p class="tagline">The party game about stepping into someone else's shoes.</p>
-
-          <div class="btn-group">
-            <button id="btn-show-host" class="btn btn-primary btn-large">
-              👑 Host a Game
-            </button>
-            <button id="btn-show-join" class="btn btn-secondary btn-large">
-              🎮 Join a Game
-            </button>
+      <!-- 1. LANDING PAGE (Overview & Game Description) -->
+      <section id="view-landing" class="view active">
+        <div class="landing-page">
+          <!-- Top Bar -->
+          <div class="landing-top-bar">
+            <div class="brand-badge">FEEL IT</div>
+            <button id="btn-sound-toggle-landing" class="btn-sound-mini" title="Toggle Sound" aria-label="Unmute sound">🔇</button>
           </div>
 
-          <button id="btn-how-to-play-home" class="btn btn-ghost">
-            📖 How to Play (20s)
-          </button>
+          <!-- Hero Section -->
+          <header class="landing-hero">
+            <h1 class="landing-title">The party game about stepping into someone else’s shoes.</h1>
+            <p class="landing-subtitle">
+              A real-time multiplayer game for 2 to 8 players that tests emotional intelligence, busts social media myths, and rewards thoughtful communication.
+            </p>
+            <div class="landing-cta-wrap">
+              <button id="btn-landing-play" class="btn btn-primary btn-large btn-block">
+                Play Now →
+              </button>
+            </div>
+          </header>
+
+          <!-- Divider -->
+          <hr class="divider">
+
+          <!-- Section: How It Works -->
+          <section class="landing-section">
+            <div class="section-tag">OVERVIEW</div>
+            <h2 class="section-heading">How Feel It Works</h2>
+            <p class="section-desc">
+              Connect from any phone or browser using a 4-letter room code. Compete across 10 fast-paced rounds while collaborating to fill the shared Team Empathy Meter.
+            </p>
+          </section>
+
+          <!-- Section: 4 Game Modes -->
+          <section class="landing-section">
+            <div class="section-tag">GAME MODES</div>
+            <h2 class="section-heading">Four Ways to Score</h2>
+
+            <div class="modes-grid">
+              <div class="mode-card">
+                <div class="mode-num">01</div>
+                <div class="mode-content">
+                  <h3 class="mode-title">Step Into Their Shoes</h3>
+                  <p class="mode-desc">
+                    Analyze relatable interpersonal dilemmas. Identify how someone actually feels, then choose the kindest and most supportive response.
+                  </p>
+                </div>
+              </div>
+
+              <div class="mode-card">
+                <div class="mode-num">02</div>
+                <div class="mode-content">
+                  <h3 class="mode-title">Real or Reel?</h3>
+                  <p class="mode-desc">
+                    Spot viral misinformation. Distinguish fact from fiction across health, relationships, social trends, and wellness advice.
+                  </p>
+                </div>
+              </div>
+
+              <div class="mode-card">
+                <div class="mode-num">03</div>
+                <div class="mode-content">
+                  <h3 class="mode-title">Say It Smooth</h3>
+                  <p class="mode-desc">
+                    Find the line that balances honesty with respect. Practice confident, clear communication in awkward social situations.
+                  </p>
+                </div>
+              </div>
+
+              <div class="mode-card">
+                <div class="mode-num">04</div>
+                <div class="mode-content">
+                  <h3 class="mode-title">Caption This</h3>
+                  <p class="mode-desc">
+                    Submit funny or insightful captions for everyday scenarios, then vote anonymously on the best contributions from the room.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section: Team Empathy Meter -->
+          <section class="landing-section">
+            <div class="section-tag">COOPERATIVE MECHANIC</div>
+            <h2 class="section-heading">The Team Empathy Meter</h2>
+            <div class="info-box">
+              <p>
+                Individual scores determine the podium, but teamwork matters. When the room consistently chooses constructive, empathetic answers, the shared meter fills. Reaching <strong>100%</strong> rewards every player with a <strong>+200 point endgame bonus</strong>.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: Privacy & Zero Friction -->
+          <section class="landing-section">
+            <div class="section-tag">BUILT FOR EVERYONE</div>
+            <h2 class="section-heading">Zero Logins. No Tracking.</h2>
+            <ul class="features-list">
+              <li><strong>No Passwords:</strong> Jump straight in with a nickname and room code.</li>
+              <li><strong>Mobile First:</strong> Optimized for mobile screens and touch interactions.</li>
+              <li><strong>Content Moderation:</strong> Built-in language filtering and host controls.</li>
+            </ul>
+          </section>
+
+          <!-- Bottom CTA -->
+          <div class="landing-bottom-cta">
+            <button id="btn-landing-play-bottom" class="btn btn-primary btn-large btn-block">
+              Start Playing →
+            </button>
+          </div>
+
+          <footer class="landing-footer">
+            <p>Feel It — Multiplayer Empathy Party Game</p>
+          </footer>
         </div>
       </section>
 
-      <!-- 2. HOST SETUP FORM -->
+      <!-- 2. PLAY MENU (Host a Game / Join a Game) -->
+      <section id="view-play-menu" class="view hidden">
+        <div class="card">
+          <button id="btn-back-to-landing" class="btn-back">← Back to Overview</button>
+          <div class="menu-header">
+            <h2>Game Menu</h2>
+            <p class="subtitle">Host a new room or join an existing session.</p>
+          </div>
+
+          <div class="btn-group">
+            <button id="btn-show-host" class="btn btn-primary btn-large btn-block">
+              Host a Game
+            </button>
+            <button id="btn-show-join" class="btn btn-secondary btn-large btn-block">
+              Join a Game
+            </button>
+          </div>
+
+          <div class="menu-footer">
+            <button id="btn-how-to-play-menu" class="btn btn-ghost btn-block">
+              How to Play (Quick Guide)
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. HOST SETUP FORM -->
       <section id="view-host-setup" class="view hidden">
         <div class="card form-card">
-          <button class="btn-back" data-back="view-home">← Back</button>
-          <h2>Host a New Game 👑</h2>
-          <p class="subtitle">Enter your nickname to create your room.</p>
+          <button class="btn-back" data-back="view-play-menu">← Back</button>
+          <h2>Host a New Game</h2>
+          <p class="subtitle">Enter your nickname to generate a room code.</p>
 
           <form id="form-host">
             <div class="input-group">
@@ -77,17 +193,17 @@
             </div>
 
             <button id="btn-create-room" type="submit" class="btn btn-primary btn-large btn-block">
-              Create Room ✨
+              Create Room
             </button>
           </form>
         </div>
       </section>
 
-      <!-- 3. JOIN FORM -->
+      <!-- 4. JOIN FORM -->
       <section id="view-join-setup" class="view hidden">
         <div class="card form-card">
-          <button class="btn-back" data-back="view-home">← Back</button>
-          <h2>Join a Game 🚀</h2>
+          <button class="btn-back" data-back="view-play-menu">← Back</button>
+          <h2>Join a Game</h2>
           <p class="subtitle">Enter the 4-letter room code and your nickname.</p>
 
           <form id="form-join">
@@ -102,24 +218,24 @@
               <small class="helper-text">Max 12 characters</small>
             </div>
 
-            <button id="btn-join-room" type="submit" class="btn btn-secondary btn-large btn-block">
-              Join Lobby 🎮
+            <button id="btn-join-room" type="submit" class="btn btn-primary btn-large btn-block">
+              Join Lobby
             </button>
           </form>
         </div>
       </section>
 
-      <!-- 4. LOBBY SCREEN -->
+      <!-- 5. LOBBY SCREEN -->
       <section id="view-lobby" class="view hidden">
         <div class="card lobby-card">
           <div class="lobby-header">
             <span class="room-code-label">Room Code</span>
             <div class="room-code-display">
               <span id="lobby-room-code" class="room-code">----</span>
-              <button id="btn-copy-code" class="btn-icon" title="Copy Room Code">📋</button>
+              <button id="btn-copy-code" class="btn-icon" title="Copy Room Code">Copy</button>
             </div>
-            <button id="btn-share-link" class="btn btn-ghost btn-small share-btn">🔗 Copy Invite Link</button>
-            <p class="room-instruction">Share this code with 1–7 friends!</p>
+            <button id="btn-share-link" class="btn btn-ghost btn-small share-btn">Copy Invite Link</button>
+            <p class="room-instruction">Share this code with 1 to 7 players.</p>
           </div>
 
           <div class="lobby-players-section">
@@ -134,11 +250,11 @@
 
           <!-- Host Settings Panel -->
           <div id="lobby-settings-panel" class="settings-panel hidden">
-            <h4>⚙️ Host Settings</h4>
+            <h4>Host Settings</h4>
             <div class="toggle-row">
               <div class="toggle-info">
-                <span class="toggle-title">🤿 Deep Dive Pack</span>
-                <span class="toggle-desc">Adds frank reproductive & health cards</span>
+                <span class="toggle-title">Deep Dive Pack</span>
+                <span class="toggle-desc">Adds frank health and reproductive topics</span>
               </div>
               <label class="switch">
                 <input type="checkbox" id="setting-deep-dive" checked>
@@ -148,8 +264,8 @@
 
             <div class="toggle-row">
               <div class="toggle-info">
-                <span class="toggle-title">🛡️ Clean Mode</span>
-                <span class="toggle-desc">Extra strict word filter</span>
+                <span class="toggle-title">Clean Mode</span>
+                <span class="toggle-desc">Strict word and topic filter</span>
               </div>
               <label class="switch">
                 <input type="checkbox" id="setting-clean-mode">
@@ -161,28 +277,27 @@
           <!-- Lobby Actions -->
           <div class="lobby-actions">
             <button id="btn-start-game" class="btn btn-primary btn-large btn-block hidden" disabled>
-              🚀 Start Game
+              Start Game
             </button>
             <div id="lobby-waiting-msg" class="waiting-indicator">
-              <span class="pulse-dot"></span> Waiting for host to start...
+              Waiting for host to start...
             </div>
             <div class="lobby-footer-btns">
               <button id="btn-how-to-play-lobby" class="btn btn-ghost btn-small">
-                📖 How to Play
+                How to Play
               </button>
               <button id="btn-leave-room" class="btn btn-danger-ghost btn-small">
-                🚪 Leave Room
+                Leave Room
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 5. ROUND INTRO SCREEN (3s) -->
+      <!-- 6. ROUND INTRO SCREEN (3s) -->
       <section id="view-round-intro" class="view hidden">
         <div class="card intro-card text-center">
           <span id="intro-round-num" class="round-badge">Round 1 / 10</span>
-          <div id="intro-emoji-banner" class="intro-emoji">👟👀</div>
           <h2 id="intro-card-title">Step Into Their Shoes</h2>
           <span id="intro-topic-badge" class="topic-badge">Topic: General</span>
           <div class="intro-timer-bar">
@@ -191,7 +306,7 @@
         </div>
       </section>
 
-      <!-- 6. QUESTION SCREEN -->
+      <!-- 7. QUESTION SCREEN -->
       <section id="view-question" class="view hidden">
         <div class="card question-card">
           <div class="question-header">
@@ -200,7 +315,7 @@
               <span id="q-type-badge" class="tag type-tag">Shoes</span>
             </div>
             <div id="q-timer-badge" class="timer-countdown">
-              ⏳ <span id="q-timer-seconds">20</span>s
+              <span id="q-timer-seconds">20</span>s
             </div>
           </div>
 
@@ -210,7 +325,6 @@
 
           <!-- Scene Box -->
           <div class="scene-box">
-            <div id="q-emoji-scene" class="scene-emoji">👧🥀🎒</div>
             <p id="q-scene-text" class="scene-text">Scene description here...</p>
           </div>
 
@@ -225,7 +339,7 @@
               <div id="shoes-q2-options" class="options-list"></div>
             </div>
             <button id="btn-submit-shoes" class="btn btn-primary btn-large btn-block" disabled>
-              Lock in Answers ✨
+              Lock in Answers
             </button>
           </div>
 
@@ -238,67 +352,66 @@
           <!-- Interactive Question Mode: Writing (Caption This) -->
           <div id="writing-container" class="interactive-container hidden">
             <h3 id="writing-prompt" class="sub-prompt">Write a caption (max 80 chars):</h3>
-            <textarea id="writing-input" maxlength="80" rows="2" placeholder="Type your witty, kind, or hilarious caption..."></textarea>
+            <textarea id="writing-input" maxlength="80" rows="2" placeholder="Type your caption here..."></textarea>
             <div class="char-count-row">
               <span id="writing-char-count">0/80</span>
             </div>
             <button id="btn-submit-caption" class="btn btn-primary btn-large btn-block">
-              Submit Caption ✍️
+              Submit Caption
             </button>
           </div>
 
           <!-- Interactive Question Mode: Caption Review (Host Moderation Window - 5s) -->
           <div id="caption-review-container" class="interactive-container hidden">
-            <h3 class="sub-prompt">🛡️ Moderation Window (5s)</h3>
+            <h3 class="sub-prompt">Host Moderation Window (5s)</h3>
             <div id="caption-review-content" class="review-content-box"></div>
             <button id="btn-start-voting-early" class="btn btn-primary btn-block hidden" style="margin-top: 12px;">
-              Start Anonymous Voting Now 🗳️
+              Start Anonymous Voting Now
             </button>
           </div>
 
           <!-- Interactive Question Mode: Caption Voting (Anonymous) -->
           <div id="caption-voting-container" class="interactive-container hidden">
-            <h3 class="sub-prompt">🗳️ Vote for the best caption:</h3>
+            <h3 class="sub-prompt">Vote for the best caption:</h3>
             <div id="caption-voting-list" class="options-list"></div>
           </div>
 
           <!-- Question Footer / Progress -->
           <div class="question-footer">
             <span id="q-answer-progress">0 of 2 players answered</span>
-            <button id="btn-skip-round" class="btn btn-ghost btn-small hidden">Skip Round ⏭️</button>
+            <button id="btn-skip-round" class="btn btn-ghost btn-small hidden">Skip Round</button>
           </div>
         </div>
       </section>
 
-      <!-- 7. REVEAL SCREEN -->
+      <!-- 8. REVEAL SCREEN -->
       <section id="view-reveal" class="view hidden">
         <div class="card reveal-card">
           <div class="reveal-header">
             <span class="round-badge">Round Summary</span>
-            <div id="reveal-badge-status" class="status-pill correct">✨ Nailed it!</div>
+            <div id="reveal-badge-status" class="status-pill correct">Correct</div>
           </div>
 
           <!-- Scene Reminder -->
           <div class="reveal-scene-box">
-            <div id="reveal-emoji" class="scene-emoji">👧🥀🎒</div>
             <p id="reveal-scene-text" class="scene-text"></p>
           </div>
 
           <!-- Community Captions Showcase (Write Mode) -->
           <div id="reveal-write-captions" class="write-captions-box hidden">
-            <h4>🏆 Community Captions & Votes</h4>
+            <h4>Community Captions & Votes</h4>
             <ul id="reveal-captions-list" class="captions-reveal-list"></ul>
           </div>
 
           <!-- Insight & Explanation Box -->
           <div class="explain-box">
-            <h4>💡 Here's the thing...</h4>
+            <h4>Explanation</h4>
             <p id="reveal-explain-text" class="explain-text"></p>
           </div>
 
           <!-- Slang Breakdown Glossary -->
           <div id="reveal-slang-section" class="slang-box hidden">
-            <h4>📖 Slang & Terminology</h4>
+            <h4>Slang & Terms</h4>
             <ul id="reveal-slang-list" class="slang-list"></ul>
           </div>
 
@@ -318,18 +431,18 @@
           <!-- Host Advance Button & Timer -->
           <div class="reveal-actions">
             <button id="btn-reveal-next" class="btn btn-primary btn-large btn-block hidden">
-              Next: Standings 🏆
+              Next: Standings
             </button>
-            <div class="countdown-subtext">Next screen in <span id="reveal-timer-countdown">10</span>s</div>
+            <div class="countdown-subtext">Continuing in <span id="reveal-timer-countdown">10</span>s</div>
           </div>
         </div>
       </section>
 
-      <!-- 8. LEADERBOARD SCREEN -->
+      <!-- 9. LEADERBOARD SCREEN -->
       <section id="view-leaderboard" class="view hidden">
         <div class="card leaderboard-card">
           <div class="leaderboard-header text-center">
-            <h2>🏆 Leaderboard</h2>
+            <h2>Leaderboard</h2>
             <p id="lb-round-subtext">After Round 1</p>
           </div>
 
@@ -339,23 +452,22 @@
 
           <div class="leaderboard-actions">
             <button id="btn-leaderboard-next" class="btn btn-primary btn-large btn-block hidden">
-              Next Round 🚀
+              Next Round
             </button>
             <div class="countdown-subtext">Continuing in <span id="lb-timer-countdown">5</span>s</div>
           </div>
         </div>
       </section>
 
-      <!-- 9. FINAL SCREEN (GAME OVER) -->
+      <!-- 10. FINAL SCREEN (GAME OVER) -->
       <section id="view-final" class="view hidden">
         <div class="card final-card text-center">
-          <div class="celebration-icon">🎉👑💖</div>
-          <h2>Game Complete!</h2>
+          <h2>Game Complete</h2>
 
           <!-- Team Meter Celebration Banner -->
           <div id="final-meter-banner" class="meter-celebration-banner">
-            <div class="meter-big-percent" id="final-meter-percent">100% 💖</div>
-            <p id="final-meter-msg">✨ Team Empathy Goal Met! Everyone gets +200 bonus!</p>
+            <div class="meter-big-percent" id="final-meter-percent">100%</div>
+            <p id="final-meter-msg">Team Empathy Goal Met! Everyone scores the +200 bonus!</p>
           </div>
 
           <!-- Final Podium Scores -->
@@ -366,23 +478,23 @@
 
           <!-- Personalized Titles & Honors -->
           <div class="titles-section">
-            <h3>🎖️ Player Honors</h3>
+            <h3>Player Honors</h3>
             <ul id="final-titles-list" class="titles-list"></ul>
           </div>
 
           <!-- Real-Life Empathy Challenge -->
           <div class="challenge-card">
-            <h4>🌍 Today's Real-Life Empathy Challenge</h4>
+            <h4>Today's Real-Life Challenge</h4>
             <p id="final-challenge-text">Ask a friend today how they are really doing, and listen without giving advice.</p>
           </div>
 
           <!-- Endgame Actions -->
           <div class="final-actions">
             <button id="btn-play-again" class="btn btn-primary btn-large btn-block hidden">
-              🔁 Play Again
+              Play Again
             </button>
             <button id="btn-final-home" class="btn btn-ghost btn-large btn-block">
-              🏠 Back to Home
+              Back to Overview
             </button>
           </div>
         </div>
@@ -392,7 +504,7 @@
       <div id="modal-how-to-play" class="modal hidden" role="dialog" aria-modal="true">
         <div class="modal-content card">
           <div class="modal-header">
-            <h2>📖 How to Play "Feel It"</h2>
+            <h2>How to Play "Feel It"</h2>
             <button id="btn-close-rules" class="btn-close" aria-label="Close rules">×</button>
           </div>
           <div class="rules-body">
@@ -400,32 +512,31 @@
               <div class="rule-num">1</div>
               <div class="rule-text">
                 <strong>Step into their shoes</strong>
-                <p>Feel what someone else is going through, then pick the kindest and most supportive move.</p>
+                <p>Read the situation, identify how the other person feels, and pick the kindest move.</p>
               </div>
             </div>
             <div class="rule-item">
               <div class="rule-num">2</div>
               <div class="rule-text">
                 <strong>Spot the Real vs Reel</strong>
-                <p>Call out social media myths and discover the true facts behind health, relationships, and trends.</p>
+                <p>Call out fake claims and learn verified health and relationship facts.</p>
               </div>
             </div>
             <div class="rule-item">
               <div class="rule-num">3</div>
               <div class="rule-text">
                 <strong>Fill the Team Empathy Meter</strong>
-                <p>When the room averages kind, empathetic answers, the Empathy Meter fills. Reach 100% and EVERYONE scores a +200 endgame bonus!</p>
+                <p>When the room chooses kind answers, the meter rises. Reach 100% for a group +200 bonus!</p>
               </div>
             </div>
           </div>
-          <button id="btn-got-it" class="btn btn-primary btn-block">Got it! Let's Play ✨</button>
+          <button id="btn-got-it" class="btn btn-primary btn-block">Got It</button>
         </div>
       </div>
 
       <!-- PAUSED OVERLAY -->
       <div id="overlay-paused" class="overlay-modal hidden" role="alertdialog">
         <div class="card modal-content text-center">
-          <div class="pause-icon">⏳</div>
           <h2>Game Paused</h2>
           <p id="pause-reason">Waiting for disconnected players to rejoin...</p>
         </div>

@@ -1,17 +1,16 @@
-// FEEL IT 💖 — Complete Frontend Client Runtime
-// Zero Dependencies, Pure Vanilla JS, Web Audio API Synthesizer, Confetti Canvas
+// FEEL IT — Minimalist Monochrome Frontend Runtime
+// Zero Dependencies, Pure Vanilla JS, Procedural Web Audio, Clean State Machine
 
 (function () {
   'use strict';
 
   // -------------------------------------------------------------
   // 1. Audio Synthesizer (Web Audio API - Zero External Assets)
-  // Muted by default per Phase 6 checklist
+  // Muted by default
   // -------------------------------------------------------------
   class SoundManager {
     constructor() {
       this.ctx = null;
-      // Sound is MUTED by default unless user explicitly turned it on
       this.enabled = localStorage.getItem('feel_it_sound') === 'true';
     }
 
@@ -90,7 +89,6 @@
       if (!this.ctx) return;
 
       const now = this.ctx.currentTime;
-      // Bright triumphant major chord (C5 - E5 - G5 - C6)
       const notes = [523.25, 659.25, 783.99, 1046.50];
       notes.forEach((freq, idx) => {
         const osc = this.ctx.createOscillator();
@@ -116,7 +114,6 @@
       if (!this.ctx) return;
 
       const now = this.ctx.currentTime;
-      // Warm, gentle low comforting chord (not harsh!)
       const notes = [329.63, 293.66, 261.63];
       notes.forEach((freq, idx) => {
         const osc = this.ctx.createOscillator();
@@ -164,7 +161,6 @@
       if (!this.ctx) return;
 
       const now = this.ctx.currentTime;
-      // Sparkling ascending glissando
       [440, 554.37, 659.25, 880, 1108.73].forEach((freq, idx) => {
         const osc = this.ctx.createOscillator();
         const gain = this.ctx.createGain();
@@ -218,8 +214,7 @@
   const sound = new SoundManager();
 
   // -------------------------------------------------------------
-  // 2. Confetti Particle Engine (Pure Canvas, Motion-Reduced Aware)
-  // Confetti only on final screen and meter milestones per checklist
+  // 2. Confetti Particle Engine (Monochrome Palette, Motion-Aware)
   // -------------------------------------------------------------
   class ConfettiEngine {
     constructor(canvasId) {
@@ -241,14 +236,13 @@
     }
 
     burst(count = 70) {
-      // Respect prefers-reduced-motion
       if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         return;
       }
       if (!this.canvas || !this.ctx) return;
       this.resize();
 
-      const colors = ['#f472b6', '#c084fc', '#67e8f9', '#34d399', '#fbbf24', '#ffffff'];
+      const colors = ['#fafafa', '#e4e4e7', '#d4d4d8', '#a1a1aa', '#71717a'];
       const cx = this.canvas.width / 2;
       const cy = this.canvas.height / 3;
 
@@ -260,7 +254,7 @@
           y: cy,
           vx: Math.cos(angle) * speed,
           vy: Math.sin(angle) * speed - 3,
-          size: Math.random() * 8 + 4,
+          size: Math.random() * 6 + 4,
           color: colors[Math.floor(Math.random() * colors.length)],
           rotation: Math.random() * 360,
           rotationSpeed: (Math.random() - 0.5) * 10,
@@ -328,7 +322,8 @@
 
   // Views Map
   const views = {
-    home: document.getElementById('view-home'),
+    landing: document.getElementById('view-landing'),
+    playMenu: document.getElementById('view-play-menu'),
     hostSetup: document.getElementById('view-host-setup'),
     joinSetup: document.getElementById('view-join-setup'),
     lobby: document.getElementById('view-lobby'),
@@ -348,7 +343,7 @@
   const overlayPaused = document.getElementById('overlay-paused');
   const pauseReason = document.getElementById('pause-reason');
   const btnSoundToggle = document.getElementById('btn-sound-toggle');
-  const btnSoundToggleHome = document.getElementById('btn-sound-toggle-home');
+  const btnSoundToggleLanding = document.getElementById('btn-sound-toggle-landing');
 
   // Forms
   const formHost = document.getElementById('form-host');
@@ -371,7 +366,6 @@
   const qTimerBadge = document.getElementById('q-timer-badge');
   const qTimerSeconds = document.getElementById('q-timer-seconds');
   const qTimerBar = document.getElementById('q-timer-bar');
-  const qEmojiScene = document.getElementById('q-emoji-scene');
   const qSceneText = document.getElementById('q-scene-text');
   const shoesContainer = document.getElementById('shoes-container');
   const shoesQ1Prompt = document.getElementById('shoes-q1-prompt');
@@ -391,7 +385,6 @@
 
   // Reveal Elements
   const revealBadgeStatus = document.getElementById('reveal-badge-status');
-  const revealEmoji = document.getElementById('reveal-emoji');
   const revealSceneText = document.getElementById('reveal-scene-text');
   const revealExplainText = document.getElementById('reveal-explain-text');
   const revealSlangSection = document.getElementById('reveal-slang-section');
@@ -427,9 +420,9 @@
       btnSoundToggle.textContent = icon;
       btnSoundToggle.setAttribute('aria-label', label);
     }
-    if (btnSoundToggleHome) {
-      btnSoundToggleHome.textContent = icon;
-      btnSoundToggleHome.setAttribute('aria-label', label);
+    if (btnSoundToggleLanding) {
+      btnSoundToggleLanding.textContent = icon;
+      btnSoundToggleLanding.setAttribute('aria-label', label);
     }
   }
   updateSoundButtonIcons();
@@ -440,8 +433,8 @@
       updateSoundButtonIcons();
     };
   }
-  if (btnSoundToggleHome) {
-    btnSoundToggleHome.onclick = () => {
+  if (btnSoundToggleLanding) {
+    btnSoundToggleLanding.onclick = () => {
       sound.toggle();
       updateSoundButtonIcons();
     };
@@ -473,6 +466,7 @@
     } else {
       gameHeader.classList.add('hidden');
     }
+    window.scrollTo(0, 0);
   }
 
   function updateEmpathyMeter(meter) {
@@ -483,7 +477,6 @@
     if (val > prevMeter && prevMeter > 0) {
       sound.playMeterUp();
     }
-    // Confetti ONLY on meter reaching 100% milestone
     if (val >= 100 && prevMeter < 100) {
       confetti.burst(80);
     }
@@ -501,15 +494,9 @@
       const fraction = Math.min(1, Math.max(0, remaining / totalDurationMs));
       const secondsLeft = Math.ceil(remaining / 1000);
 
-      // Warning tick in last 5 seconds
       if (secondsLeft <= 5 && secondsLeft > 0 && secondsLeft !== lastTickSecond) {
         lastTickSecond = secondsLeft;
         sound.playTick();
-        if (qTimerBadge) qTimerBadge.classList.add('warning');
-        if (qTimerBar) qTimerBar.classList.add('warning');
-      } else if (secondsLeft > 5) {
-        if (qTimerBadge) qTimerBadge.classList.remove('warning');
-        if (qTimerBar) qTimerBar.classList.remove('warning');
       }
 
       onTick(secondsLeft, fraction);
@@ -517,8 +504,6 @@
       if (remaining <= 0) {
         clearInterval(timerInterval);
         timerInterval = null;
-        if (qTimerBadge) qTimerBadge.classList.remove('warning');
-        if (qTimerBar) qTimerBar.classList.remove('warning');
         if (onComplete) onComplete();
       }
     }
@@ -619,7 +604,7 @@
 
       case 'error_msg': {
         sound.playIncorrect();
-        showToast(`⚠️ ${payload.message || 'An error occurred'}`);
+        showToast(`${payload.message || 'An error occurred'}`);
         break;
       }
 
@@ -628,7 +613,7 @@
         sessionStorage.removeItem('feel_it_room');
         sound.playIncorrect();
         showToast('You were removed from the room.');
-        switchView('home');
+        switchView('landing');
         break;
       }
 
@@ -636,7 +621,7 @@
         sessionStorage.removeItem('feel_it_token');
         sessionStorage.removeItem('feel_it_room');
         showToast('Room expired due to inactivity.');
-        switchView('home');
+        switchView('landing');
         break;
       }
 
@@ -702,7 +687,7 @@
 
         const avatarSpan = document.createElement('span');
         avatarSpan.className = 'player-avatar';
-        avatarSpan.textContent = player.avatar || '👤';
+        avatarSpan.textContent = player.avatar || '•';
 
         const nameSpan = document.createElement('span');
         nameSpan.className = 'player-name';
@@ -717,7 +702,7 @@
         if (player.id === state.hostId) {
           const hostTag = document.createElement('span');
           hostTag.className = 'tag host';
-          hostTag.textContent = 'Host 👑';
+          hostTag.textContent = 'Host';
           tagsDiv.appendChild(hostTag);
         }
 
@@ -754,12 +739,12 @@
       const topicEl = document.getElementById('intro-topic-badge');
 
       const titles = {
-        shoes: "Step Into Their Shoes 👟",
-        reel: "Real or Reel? 📱",
-        smooth: "Say It Smooth 💬",
-        caption: "Caption This ✨"
+        shoes: "Step Into Their Shoes",
+        reel: "Real or Reel?",
+        smooth: "Say It Smooth",
+        caption: "Caption This"
       };
-      titleEl.textContent = titles[state.cardType] || "Get Ready!";
+      titleEl.textContent = titles[state.cardType] || "Get Ready";
       topicEl.textContent = `Topic: ${state.topic || 'General'}`;
     }
 
@@ -771,7 +756,6 @@
 
       qRoundLabel.textContent = `Round ${state.round}/${state.totalRounds || 10}`;
       qTypeBadge.textContent = (state.card && state.card.type ? state.card.type : 'Question').toUpperCase();
-      qEmojiScene.textContent = state.card ? state.card.emojiScene : '👀';
       qSceneText.textContent = state.card ? state.card.scene : '';
 
       qAnswerProgress.textContent = `${state.answeredCount || 0} of ${state.totalPlayers || 2} answered`;
@@ -783,7 +767,6 @@
         qTimerBar.style.width = `${fraction * 100}%`;
       });
 
-      // Hide all sub-containers first
       shoesContainer.classList.add('hidden');
       standardOptionsContainer.classList.add('hidden');
       writingContainer.classList.add('hidden');
@@ -801,7 +784,7 @@
         shoesQ1Prompt.textContent = `1. ${card.q1.prompt}`;
         shoesQ2Prompt.textContent = `2. ${card.q2.prompt}`;
         btnSubmitShoes.disabled = true;
-        btnSubmitShoes.textContent = "Lock in Answers ✨";
+        btnSubmitShoes.textContent = "Lock in Answers";
 
         shoesQ1Options.innerHTML = '';
         card.q1.options.forEach((opt, idx) => {
@@ -839,7 +822,7 @@
           if (shoesSelectedQ1 !== null && shoesSelectedQ2 !== null) {
             sound.playChime();
             btnSubmitShoes.disabled = true;
-            btnSubmitShoes.textContent = "Locked in! ✨";
+            btnSubmitShoes.textContent = "Locked in";
             sendEnvelope('submit_answer', {
               roundId: state.roundId,
               q1Index: shoesSelectedQ1,
@@ -887,14 +870,13 @@
 
       qRoundLabel.textContent = `Round ${state.round}/${state.totalRounds || 10}`;
       qTypeBadge.textContent = "CAPTION THIS";
-      qEmojiScene.textContent = state.emojiScene || '✨';
       qSceneText.textContent = state.scene || '';
       document.getElementById('writing-prompt').textContent = state.prompt || "Write a caption:";
 
       writingInput.value = '';
       writingCharCount.textContent = '0/80';
       btnSubmitCaption.disabled = false;
-      btnSubmitCaption.textContent = 'Submit Caption ✍️';
+      btnSubmitCaption.textContent = 'Submit Caption';
 
       startCountdown(state.endsAt, 20000, (secondsLeft, fraction) => {
         qTimerSeconds.textContent = secondsLeft;
@@ -918,7 +900,6 @@
 
       qRoundLabel.textContent = `Round ${state.round}/${state.totalRounds || 10}`;
       qTypeBadge.textContent = "MODERATION (5s)";
-      qEmojiScene.textContent = state.emojiScene || '🛡️';
       qSceneText.textContent = state.scene || '';
 
       if (state.isHostReview) {
@@ -927,7 +908,7 @@
           sendEnvelope('next_step', {});
         };
 
-        reviewContent.innerHTML = '<p class="helper-text" style="margin-bottom: 8px;">👑 <strong>Host Moderation:</strong> Remove any inappropriate captions before anonymous voting begins.</p>';
+        reviewContent.innerHTML = '<p class="helper-text" style="margin-bottom: 8px;"><strong>Host Moderation:</strong> Remove inappropriate submissions before anonymous voting starts.</p>';
         const list = document.createElement('ul');
         list.className = 'review-list';
 
@@ -938,7 +919,7 @@
             <div class="review-item-text">
               <strong>${cap.authorNickname || 'Anonymous'}:</strong> "${cap.text}"
             </div>
-            <button class="btn-danger-ghost btn-small" title="Remove this caption">🗑️ Remove</button>
+            <button class="btn-danger-ghost btn-small" title="Remove this caption">Remove</button>
           `;
           li.querySelector('button').onclick = () => {
             sendEnvelope('remove_caption', { roundId: state.roundId, captionId: cap.id });
@@ -950,9 +931,8 @@
         btnStartVotingEarly.classList.add('hidden');
         reviewContent.innerHTML = `
           <div class="waiting-box text-center" style="padding: 16px 0;">
-            <span class="pulse-dot"></span>
-            <p>🛡️ Host is reviewing submissions for safety & kindness...</p>
-            <p class="subtitle" style="font-size: 0.95rem; margin-top: 4px;">Anonymous voting begins in a few seconds!</p>
+            <p>Host is reviewing submissions for safety...</p>
+            <p class="subtitle" style="font-size: 0.9rem; margin-top: 4px;">Anonymous voting begins shortly.</p>
           </div>
         `;
       }
@@ -978,7 +958,6 @@
 
       qRoundLabel.textContent = `Round ${state.round}/${state.totalRounds || 10}`;
       qTypeBadge.textContent = "VOTE FOR CAPTION";
-      qEmojiScene.textContent = state.emojiScene || '🗳️';
       qSceneText.textContent = state.scene || '';
 
       votingList.innerHTML = '';
@@ -1016,7 +995,6 @@
     // 5. REVEAL
     else if (state.phase === 'REVEAL') {
       switchView('reveal');
-      revealEmoji.textContent = state.emojiScene || '✨';
       revealSceneText.textContent = state.scene || '';
       revealExplainText.textContent = state.explain || '';
 
@@ -1032,10 +1010,10 @@
             li.className = `caption-reveal-item ${c.isWinner ? 'winner' : ''}`;
             li.innerHTML = `
               <div class="caption-reveal-text">
-                ${c.isWinner ? '👑 ' : ''}"${c.text}" — <strong>${c.authorNickname}</strong>
+                "${c.text}" — <strong>${c.authorNickname}</strong>
               </div>
               <div class="caption-reveal-votes">
-                ${c.votes} vote${c.votes === 1 ? '' : 's'} ${c.isWinner ? '<span class="tag" style="background: var(--color-success); color: #0b1329; margin-left: 4px;">+150 pts</span>' : ''}
+                ${c.votes} vote${c.votes === 1 ? '' : 's'} ${c.isWinner ? '<span class="tag" style="margin-left: 4px;">+150 pts</span>' : ''}
               </div>
             `;
             writeCaptionsList.appendChild(li);
@@ -1048,15 +1026,14 @@
       const wasCorrect = state.wasCorrect;
       const isCorrect = typeof wasCorrect === 'object' ? (wasCorrect.q1Correct && wasCorrect.q2Correct) : !!wasCorrect;
 
-      // Icons and text alongside color for right/wrong
       if (isCorrect) {
         sound.playCorrect();
         revealBadgeStatus.className = 'status-pill correct';
-        revealBadgeStatus.textContent = '✨ Nailed it!';
+        revealBadgeStatus.textContent = 'Correct';
       } else {
         sound.playIncorrect();
         revealBadgeStatus.className = 'status-pill incorrect';
-        revealBadgeStatus.textContent = '💡 Good try, here is the thing...';
+        revealBadgeStatus.textContent = 'Explanation Below';
       }
 
       // Slang glossary
@@ -1081,15 +1058,15 @@
         revealSpeedBonus.classList.add('hidden');
       }
 
-      // Player Results List (Includes text and icons alongside color)
+      // Player Results List
       revealPlayerResults.innerHTML = '';
       (state.playerResults || []).forEach((r) => {
         const li = document.createElement('li');
         li.className = 'result-item';
         li.innerHTML = `
-          <span>${r.avatar || '👤'} <strong>${r.nickname}</strong></span>
-          <span style="color: ${r.correct ? 'var(--color-success)' : 'var(--text-secondary)'}; font-weight: 700;">
-            ${r.correct ? '✨ Correct' : '💡 Good try'} (+${r.pointsGained})
+          <span><strong>${r.nickname}</strong></span>
+          <span style="color: ${r.correct ? 'var(--text-primary)' : 'var(--text-muted)'}; font-weight: 700;">
+            ${r.correct ? 'Correct' : 'Incorrect'} (+${r.pointsGained})
           </span>
         `;
         revealPlayerResults.appendChild(li);
@@ -1114,9 +1091,8 @@
         li.innerHTML = `
           <span class="lb-rank">#${item.rank}</span>
           <div class="lb-player">
-            <span>${item.avatar || '👤'}</span>
             <span>${item.nickname}</span>
-            ${item.streak >= 2 ? `<span class="tag" style="background: rgba(244,114,182,0.25); color: var(--accent-pink);">🔥 ${item.streak}</span>` : ''}
+            ${item.streak >= 2 ? `<span class="tag">Streak: ${item.streak}</span>` : ''}
           </div>
           <span class="lb-score">${item.score} pts</span>
         `;
@@ -1130,20 +1106,18 @@
       });
     }
 
-    // 7. FINAL (Game Over - Confetti triggers here!)
+    // 7. FINAL (Game Over)
     else if (state.phase === 'FINAL') {
       switchView('final');
       sound.playVictory();
       confetti.burst(100);
 
       if (state.meterSuccess) {
-        finalMeterBanner.style.background = 'var(--accent-correct-gradient)';
-        finalMeterPercent.textContent = '100% 💖';
-        finalMeterMsg.textContent = '✨ Team Empathy Goal Met! Everyone scored the +200 bonus!';
+        finalMeterPercent.textContent = '100%';
+        finalMeterMsg.textContent = 'Team Empathy Goal Met! Everyone scored the +200 bonus!';
       } else {
-        finalMeterBanner.style.background = 'var(--bg-card-subtle)';
         finalMeterPercent.textContent = `${state.meterFinal || 0}%`;
-        finalMeterMsg.textContent = 'Good effort! Next time let\'s reach 100%!';
+        finalMeterMsg.textContent = 'Team Empathy goal not reached this game.';
       }
 
       // Final Podium
@@ -1152,9 +1126,8 @@
         const li = document.createElement('li');
         li.className = `lb-item ${item.rank === 1 ? 'first' : ''}`;
         li.innerHTML = `
-          <span class="lb-rank">${item.rank === 1 ? '🥇' : item.rank === 2 ? '🥈' : item.rank === 3 ? '🥉' : `#${item.rank}`}</span>
+          <span class="lb-rank">#${item.rank}</span>
           <div class="lb-player">
-            <span>${item.avatar || '👤'}</span>
             <span>${item.nickname}</span>
           </div>
           <span class="lb-score">${item.score} pts</span>
@@ -1174,7 +1147,6 @@
         finalTitlesList.appendChild(li);
       });
 
-      // Real Life Challenge
       finalChallengeText.textContent = state.challenge || "Ask a friend today how they are really doing, and listen without giving advice.";
 
       btnPlayAgain.classList.toggle('hidden', !isHost);
@@ -1184,6 +1156,36 @@
   // -------------------------------------------------------------
   // 8. Event Listeners & Interactive Handlers
   // -------------------------------------------------------------
+  // Landing Page -> Play Menu
+  const btnLandingPlay = document.getElementById('btn-landing-play');
+  const btnLandingPlayBottom = document.getElementById('btn-landing-play-bottom');
+  if (btnLandingPlay) {
+    btnLandingPlay.onclick = () => {
+      sound.playTap();
+      switchView('playMenu');
+    };
+  }
+  if (btnLandingPlayBottom) {
+    btnLandingPlayBottom.onclick = () => {
+      sound.playTap();
+      switchView('playMenu');
+    };
+  }
+
+  // Play Menu Navigation
+  const btnBackToLanding = document.getElementById('btn-back-to-landing');
+  if (btnBackToLanding) {
+    btnBackToLanding.onclick = () => {
+      sound.playTap();
+      switchView('landing');
+    };
+  }
+
+  const btnHowToPlayMenu = document.getElementById('btn-how-to-play-menu');
+  if (btnHowToPlayMenu) {
+    btnHowToPlayMenu.onclick = () => openRules();
+  }
+
   document.getElementById('btn-show-host').onclick = () => {
     sound.playTap();
     switchView('hostSetup');
@@ -1196,11 +1198,12 @@
     document.getElementById('join-code').focus();
   };
 
-  document.querySelectorAll('.btn-back').forEach((btn) => {
+  document.querySelectorAll('.btn-back[data-back]').forEach((btn) => {
     btn.onclick = () => {
       sound.playTap();
       const target = btn.getAttribute('data-back');
-      if (target === 'view-home') switchView('home');
+      if (target === 'view-play-menu') switchView('playMenu');
+      else if (target === 'view-landing') switchView('landing');
     };
   });
 
@@ -1243,7 +1246,7 @@
     sound.playTap();
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(currentState.roomCode).then(() => {
-        showToast('Room code copied! 📋');
+        showToast('Room code copied');
       });
     } else {
       showToast(`Room code: ${currentState.roomCode}`);
@@ -1256,7 +1259,7 @@
     const link = `${window.location.origin}${window.location.pathname}?code=${currentState.roomCode}`;
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(link).then(() => {
-        showToast('Invite link copied to clipboard! 🔗');
+        showToast('Invite link copied');
       });
     } else {
       showToast(`Invite Link: ${link}`);
@@ -1302,7 +1305,7 @@
     sessionStorage.removeItem('feel_it_room');
     currentState = null;
     myPlayerId = null;
-    switchView('home');
+    switchView('landing');
   };
 
   document.getElementById('btn-leave-room').onclick = () => {
@@ -1312,10 +1315,9 @@
     sessionStorage.removeItem('feel_it_room');
     currentState = null;
     myPlayerId = null;
-    switchView('home');
+    switchView('landing');
   };
 
-  // Caption Input Character Counter
   if (writingInput) {
     writingInput.oninput = () => {
       const len = writingInput.value.length;
@@ -1327,12 +1329,12 @@
     btnSubmitCaption.onclick = () => {
       const text = (writingInput.value || '').trim();
       if (!text) {
-        showToast('Please type a caption.');
+        showToast('Please enter a caption.');
         return;
       }
       sound.playChime();
       btnSubmitCaption.disabled = true;
-      btnSubmitCaption.textContent = 'Submitted! ✨';
+      btnSubmitCaption.textContent = 'Submitted';
       sendEnvelope('submit_caption', {
         roundId: currentState.roundId,
         caption: text
@@ -1340,7 +1342,6 @@
     };
   }
 
-  // Rules Modal
   function openRules() {
     sound.playTap();
     modalHowToPlay.classList.remove('hidden');
@@ -1350,7 +1351,6 @@
     modalHowToPlay.classList.add('hidden');
   }
 
-  document.getElementById('btn-how-to-play-home').onclick = openRules;
   document.getElementById('btn-how-to-play-lobby').onclick = openRules;
   document.getElementById('btn-close-rules').onclick = closeRules;
   document.getElementById('btn-got-it').onclick = closeRules;

@@ -12,10 +12,10 @@ if (!fs.existsSync(screenshotsDir)) {
 }
 
 async function captureAllScreens() {
-  console.log('📸 Starting automated 360x640 screenshot capture...');
+  console.log('📸 Starting automated 360x640 screenshot capture with new minimalist landing page...');
 
   let testServer;
-  let port = 3108;
+  let port = 3110;
   await new Promise((resolve) => {
     testServer = server.listen(port, () => {
       console.log(`Server listening on port ${port} for screenshots.`);
@@ -46,13 +46,19 @@ async function captureAllScreens() {
   const baseUrl = `http://localhost:${port}`;
   await page.goto(baseUrl, { waitUntil: 'networkidle0' });
 
-  // 1. Home Screen
-  console.log('Capturing 01_home.png...');
+  // 1. Landing Page
+  console.log('Capturing 01_home.png (Landing Page)...');
   await page.screenshot({ path: path.join(screenshotsDir, '01_home.png') });
 
-  // 2. How to Play Modal
+  // 2. Play Menu
+  console.log('Capturing 02_play_menu.png...');
+  await page.click('#btn-landing-play');
+  await page.waitForSelector('#view-play-menu:not(.hidden)');
+  await page.screenshot({ path: path.join(screenshotsDir, '02_play_menu.png') });
+
+  // How to Play Modal from Play Menu
   console.log('Capturing 02_how_to_play.png...');
-  await page.click('#btn-how-to-play-home');
+  await page.click('#btn-how-to-play-menu');
   await page.waitForSelector('#modal-how-to-play:not(.hidden)');
   await page.screenshot({ path: path.join(screenshotsDir, '02_how_to_play.png') });
   await page.click('#btn-close-rules');
@@ -85,9 +91,9 @@ async function captureAllScreens() {
   const room = rooms.get(roomCode);
 
   const mockPlayers = [
-    { id: 'p1', nickname: 'Maya', avatar: '👑', isHost: true, score: 320, streak: 3 },
-    { id: 'p2', nickname: 'Sam', avatar: '🎮', isHost: false, score: 280, streak: 1 },
-    { id: 'p3', nickname: 'Jordan', avatar: '🌟', isHost: false, score: 250, streak: 0 }
+    { id: 'p1', nickname: 'Maya', avatar: '•', isHost: true, score: 320, streak: 3 },
+    { id: 'p2', nickname: 'Sam', avatar: '•', isHost: false, score: 280, streak: 1 },
+    { id: 'p3', nickname: 'Jordan', avatar: '•', isHost: false, score: 250, streak: 0 }
   ];
 
   if (room && room.players.length > 0) {
@@ -120,7 +126,6 @@ async function captureAllScreens() {
       type: 'shoes',
       pack: 'core',
       topic: 'periods',
-      emojiScene: '👧🥀🎒',
       scene: 'Meera has severe period cramps and is quietly folding over her desk in class.',
       q1: {
         prompt: 'How is Meera feeling right now?',
@@ -158,7 +163,6 @@ async function captureAllScreens() {
       type: 'reel',
       pack: 'core',
       topic: 'beauty',
-      emojiScene: '🧴🧪✨',
       scene: 'Viral Skincare Video: "If a product label lists long scientific names, it means it contains dangerous toxic chemicals!"',
       q2: {
         prompt: 'Is this claim Real or Reel?',
@@ -194,7 +198,6 @@ async function captureAllScreens() {
       meter: 65,
       roomCode: room.code,
       roundId: 'r3',
-      emojiScene: '🐱📱🍕',
       scene: 'Your cat knocked over the entire pizza box and is staring at you with zero regret.',
       prompt: 'Write a witty or kind caption (max 80 chars):',
       yourPlayerId: hostPlayer.id,
@@ -216,12 +219,11 @@ async function captureAllScreens() {
       meter: 65,
       roomCode: room.code,
       roundId: 'r3',
-      emojiScene: '🐱📱🍕',
       scene: 'Your cat knocked over the entire pizza box and is staring at you with zero regret.',
       isHostReview: true,
       captions: [
-        { id: 'c1', text: 'Main character energy at its finest 🍕😼', authorNickname: 'Sam' },
-        { id: 'c2', text: 'Lowkey thought you ordered this extra cheese for me', authorNickname: 'Maya' }
+        { id: 'c1', text: 'Main character energy at its finest', authorNickname: 'Sam' },
+        { id: 'c2', text: 'Thought you ordered this extra cheese for me', authorNickname: 'Maya' }
       ],
       yourPlayerId: hostPlayer.id,
       hostId: room.hostId,
@@ -242,11 +244,10 @@ async function captureAllScreens() {
       meter: 65,
       roomCode: room.code,
       roundId: 'r3',
-      emojiScene: '🐱📱🍕',
       scene: 'Your cat knocked over the entire pizza box and is staring at you with zero regret.',
       captions: [
-        { id: 'c1', text: 'Main character energy at its finest 🍕😼', isOwn: false },
-        { id: 'c2', text: 'Lowkey thought you ordered this extra cheese for me', isOwn: true }
+        { id: 'c1', text: 'Main character energy at its finest', isOwn: false },
+        { id: 'c2', text: 'Thought you ordered this extra cheese for me', isOwn: true }
       ],
       hasVoted: false,
       yourPlayerId: hostPlayer.id,
@@ -266,7 +267,6 @@ async function captureAllScreens() {
       round: 1,
       totalRounds: 10,
       meter: 80,
-      emojiScene: '👧🥀🎒',
       scene: 'Meera has severe period cramps and is quietly folding over her desk in class.',
       explain: 'Period cramps are real physical contractions of uterine muscle. Offering quiet support like a heat pack or water helps, and severe pain is always worth seeing a doctor about.',
       slang: [
@@ -276,9 +276,9 @@ async function captureAllScreens() {
       yourPointsEarned: 148,
       speedBonus: 48,
       playerResults: [
-        { nickname: 'Maya', avatar: '👑', correct: true, pointsGained: 148 },
-        { nickname: 'Sam', avatar: '🎮', correct: true, pointsGained: 135 },
-        { nickname: 'Jordan', avatar: '🌟', correct: false, pointsGained: 0 }
+        { nickname: 'Maya', correct: true, pointsGained: 148 },
+        { nickname: 'Sam', correct: true, pointsGained: 135 },
+        { nickname: 'Jordan', correct: false, pointsGained: 0 }
       ],
       roomCode: room.code,
       yourPlayerId: hostPlayer.id,
@@ -299,9 +299,9 @@ async function captureAllScreens() {
       totalRounds: 10,
       meter: 80,
       leaderboard: [
-        { rank: 1, nickname: 'Maya', avatar: '👑', score: 440, streak: 3 },
-        { rank: 2, nickname: 'Sam', avatar: '🎮', score: 380, streak: 1 },
-        { rank: 3, nickname: 'Jordan', avatar: '🌟', score: 250, streak: 0 }
+        { rank: 1, nickname: 'Maya', score: 440, streak: 3 },
+        { rank: 2, nickname: 'Sam', score: 380, streak: 1 },
+        { rank: 3, nickname: 'Jordan', score: 250, streak: 0 }
       ],
       roomCode: room.code,
       yourPlayerId: hostPlayer.id,
@@ -321,14 +321,14 @@ async function captureAllScreens() {
       meterFinal: 100,
       meterSuccess: true,
       finalScores: [
-        { rank: 1, nickname: 'Maya', avatar: '👑', score: 1420 },
-        { rank: 2, nickname: 'Sam', avatar: '🎮', score: 1340 },
-        { rank: 3, nickname: 'Jordan', avatar: '🌟', score: 1150 }
+        { rank: 1, nickname: 'Maya', score: 1420 },
+        { rank: 2, nickname: 'Sam', score: 1340 },
+        { rank: 3, nickname: 'Jordan', score: 1150 }
       ],
       titles: [
-        { nickname: 'Maya', title: 'The Empathy MVP 💖', reason: 'Highest overall empathy score' },
-        { nickname: 'Sam', title: 'Myth Buster 🔍', reason: 'Spotted every social media myth' },
-        { nickname: 'Jordan', title: 'Speed Demon ⚡', reason: 'Fastest average response time' }
+        { nickname: 'Maya', title: 'The Empathy MVP', reason: 'Highest overall empathy score' },
+        { nickname: 'Sam', title: 'Myth Buster', reason: 'Spotted every social media myth' },
+        { nickname: 'Jordan', title: 'Speed Demon', reason: 'Fastest average response time' }
       ],
       challenge: 'Ask a friend today how they are really doing, and listen without giving advice.',
       roomCode: room.code,
@@ -344,7 +344,7 @@ async function captureAllScreens() {
 
   await browser.close();
   await new Promise((resolve) => testServer.close(resolve));
-  console.log('🎉 All 14 screenshots captured cleanly into screenshots/ at 360x640!');
+  console.log('🎉 All 14 screenshots updated cleanly in screenshots/ at 360x640!');
 }
 
 captureAllScreens().catch((err) => {

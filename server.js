@@ -6,6 +6,7 @@ const { WebSocketServer, WebSocket } = require('ws');
 const { validateNickname, validateCaption } = require('./lib/filter');
 const {
   buildDeck,
+  buildDeckAsync,
   calculateSpeedBonus,
   scoreAnswer,
   computeLeaderboard,
@@ -41,10 +42,15 @@ const wss = new WebSocketServer({ server });
 // Room storage (In-memory)
 const rooms = new Map();
 
-// Flood caps & IP rate limits
-const MAX_TOTAL_ROOMS = 200;
-const MAX_CONNS_PER_IP = 40;
-const MAX_ROOM_CREATIONS_PER_MIN = 5;
+// Flood caps & IP rate limits & Server configuration (all environment-driven)
+const MAX_TOTAL_ROOMS = process.env.MAX_TOTAL_ROOMS ? parseInt(process.env.MAX_TOTAL_ROOMS, 10) : 200;
+const MAX_CONNS_PER_IP = process.env.MAX_CONNS_PER_IP ? parseInt(process.env.MAX_CONNS_PER_IP, 10) : 40;
+const MAX_ROOM_CREATIONS_PER_MIN = process.env.MAX_ROOM_CREATIONS_PER_MIN ? parseInt(process.env.MAX_ROOM_CREATIONS_PER_MIN, 10) : 5;
+const MAX_PLAYERS_PER_ROOM = process.env.MAX_PLAYERS_PER_ROOM ? parseInt(process.env.MAX_PLAYERS_PER_ROOM, 10) : 8;
+const MAX_PAYLOAD_BYTES = process.env.MAX_PAYLOAD_BYTES ? parseInt(process.env.MAX_PAYLOAD_BYTES, 10) : 2048;
+const MSG_RATE_LIMIT = process.env.MSG_RATE_LIMIT ? parseInt(process.env.MSG_RATE_LIMIT, 10) : 10;
+const ROOM_INACTIVITY_MAX_AGE_MS = process.env.ROOM_INACTIVITY_MAX_AGE_MS ? parseInt(process.env.ROOM_INACTIVITY_MAX_AGE_MS, 10) : 2 * 60 * 60 * 1000;
+const CLEANUP_INTERVAL_MS = process.env.CLEANUP_INTERVAL_MS ? parseInt(process.env.CLEANUP_INTERVAL_MS, 10) : 5 * 60 * 1000;
 
 const ipConnections = new Map(); // ip -> Set<ws>
 const ipRoomCreations = new Map(); // ip -> number[] (timestamps)
@@ -722,7 +728,7 @@ function checkPauseCondition(room) {
   }
 }
 
-function cleanupInactiveRooms(maxAgeMs = 2 * 60 * 60 * 1000) {
+function cleanupInactiveRooms(maxAgeMs = ROOM_INACTIVITY_MAX_AGE_MS) {
   const now = Date.now();
   let deletedCount = 0;
   for (const [code, room] of rooms.entries()) {
@@ -736,10 +742,10 @@ function cleanupInactiveRooms(maxAgeMs = 2 * 60 * 60 * 1000) {
   return deletedCount;
 }
 
-// Inactivity cleanup every 5 minutes
+// Inactivity cleanup timer
 const cleanupInterval = setInterval(() => {
   cleanupInactiveRooms();
-}, 5 * 60 * 1000);
+}, CLEANUP_INTERVAL_MS);
 cleanupInterval.unref();
 
 // WebSocket connection lifecycle
@@ -767,9 +773,9 @@ wss.on('connection', (ws, req) => {
     ws.isAlive = true;
   });
 
-  ws.on('message', (raw) => {
-    if (raw.length > 2048) {
-      sendError(ws, 'PAYLOAD_TOO_LARGE', 'Message size exceeds 2KB limit.');
+  ws.on('message', async (raw) => {
+    if (raw.length > MAX_PAYLOAD_BYTES) {
+      sendError(ws, 'PAYLOAD_TOO_LARGE', `Message size exceeds ${MAX_PAYLOAD_BYTES}B limit.`);
       return;
     }
 
@@ -779,7 +785,7 @@ wss.on('connection', (ws, req) => {
       lastRateReset = now;
     }
     messageCount++;
-    if (messageCount > 10) {
+    if (messageCount > MSG_RATE_LIMIT) {
       sendError(ws, 'RATE_LIMITED', 'Too many requests. Please slow down.');
       return;
     }
@@ -851,6 +857,10 @@ wss.on('connection', (ws, req) => {
           disconnectTimer: null
         };
 
+        const category = typeof payload.category === 'string' && payload.category ? payload.category : 'empathy';
+        const customTopic = typeof payload.customTopic === 'string' ? payload.customTopic.slice(0, 100) : '';
+        const useAi = typeof payload.useAi === 'boolean' ? payload.useAi : false;
+
         const newRoom = {
           code: roomCode,
           hostId: playerId,
@@ -862,7 +872,10 @@ wss.on('connection', (ws, req) => {
           round: 0,
           totalRounds: 10,
           settings: {
-            deepDive: true,
+            category,
+            customTopic,
+            useAi,
+            deepDive: payload.deepDive !== false,
             cleanMode: false,
             allowKick: true,
             allowCaptionRemoval: true
@@ -943,8 +956,8 @@ wss.on('connection', (ws, req) => {
           return;
         }
 
-        if (room.players.length >= 8) {
-          sendError(ws, 'ROOM_FULL', 'This room is full (max 8 players).');
+        if (room.players.length >= MAX_PLAYERS_PER_ROOM) {
+          sendError(ws, 'ROOM_FULL', `This room is full (max ${MAX_PLAYERS_PER_ROOM} players).`);
           return;
         }
 
@@ -992,6 +1005,15 @@ wss.on('connection', (ws, req) => {
           return;
         }
 
+        if (typeof payload.category === 'string') {
+          boundRoom.settings.category = payload.category;
+        }
+        if (typeof payload.customTopic === 'string') {
+          boundRoom.settings.customTopic = payload.customTopic.slice(0, 100);
+        }
+        if (typeof payload.useAi === 'boolean') {
+          boundRoom.settings.useAi = payload.useAi;
+        }
         if (typeof payload.deepDive === 'boolean') {
           boundRoom.settings.deepDive = payload.deepDive;
         }
@@ -1027,12 +1049,25 @@ wss.on('connection', (ws, req) => {
           return;
         }
 
-        // Initialize game & deck (drawing fresh cards without repeat until exhausted)
-        boundRoom.deck = buildDeck({
-          deepDive: boundRoom.settings.deepDive,
-          playerCount: boundRoom.players.length,
-          usedCardIds: boundRoom.usedCardIds
-        });
+        // Initialize game & deck (hybrid async generation with automatic offline fallback)
+        try {
+          boundRoom.deck = await buildDeckAsync({
+            category: boundRoom.settings.category || 'empathy',
+            customTopic: boundRoom.settings.customTopic || '',
+            useAi: boundRoom.settings.useAi || false,
+            deepDive: boundRoom.settings.deepDive,
+            playerCount: boundRoom.players.length,
+            usedCardIds: boundRoom.usedCardIds
+          });
+        } catch (err) {
+          console.error('[Server] Error building deck:', err);
+          boundRoom.deck = buildDeck({
+            category: boundRoom.settings.category || 'empathy',
+            deepDive: boundRoom.settings.deepDive,
+            playerCount: boundRoom.players.length,
+            usedCardIds: boundRoom.usedCardIds
+          });
+        }
         boundRoom.round = 0;
         boundRoom.totalRounds = 10;
         boundRoom.meter = 0;

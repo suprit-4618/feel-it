@@ -1,0 +1,190 @@
+[
+  {
+    "id": "planes-001",
+    "type": "shoes",
+    "pack": "planes",
+    "topic": "fearofflying",
+    "scene": "Your seatmate on a commercial flight starts gripping their armrests with white knuckles during mild clear-air turbulence.",
+    "emojiScene": "✈️💺😰",
+    "q1": {
+      "prompt": "How is the nervous passenger feeling inside?",
+      "options": [
+        "In a state of acute panic, hyper-fixating on every engine noise and vibration",
+        "Excited for a rollercoaster ride",
+        "Mildly sleepy"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the kindest, most reassuring passenger move?",
+      "options": [
+        "Tell them a story about a plane crash you saw on YouTube",
+        "Offer a gentle smile: 'Turbulence feels rough inside, but planes are built like tanks for this. You doing okay?'",
+        "Grip your chest and gasp dramatically"
+      ],
+      "correct": 1
+    },
+    "explain": "A calm, grounded presence and simple factual reassurance relieves flight panic significantly."
+  },
+  {
+    "id": "planes-002",
+    "type": "shoes",
+    "pack": "planes",
+    "topic": "armrestwars",
+    "scene": "You are sitting in the middle seat on a 7-hour flight with passengers on both sides occupying all armrests.",
+    "emojiScene": "✈️💺😐",
+    "q1": {
+      "prompt": "What is the undisputed universal flight etiquette rule for the middle seat?",
+      "options": [
+        "Window gets the view, Aisle gets legroom/exit access, Middle gets BOTH armrests",
+        "Whoever is taller gets all 4 armrests",
+        "First person to touch an armrest owns it for the entire flight"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "If you have the window seat, what is the courteous move?",
+      "options": [
+        "Claim both armrests and sleep leaning across the middle passenger",
+        "Leave the middle armrest free for the middle seat passenger who has no view and no direct aisle exit",
+        "Turn off their air vent"
+      ],
+      "correct": 1
+    },
+    "explain": "Flight etiquette universally grants the middle passenger both center armrests as compensation for being squeezed in the middle."
+  },
+  {
+    "id": "planes-003",
+    "type": "shoes",
+    "pack": "planes",
+    "topic": "reclining",
+    "scene": "You are on a short 1-hour flight and the person in front of you violently slams their seat into full recline, crushing your laptop screen.",
+    "emojiScene": "💺💥💻",
+    "q1": {
+      "prompt": "How does the person behind feel?",
+      "options": [
+        "Startled, cramped, and worried their laptop screen just cracked",
+        "Excited to share personal space",
+        "Unaware of what happened"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the most polite etiquette move before reclining a seat?",
+      "options": [
+        "Glance back for a second to ensure you won't spill hot coffee or crush a laptop, and recline slowly",
+        "Slam back with maximum body weight while laughing",
+        "Never look back"
+      ],
+      "correct": 0
+    },
+    "explain": "A 2-second glance before reclining prevents spilled drinks and broken electronics."
+  },
+  {
+    "id": "planes-004",
+    "type": "reel",
+    "pack": "planes",
+    "topic": "airplanefood",
+    "scene": "Airplane food tastes bland and dry at 35,000 feet primarily because cabin pressure and low humidity dull human taste buds by ~30%.",
+    "emojiScene": "✈️🍽️👅",
+    "q1": {
+      "prompt": "Is this Real or Reel?",
+      "options": ["Real", "Reel"],
+      "correct": 0
+    },
+    "explain": "REAL! Lufthansa and Fraunhofer Institute studies found that cabin altitude and desert-dry air desensitize sweet and salty taste receptors by nearly 30%!"
+  },
+  {
+    "id": "planes-005",
+    "type": "reel",
+    "pack": "planes",
+    "topic": "autopilot",
+    "scene": "Modern commercial airliners can fly and land themselves completely on autopilot, but pilots must still monitor and make critical safety decisions every second.",
+    "emojiScene": "✈️🤖👨‍✈️",
+    "q1": {
+      "prompt": "Is this Real or Reel?",
+      "options": ["Real", "Reel"],
+      "correct": 0
+    },
+    "explain": "REAL! Autoland systems (CAT III ILS) can touch down in zero visibility, but pilots manage navigation, weather avoidance, systems management, and emergency response throughout the flight."
+  },
+  {
+    "id": "planes-006",
+    "type": "reel",
+    "pack": "planes",
+    "topic": "airplanetrap",
+    "scene": "If a passenger attempts to open the cabin door during flight at 35,000 feet, they can easily push it open with one hand.",
+    "emojiScene": "✈️🚪🚫",
+    "q1": {
+      "prompt": "Is this Real or Reel?",
+      "options": ["Real", "Reel"],
+      "correct": 1
+    },
+    "explain": "REEL! Airplane doors are 'plug doors' held closed by cabin pressure. At cruising altitude, thousands of pounds of pressure seal the door shut—it is physically impossible for any human to open it in flight."
+  },
+  {
+    "id": "planes-007",
+    "type": "smooth",
+    "pack": "planes",
+    "topic": "blackbox",
+    "scene": "A passenger asks why an airplane's 'Black Box' flight recorder is called that if it's painted bright neon orange.",
+    "emojiScene": "📦🟠✈️",
+    "q2": {
+      "prompt": "Why are Flight Data Recorders painted bright high-visibility orange?",
+      "options": [
+        "So search and rescue teams can easily spot the recorder underwater and in crash wreckage",
+        "Because black paint was outlawed by airlines",
+        "Orange paint is fireproof"
+      ],
+      "correct": 0
+    },
+    "explain": "They are painted fluorescent orange with reflective strips to maximize visibility among sea floor debris and wreckage."
+  },
+  {
+    "id": "planes-008",
+    "type": "smooth",
+    "pack": "planes",
+    "topic": "pilotfood",
+    "scene": "Why do the Captain and First Officer always eat completely different meals during flight?",
+    "emojiScene": "👨‍✈️🍲👩‍✈️",
+    "q2": {
+      "prompt": "What is the reason behind the two-meal airline safety rule?",
+      "options": [
+        "To prevent both pilots from getting food poisoning at the same time in flight",
+        "Pilots have strict contractual dietary preferences",
+        "Airline superstition"
+      ],
+      "correct": 0
+    },
+    "explain": "If one meal contains contaminated food or allergens, the other pilot remains unaffected and capable of safely commanding the aircraft."
+  },
+  {
+    "id": "planes-009",
+    "type": "caption",
+    "pack": "planes",
+    "mode": "write",
+    "topic": "clapping",
+    "scene": "The airplane wheels touch down in a routine smooth landing in Orlando, and row 14 through 28 erupts into a standing ovation with wild applause.",
+    "prompt": "Write the funniest caption for passengers clapping on landing (max 80 chars):",
+    "explain": "Vote on the best aviation caption!"
+  },
+  {
+    "id": "planes-010",
+    "type": "caption",
+    "pack": "planes",
+    "mode": "pick",
+    "topic": "unbuckle",
+    "scene": "The plane is still taxiing at 30 mph on the runway and 12 passengers immediately unbuckle, stand up, and start yanking heavy suitcases out of the overhead bins.",
+    "emojiScene": "✈️🧳🏃‍♂️",
+    "q2": {
+      "prompt": "Pick the most accurate caption:",
+      "options": [
+        "“Where are you running to, bro? The doors aren't even open 😭”",
+        "“Olympic luggage sprint team”",
+        "“Fastest disembarkation in history”"
+      ],
+      "correct": 0
+    },
+    "explain": "The universal urge to stand up before the seatbelt sign turns off remains humanity's greatest mystery."
+  }
+]

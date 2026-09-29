@@ -6,7 +6,7 @@
   "type": "commonjs",
   "scripts": {
     "start": "node server.js",
-    "test": "node --test tests/phase1.test.js && node --test tests/phase3.test.js && node --test tests/phase4.test.js",
+    "test": "node --test tests/phase1.test.js && node --test tests/phase3.test.js && node --test tests/phase4.test.js && node --test tests/category_ai.test.js",
     "validate": "node scripts/validate.js",
     "simulate": "node scripts/simulate.js"
   },

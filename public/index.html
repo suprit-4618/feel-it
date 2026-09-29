@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Feel It — Multiplayer Empathy Party Game</title>
   <meta name="description" content="Feel It: A real-time multiplayer party game about emotional intelligence, myth-busting, and stepping into someone else's shoes.">
-  <meta name="theme-color" content="#09090b">
+  <meta name="theme-color" content="#faf6ee">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,600&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -35,119 +38,405 @@
     <!-- MAIN VIEW CONTAINER -->
     <main id="view-container" class="view-container">
 
-      <!-- 1. LANDING PAGE (Overview & Game Description) -->
+      <!-- 1. LANDING PAGE (Clean Minimalist Monochrome Design) -->
       <section id="view-landing" class="view active">
         <div class="landing-page">
-          <!-- Top Bar -->
-          <div class="landing-top-bar">
-            <div class="brand-badge">FEEL IT</div>
-            <button id="btn-sound-toggle-landing" class="btn-sound-mini" title="Toggle Sound" aria-label="Unmute sound">🔇</button>
-          </div>
 
-          <!-- Hero Section -->
+          <!-- Top Brand & Navigation Bar -->
+          <nav class="landing-top-bar" aria-label="Main Navigation">
+            <div class="brand-badge-wrap">
+              <span class="brand-badge">FEEL IT 💭</span>
+            </div>
+
+            <!-- Desktop Nav Links (Hidden on Mobile) -->
+            <div class="desktop-nav-links">
+              <a href="#demo-section" class="nav-link">✨ Live Demo</a>
+              <a href="#section-crisis" class="nav-link">📖 The Story</a>
+              <a href="#section-arenas" class="nav-link">🎯 4 Arenas</a>
+              <a href="#section-meter" class="nav-link">❤️ Team Meter</a>
+              <a href="#section-safety" class="nav-link">🔒 Safety</a>
+            </div>
+
+            <!-- Top Action Group -->
+            <div class="top-nav-actions">
+              <button id="btn-landing-quick-host-nav" class="btn btn-secondary btn-mini">⚡ Host</button>
+              <button id="btn-landing-quick-join-nav" class="btn btn-secondary btn-mini">🔑 Join</button>
+              <button id="btn-sound-toggle-landing" class="btn-sound-mini" title="Toggle Sound" aria-label="Unmute sound">🔇</button>
+            </div>
+          </nav>
+
+          <!-- Hero Section: Responsive 2-Column on Desktop -->
           <header class="landing-hero">
-            <h1 class="landing-title">The party game about stepping into someone else’s shoes.</h1>
-            <p class="landing-subtitle">
-              A real-time multiplayer game for 2 to 8 players that tests emotional intelligence, busts social media myths, and rewards thoughtful communication.
-            </p>
-            <div class="landing-cta-wrap">
-              <button id="btn-landing-play" class="btn btn-primary btn-large btn-block">
-                Play Now →
-              </button>
+            <div class="hero-content-left">
+              <div class="hero-eyebrow">
+                ✨ THE COOPERATIVE PARTY GAME
+              </div>
+              <h1 class="landing-title">Why is it so hard to talk about what actually matters?</h1>
+              <p class="landing-subtitle">
+                We live in a world flooded with 30-second reels, viral wellness myths, and unspoken social anxieties. Feel It transforms awkward silences, health taboos, and emotional barriers into an energetic, laughter-filled party game that builds real empathy.
+              </p>
+
+              <!-- Primary Action Triggers (Horizontal on PC, stacked on Mobile) -->
+              <div class="hero-cta-group">
+                <button id="btn-landing-play" class="btn btn-primary btn-large">
+                  🎮 Enter Game Menu →
+                </button>
+                <button id="btn-landing-quick-host" class="btn btn-secondary btn-large">
+                  ⚡ Host Game
+                </button>
+                <button id="btn-landing-quick-join" class="btn btn-secondary btn-large">
+                  🔑 Join Code
+                </button>
+              </div>
+
+              <!-- Trust / Feature Badges -->
+              <div class="hero-trust-chips">
+                <span class="trust-chip">👥 2–8 Players</span>
+                <span class="trust-chip">⚡ Play in Seconds</span>
+                <span class="trust-chip">🔒 No Account Needed</span>
+                <span class="trust-chip">📱 Any Phone or PC</span>
+              </div>
+            </div>
+
+            <!-- HERO VISUAL POSTER COMPONENT (Right Column on Desktop) -->
+            <div class="hero-visual-right">
+              <div class="hero-poster-container">
+                <div class="hero-poster-card">
+                  <!-- Poster Top Header -->
+                  <div class="poster-card-top">
+                    <div class="poster-meta-pill">ROUND 4/10 • 📱 REAL OR REEL?</div>
+                    <div class="poster-timer-pill">⏳ 18s</div>
+                  </div>
+
+                  <!-- Poster Question Content -->
+                  <div class="poster-question-box">
+                    <p class="poster-prompt">“A viral video says drinking lemon water during your period stops flow entirely.”</p>
+                    <div class="poster-options-row">
+                      <div class="poster-opt-btn opt-real">Real</div>
+                      <div class="poster-opt-btn opt-reel selected">Reel (Myth!) 🎯</div>
+                    </div>
+                  </div>
+
+                  <!-- Floating Live Player Badges -->
+                  <div class="floating-badge badge-maya">
+                    <span class="fb-avatar">🌟</span>
+                    <div class="fb-text">
+                      <span class="fb-name">Maya</span>
+                      <span class="fb-sub">+50 Speed Bonus</span>
+                    </div>
+                  </div>
+
+                  <div class="floating-badge badge-sam">
+                    <span class="fb-avatar">🔥</span>
+                    <div class="fb-text">
+                      <span class="fb-name">Sam</span>
+                      <span class="fb-sub">Streak x3</span>
+                    </div>
+                  </div>
+
+                  <div class="floating-badge badge-meter">
+                    <span class="fb-avatar">❤️</span>
+                    <div class="fb-text">
+                      <span class="fb-name">Team Empathy</span>
+                      <span class="fb-sub">85% (+200 Bonus)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </header>
 
-          <!-- Divider -->
-          <hr class="divider">
-
-          <!-- Section: How It Works -->
-          <section class="landing-section">
-            <div class="section-tag">OVERVIEW</div>
-            <h2 class="section-heading">How Feel It Works</h2>
-            <p class="section-desc">
-              Connect from any phone or browser using a 4-letter room code. Compete across 10 fast-paced rounds while collaborating to fill the shared Team Empathy Meter.
+          <!-- INTERACTIVE MINI-GAME SIMULATOR: "TEST YOUR EMPATHY" -->
+          <section id="demo-section" class="landing-section demo-section">
+            <div class="section-tag">TRY IT LIVE • INTERACTIVE DEMO</div>
+            <h2 class="section-heading">Play a Sample Round Right Now</h2>
+            <p class="section-lead">
+              Tap any option below to see how Feel It turns tricky topics into immediate insight and team points.
             </p>
-          </section>
 
-          <!-- Section: 4 Game Modes -->
-          <section class="landing-section">
-            <div class="section-tag">GAME MODES</div>
-            <h2 class="section-heading">Four Ways to Score</h2>
-
-            <div class="modes-grid">
-              <div class="mode-card">
-                <div class="mode-num">01</div>
-                <div class="mode-content">
-                  <h3 class="mode-title">Step Into Their Shoes</h3>
-                  <p class="mode-desc">
-                    Analyze relatable interpersonal dilemmas. Identify how someone actually feels, then choose the kindest and most supportive response.
-                  </p>
-                </div>
+            <!-- Mini Game Demo Card -->
+            <div class="demo-card" id="interactive-demo-card">
+              <!-- Demo Arena Selector Tabs -->
+              <div class="demo-tabs">
+                <button class="demo-tab active" data-tab="shoes">👟 Shoes</button>
+                <button class="demo-tab" data-tab="reel">📱 Reel?</button>
+                <button class="demo-tab" data-tab="smooth">💬 Smooth</button>
+                <button class="demo-tab" data-tab="caption">✍️ Caption</button>
               </div>
 
-              <div class="mode-card">
-                <div class="mode-num">02</div>
-                <div class="mode-content">
-                  <h3 class="mode-title">Real or Reel?</h3>
-                  <p class="mode-desc">
-                    Spot viral misinformation. Distinguish fact from fiction across health, relationships, social trends, and wellness advice.
-                  </p>
+              <!-- Demo Interactive Content Area -->
+              <div class="demo-body" id="demo-body-content">
+                <!-- Dynamically populated / interactive via client.js -->
+                <div class="demo-scenario">
+                  <span class="demo-topic-pill">EMOTIONAL PERSPECTIVE</span>
+                  <p class="demo-scenario-text">“Your best friend suddenly cancels weekend plans with a one-word text: ‘busy’.”</p>
                 </div>
-              </div>
 
-              <div class="mode-card">
-                <div class="mode-num">03</div>
-                <div class="mode-content">
-                  <h3 class="mode-title">Say It Smooth</h3>
-                  <p class="mode-desc">
-                    Find the line that balances honesty with respect. Practice confident, clear communication in awkward social situations.
-                  </p>
+                <div class="demo-prompt-label">What is the kindest, most empathetic move?</div>
+
+                <div class="demo-options-list" id="demo-options-list">
+                  <button class="demo-opt-btn" data-correct="false" data-explain="Leaving them on read or spamming angry texts creates pressure and shuts down communication.">
+                    <span>A</span> Spam them asking why they are ditching you
+                  </button>
+                  <button class="demo-opt-btn" data-correct="true" data-explain="Giving space with zero guilt lets them know they are supported without feeling pressured to explain immediately.">
+                    <span>B</span> Text back: “All good! Hope everything’s okay, here if you need me ❤️”
+                  </button>
+                  <button class="demo-opt-btn" data-correct="false" data-explain="Passive-aggressive posts escalate misunderstandings and damage trust.">
+                    <span>C</span> Post a passive-aggressive story about fake friends
+                  </button>
                 </div>
-              </div>
 
-              <div class="mode-card">
-                <div class="mode-num">04</div>
-                <div class="mode-content">
-                  <h3 class="mode-title">Caption This</h3>
-                  <p class="mode-desc">
-                    Submit funny or insightful captions for everyday scenarios, then vote anonymously on the best contributions from the room.
-                  </p>
+                <!-- Demo Reveal Feedback Box -->
+                <div class="demo-reveal-box hidden" id="demo-reveal-box">
+                  <div class="demo-reveal-header">
+                    <span class="demo-reveal-badge" id="demo-reveal-badge">✓ KIND MOVE</span>
+                    <span class="demo-pts-badge">+150 PTS</span>
+                  </div>
+                  <p class="demo-reveal-text" id="demo-reveal-text"></p>
+                  <button class="btn btn-secondary btn-small" id="btn-demo-try-another">Try Another Scenario ↻</button>
                 </div>
               </div>
             </div>
           </section>
 
-          <!-- Section: Team Empathy Meter -->
-          <section class="landing-section">
-            <div class="section-tag">COOPERATIVE MECHANIC</div>
+          <!-- ACT I: The Crisis (The Problem We Face) -->
+          <section id="section-crisis" class="landing-section story-act">
+            <div class="section-tag">ACT I • THE SILENT CRISIS</div>
+            <h2 class="section-heading">The Digital Disconnect & Stigma</h2>
+            <p class="section-lead">
+              Growing up today means navigating complex relationships through glowing screens—where genuine vulnerability is rare and misinformation spreads fast.
+            </p>
+
+            <div class="story-grid">
+              <div class="story-card card-problem">
+                <div class="story-card-header">
+                  <div class="story-icon-wrap">📱</div>
+                  <span class="story-sub-tag">ALGORITHM NOISE</span>
+                </div>
+                <h3 class="story-card-title">The Viral Myth Trap</h3>
+                <p class="story-card-desc">
+                  Algorithmic feeds blast young people with sensationalized wellness fads, toxic dating rules, and medical falsehoods about reproductive health, bodies, and mental wellness.
+                </p>
+              </div>
+
+              <div class="story-card card-problem">
+                <div class="story-card-header">
+                  <div class="story-icon-wrap">🤐</div>
+                  <span class="story-sub-tag">SOCIAL TABOOS</span>
+                </div>
+                <h3 class="story-card-title">Taboos & Awkward Silence</h3>
+                <p class="story-card-desc">
+                  Vital topics like menstrual cramps, contraception, male emotional vulnerability, and consent are avoided in classrooms and dinner tables out of fear of judgment.
+                </p>
+              </div>
+
+              <div class="story-card card-problem">
+                <div class="story-card-header">
+                  <div class="story-icon-wrap">💔</div>
+                  <span class="story-sub-tag">THE EMPATHY GAP</span>
+                </div>
+                <h3 class="story-card-title">The Connection Paradox</h3>
+                <p class="story-card-desc">
+                  We have hundreds of online followers, yet we freeze when a friend is overwhelmed, hurting, or masking pain behind a brave face.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ACT II: The Solution (How Feel It Works) -->
+          <section id="section-antidote" class="landing-section story-act">
+            <div class="section-tag">ACT II • THE ANTIDOTE</div>
+            <h2 class="section-heading">Empathy Isn't a Lecture. It’s a Game.</h2>
+            <p class="section-lead">
+              Dry pamphlets and preachy presentations get ignored. Feel It proves that people learn best when they are laughing, debating, and solving relatable dilemmas together.
+            </p>
+
+            <div class="solution-highlight-box">
+              <div class="highlight-stat-col">
+                <span class="stat-number">10</span>
+                <span class="stat-label">Fast Rounds</span>
+                <span class="stat-detail">Under 15 mins</span>
+              </div>
+              <div class="highlight-stat-col">
+                <span class="stat-number">2-8</span>
+                <span class="stat-label">Live Players</span>
+                <span class="stat-detail">Zero app installs</span>
+              </div>
+              <div class="highlight-stat-col">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Team Goal</span>
+                <span class="stat-detail">+200 bonus</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- ACT III: The 4 Game Arenas -->
+          <section id="section-arenas" class="landing-section story-act">
+            <div class="section-tag">ACT III • THE FOUR ARENAS</div>
+            <h2 class="section-heading">Four Ways We Bridge the Gap</h2>
+            <p class="section-lead">
+              Every round challenges players with dynamic situations drawn from real teen and young adult experiences.
+            </p>
+
+            <div class="modes-grid">
+              <!-- Arena 1: In Their Shoes -->
+              <div class="mode-card">
+                <div class="mode-header-row">
+                  <span class="arena-badge">01 • IN THEIR SHOES</span>
+                  <span class="arena-icon-pill">👟</span>
+                </div>
+                <div class="mode-content">
+                  <h3 class="mode-title">Perspective Taking & Real Support</h3>
+                  <p class="mode-desc">
+                    Step directly into someone else's dilemma—a classmate folding over in silent period cramps, or a friend lashing out when overwhelmed. First, decode what they truly feel. Then, choose the kindest, most supportive move.
+                  </p>
+                  <div class="mode-takeaway">
+                    <strong>Mastered Skill:</strong> Emotional resonance and active support.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Arena 2: Real or Reel? -->
+              <div class="mode-card">
+                <div class="mode-header-row">
+                  <span class="arena-badge">02 • REAL OR REEL?</span>
+                  <span class="arena-icon-pill">📱</span>
+                </div>
+                <div class="mode-content">
+                  <h3 class="mode-title">Media Literacy & Science Fact-Checking</h3>
+                  <p class="mode-desc">
+                    Viral TikToks claim chocolate causes cramps, vasectomies are irreversible, or crying weakens you. Separate medical reality from social media myths backed by verified health sources.
+                  </p>
+                  <div class="mode-takeaway">
+                    <strong>Mastered Skill:</strong> Critical thinking and scientific literacy.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Arena 3: Say It Smooth -->
+              <div class="mode-card">
+                <div class="mode-header-row">
+                  <span class="arena-badge">03 • SAY IT SMOOTH</span>
+                  <span class="arena-icon-pill">💬</span>
+                </div>
+                <div class="mode-content">
+                  <h3 class="mode-title">Compassionate Boundaries & Consent</h3>
+                  <p class="mode-desc">
+                    Master the delicate balance between honesty and empathy. Practice how to set a healthy personal boundary, navigate awkward crush moments, or communicate consent without ghosting or hurting others.
+                  </p>
+                  <div class="mode-takeaway">
+                    <strong>Mastered Skill:</strong> Assertive, compassionate communication.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Arena 4: Caption This! -->
+              <div class="mode-card">
+                <div class="mode-header-row">
+                  <span class="arena-badge">04 • CAPTION THIS!</span>
+                  <span class="arena-icon-pill">✍️</span>
+                </div>
+                <div class="mode-content">
+                  <h3 class="mode-title">De-escalating Stress Through Shared Humor</h3>
+                  <p class="mode-desc">
+                    Transform everyday awkward chaos—from midnight group project texts to clumsy social moments—into creative, funny, or heartfelt captions. Vote anonymously on your favorites.
+                  </p>
+                  <div class="mode-takeaway">
+                    <strong>Mastered Skill:</strong> Finding warmth and connection through humor.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ACT IV: The Cooperative Team Empathy Meter -->
+          <section id="section-meter" class="landing-section story-act">
+            <div class="section-tag">ACT IV • WINNING TOGETHER</div>
             <h2 class="section-heading">The Team Empathy Meter</h2>
-            <div class="info-box">
-              <p>
-                Individual scores determine the podium, but teamwork matters. When the room consistently chooses constructive, empathetic answers, the shared meter fills. Reaching <strong>100%</strong> rewards every player with a <strong>+200 point endgame bonus</strong>.
+            <p class="section-lead">
+              Unlike cutthroat party games, Feel It unites players around a shared cooperative mission.
+            </p>
+            <div class="coop-card">
+              <div class="coop-meter-visual">
+                <div class="coop-meter-label">
+                  <span>SHARED COMMUNITY GOAL</span>
+                  <span class="coop-percent">100% REACHED</span>
+                </div>
+                <div class="coop-track">
+                  <div class="coop-fill"></div>
+                </div>
+              </div>
+              <div class="coop-text">
+                <h3>Collaborative Victory</h3>
+                <p>
+                  Individual points determine the winner's podium, but every empathetic choice also charges the <strong>Team Empathy Meter</strong>. If the room averages 75%+ constructive empathy, everyone unlocks the <strong>+200 Team Bonus</strong> at endgame!
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ACT V: Built Safe, Private & Frictionless -->
+          <section id="section-safety" class="landing-section story-act">
+            <div class="section-tag">ACT V • SAFETY & PRIVACY</div>
+            <h2 class="section-heading">A Judgment-Free Space for Everyone</h2>
+            <div class="safety-grid">
+              <div class="safety-item">
+                <span class="safety-icon">🔒</span>
+                <div>
+                  <h4>Zero Logins or Tracking</h4>
+                  <p>No account creation, no emails, no app store downloads. Just a 4-letter room code.</p>
+                </div>
+              </div>
+              <div class="safety-item">
+                <span class="safety-icon">🛡️</span>
+                <div>
+                  <h4>Safe & Respectful Content</h4>
+                  <p>Smart filters keep custom answers and captions fun, positive, and appropriate for everyone.</p>
+                </div>
+              </div>
+              <div class="safety-item">
+                <span class="safety-icon">👑</span>
+                <div>
+                  <h4>Host Moderation & Clean Mode</h4>
+                  <p>Hosts can review submissions, toggle Clean Mode for younger groups, or enable Deep Dive packs.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ACT VI: The Real-World Outcome -->
+          <section id="section-impact" class="landing-section story-act">
+            <div class="section-tag">THE IMPACT</div>
+            <h2 class="section-heading">What Happens After the Game?</h2>
+            <div class="impact-quote-box">
+              <p class="impact-quote">
+                “When the phones go down, the conversations keep going. Players walk away with the language, confidence, and empathy to handle real-life relationships.”
               </p>
             </div>
           </section>
 
-          <!-- Section: Privacy & Zero Friction -->
-          <section class="landing-section">
-            <div class="section-tag">BUILT FOR EVERYONE</div>
-            <h2 class="section-heading">Zero Logins. No Tracking.</h2>
-            <ul class="features-list">
-              <li><strong>No Passwords:</strong> Jump straight in with a nickname and room code.</li>
-              <li><strong>Mobile First:</strong> Optimized for mobile screens and touch interactions.</li>
-              <li><strong>Content Moderation:</strong> Built-in language filtering and host controls.</li>
-            </ul>
-          </section>
-
-          <!-- Bottom CTA -->
+          <!-- Final Bottom CTA Poster Card -->
           <div class="landing-bottom-cta">
-            <button id="btn-landing-play-bottom" class="btn btn-primary btn-large btn-block">
-              Start Playing →
-            </button>
+            <div class="bottom-cta-inner">
+              <span class="bottom-spark">🚀</span>
+              <h3 class="cta-heading">Ready to step into someone else’s shoes?</h3>
+              <p class="cta-sub">Start a free room or join your friends in seconds on any phone or browser.</p>
+              <div class="bottom-cta-actions">
+                <button id="btn-landing-play-bottom" class="btn btn-primary btn-large">
+                  Enter Game Menu →
+                </button>
+                <button id="btn-landing-quick-host-bottom" class="btn btn-secondary btn-large">
+                  ⚡ Host a Game
+                </button>
+                <button id="btn-landing-quick-join-bottom" class="btn btn-secondary btn-large">
+                  🔑 Join with Code
+                </button>
+              </div>
+            </div>
           </div>
 
           <footer class="landing-footer">
-            <p>Feel It — Multiplayer Empathy Party Game</p>
+            <p>Feel It • The Cooperative Empathy Party Game</p>
           </footer>
         </div>
       </section>
@@ -163,16 +452,16 @@
 
           <div class="btn-group">
             <button id="btn-show-host" class="btn btn-primary btn-large btn-block">
-              Host a Game
+              🎮 Host a Game
             </button>
             <button id="btn-show-join" class="btn btn-secondary btn-large btn-block">
-              Join a Game
+              🔑 Join a Game
             </button>
           </div>
 
           <div class="menu-footer">
             <button id="btn-how-to-play-menu" class="btn btn-ghost btn-block">
-              How to Play (Quick Guide)
+              📖 How to Play (Quick Guide)
             </button>
           </div>
         </div>
@@ -183,7 +472,7 @@
         <div class="card form-card">
           <button class="btn-back" data-back="view-play-menu">← Back</button>
           <h2>Host a New Game</h2>
-          <p class="subtitle">Enter your nickname to generate a room code.</p>
+          <p class="subtitle">Pick your topic pack or generate a live AI deck!</p>
 
           <form id="form-host">
             <div class="input-group">
@@ -192,8 +481,79 @@
               <small class="helper-text">Max 12 characters</small>
             </div>
 
+            <!-- Topic / Category Selection -->
+            <div class="input-group topic-select-group">
+              <label>Select Category & Mode</label>
+              <div class="category-grid" id="host-category-grid">
+                <button type="button" class="category-card-btn selected" data-category="empathy">
+                  <span class="cat-icon">💭</span>
+                  <span class="cat-name">Empathy & Life</span>
+                  <span class="cat-badge">Classic</span>
+                </button>
+                <button type="button" class="category-card-btn" data-category="sports">
+                  <span class="cat-icon">⚽</span>
+                  <span class="cat-name">Sports & Athl.</span>
+                  <span class="cat-badge">Trending</span>
+                </button>
+                <button type="button" class="category-card-btn" data-category="gaming">
+                  <span class="cat-icon">🎮</span>
+                  <span class="cat-name">Gaming & Esports</span>
+                  <span class="cat-badge">Popular</span>
+                </button>
+                <button type="button" class="category-card-btn" data-category="genz">
+                  <span class="cat-icon">📱</span>
+                  <span class="cat-name">Gen-Z & Trends</span>
+                  <span class="cat-badge">Viral</span>
+                </button>
+                <button type="button" class="category-card-btn" data-category="lyrics">
+                  <span class="cat-icon">🎵</span>
+                  <span class="cat-name">Song Lyrics</span>
+                  <span class="cat-badge">Music</span>
+                </button>
+                <button type="button" class="category-card-btn" data-category="cars">
+                  <span class="cat-icon">🏎️</span>
+                  <span class="cat-name">Cars & Auto</span>
+                  <span class="cat-badge">Speed</span>
+                </button>
+                <button type="button" class="category-card-btn" data-category="planes">
+                  <span class="cat-icon">✈️</span>
+                  <span class="cat-name">Planes & Aviat.</span>
+                  <span class="cat-badge">Aero</span>
+                </button>
+                <button type="button" class="category-card-btn" data-category="popculture">
+                  <span class="cat-icon">🎬</span>
+                  <span class="cat-name">Pop & Anime</span>
+                  <span class="cat-badge">Fandom</span>
+                </button>
+                <button type="button" class="category-card-btn" data-category="custom">
+                  <span class="cat-icon">✨</span>
+                  <span class="cat-name">Custom AI</span>
+                  <span class="cat-badge">Any Topic</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Custom Topic Input -->
+            <div id="host-custom-topic-group" class="input-group hidden">
+              <label for="host-custom-topic">Custom AI Topic Prompt</label>
+              <input type="text" id="host-custom-topic" maxlength="80" placeholder="e.g. Marvel Cinematic Universe, 90s Cartoons..." autocomplete="off">
+              <small class="helper-text">Gemini AI will craft a bespoke 10-round deck for this theme!</small>
+            </div>
+
+            <!-- AI Fresh Deck Generator Toggle -->
+            <div class="toggle-row ai-toggle-row">
+              <div class="toggle-info">
+                <span class="toggle-title">✨ AI Fresh Generation</span>
+                <span class="toggle-desc">Generate unique unrepeated rounds dynamically with Google Gemini</span>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="host-setting-ai" checked>
+                <span class="slider"></span>
+              </label>
+            </div>
+
             <button id="btn-create-room" type="submit" class="btn btn-primary btn-large btn-block">
-              Create Room
+              🎮 Create Room
             </button>
           </form>
         </div>
@@ -219,7 +579,7 @@
             </div>
 
             <button id="btn-join-room" type="submit" class="btn btn-primary btn-large btn-block">
-              Join Lobby
+              🔑 Join Lobby
             </button>
           </form>
         </div>
@@ -238,6 +598,18 @@
             <p class="room-instruction">Share this code with 1 to 7 players.</p>
           </div>
 
+          <!-- Active Topic Pill / Banner -->
+          <div class="lobby-topic-showcase" id="lobby-topic-showcase">
+            <div class="topic-showcase-left">
+              <span class="topic-icon" id="lobby-topic-icon">💭</span>
+              <div class="topic-text-meta">
+                <span class="topic-label">Deck Category</span>
+                <span class="topic-title" id="lobby-topic-title">Empathy & Life</span>
+              </div>
+            </div>
+            <span class="topic-badge" id="lobby-topic-badge">✨ AI Fresh Deck</span>
+          </div>
+
           <div class="lobby-players-section">
             <div class="players-header">
               <h3>Players (<span id="lobby-player-count">0</span>/8)</h3>
@@ -251,6 +623,38 @@
           <!-- Host Settings Panel -->
           <div id="lobby-settings-panel" class="settings-panel hidden">
             <h4>Host Settings</h4>
+
+            <div class="settings-select-row">
+              <label for="lobby-category-select">Deck Category</label>
+              <select id="lobby-category-select" class="cozy-select">
+                <option value="empathy">💭 Empathy & Life (Classic)</option>
+                <option value="sports">⚽ Sports & Athletics</option>
+                <option value="gaming">🎮 Gaming & Esports</option>
+                <option value="genz">📱 Gen-Z & Trends</option>
+                <option value="lyrics">🎵 Song Lyrics & Music</option>
+                <option value="cars">🏎️ Cars & Automotive</option>
+                <option value="planes">✈️ Planes & Aviation</option>
+                <option value="popculture">🎬 Pop Culture & Anime</option>
+                <option value="custom">✨ Custom AI Topic...</option>
+              </select>
+            </div>
+
+            <div id="lobby-custom-topic-input-row" class="input-group hidden">
+              <label for="lobby-custom-topic-input">Custom Topic Prompt</label>
+              <input type="text" id="lobby-custom-topic-input" maxlength="80" placeholder="e.g. Formula 1, Marvel MCU..." autocomplete="off">
+            </div>
+
+            <div class="toggle-row">
+              <div class="toggle-info">
+                <span class="toggle-title">✨ AI Fresh Generation</span>
+                <span class="toggle-desc">Generate unrepeated live rounds with Gemini</span>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="setting-ai-deck" checked>
+                <span class="slider"></span>
+              </label>
+            </div>
+
             <div class="toggle-row">
               <div class="toggle-info">
                 <span class="toggle-title">Deep Dive Pack</span>
@@ -277,17 +681,17 @@
           <!-- Lobby Actions -->
           <div class="lobby-actions">
             <button id="btn-start-game" class="btn btn-primary btn-large btn-block hidden" disabled>
-              Start Game
+              🎮 Start Game
             </button>
             <div id="lobby-waiting-msg" class="waiting-indicator">
-              Waiting for host to start...
+              ⏳ Waiting for host to start...
             </div>
             <div class="lobby-footer-btns">
               <button id="btn-how-to-play-lobby" class="btn btn-ghost btn-small">
-                How to Play
+                📖 How to Play
               </button>
               <button id="btn-leave-room" class="btn btn-danger-ghost btn-small">
-                Leave Room
+                🚪 Leave Room
               </button>
             </div>
           </div>
@@ -431,7 +835,7 @@
           <!-- Host Advance Button & Timer -->
           <div class="reveal-actions">
             <button id="btn-reveal-next" class="btn btn-primary btn-large btn-block hidden">
-              Next: Standings
+              ✨ Next: Standings
             </button>
             <div class="countdown-subtext">Continuing in <span id="reveal-timer-countdown">10</span>s</div>
           </div>
@@ -452,7 +856,7 @@
 
           <div class="leaderboard-actions">
             <button id="btn-leaderboard-next" class="btn btn-primary btn-large btn-block hidden">
-              Next Round
+              🎯 Next Round
             </button>
             <div class="countdown-subtext">Continuing in <span id="lb-timer-countdown">5</span>s</div>
           </div>
@@ -491,10 +895,10 @@
           <!-- Endgame Actions -->
           <div class="final-actions">
             <button id="btn-play-again" class="btn btn-primary btn-large btn-block hidden">
-              Play Again
+              🎉 Play Again
             </button>
             <button id="btn-final-home" class="btn btn-ghost btn-large btn-block">
-              Back to Overview
+              🏡 Back to Overview
             </button>
           </div>
         </div>
@@ -504,33 +908,33 @@
       <div id="modal-how-to-play" class="modal hidden" role="dialog" aria-modal="true">
         <div class="modal-content card">
           <div class="modal-header">
-            <h2>How to Play "Feel It"</h2>
+            <h2>📖 How to Play "Feel It"</h2>
             <button id="btn-close-rules" class="btn-close" aria-label="Close rules">×</button>
           </div>
           <div class="rules-body">
             <div class="rule-item">
               <div class="rule-num">1</div>
               <div class="rule-text">
-                <strong>Step into their shoes</strong>
+                <strong>👟 Step into their shoes</strong>
                 <p>Read the situation, identify how the other person feels, and pick the kindest move.</p>
               </div>
             </div>
             <div class="rule-item">
               <div class="rule-num">2</div>
               <div class="rule-text">
-                <strong>Spot the Real vs Reel</strong>
+                <strong>📱 Spot the Real vs Reel</strong>
                 <p>Call out fake claims and learn verified health and relationship facts.</p>
               </div>
             </div>
             <div class="rule-item">
               <div class="rule-num">3</div>
               <div class="rule-text">
-                <strong>Fill the Team Empathy Meter</strong>
+                <strong>❤️ Fill the Team Empathy Meter</strong>
                 <p>When the room chooses kind answers, the meter rises. Reach 100% for a group +200 bonus!</p>
               </div>
             </div>
           </div>
-          <button id="btn-got-it" class="btn btn-primary btn-block">Got It</button>
+          <button id="btn-got-it" class="btn btn-primary btn-block">✨ Got It</button>
         </div>
       </div>
 

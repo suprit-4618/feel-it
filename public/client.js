@@ -242,7 +242,7 @@
       if (!this.canvas || !this.ctx) return;
       this.resize();
 
-      const colors = ['#fafafa', '#e4e4e7', '#d4d4d8', '#a1a1aa', '#71717a'];
+      const colors = ['#7da779', '#e28f89', '#eec75e', '#82acc8', '#e89e74', '#faf4ea'];
       const cx = this.canvas.width / 2;
       const cy = this.canvas.height / 3;
 
@@ -359,6 +359,34 @@
   const lobbyWaitingMsg = document.getElementById('lobby-waiting-msg');
   const settingDeepDive = document.getElementById('setting-deep-dive');
   const settingCleanMode = document.getElementById('setting-clean-mode');
+
+  // Category & AI Setup elements
+  const hostCategoryGrid = document.getElementById('host-category-grid');
+  const hostCustomTopicGroup = document.getElementById('host-custom-topic-group');
+  const hostCustomTopicInput = document.getElementById('host-custom-topic');
+  const hostSettingAi = document.getElementById('host-setting-ai');
+  const lobbyTopicShowcase = document.getElementById('lobby-topic-showcase');
+  const lobbyTopicIcon = document.getElementById('lobby-topic-icon');
+  const lobbyTopicTitle = document.getElementById('lobby-topic-title');
+  const lobbyTopicBadge = document.getElementById('lobby-topic-badge');
+  const lobbyCategorySelect = document.getElementById('lobby-category-select');
+  const lobbyCustomTopicInputRow = document.getElementById('lobby-custom-topic-input-row');
+  const lobbyCustomTopicInput = document.getElementById('lobby-custom-topic-input');
+  const settingAiDeck = document.getElementById('setting-ai-deck');
+
+  let selectedCategory = 'empathy';
+
+  const CATEGORY_META = {
+    empathy: { icon: '💭', name: 'Empathy & Life', badge: 'Classic' },
+    sports: { icon: '⚽', name: 'Sports & Athletics', badge: 'Trending' },
+    gaming: { icon: '🎮', name: 'Gaming & Esports', badge: 'Popular' },
+    genz: { icon: '📱', name: 'Gen-Z & Trends', badge: 'Viral' },
+    lyrics: { icon: '🎵', name: 'Song Lyrics & Music', badge: 'Music' },
+    cars: { icon: '🏎️', name: 'Cars & Automotive', badge: 'Speed' },
+    planes: { icon: '✈️', name: 'Planes & Aviation', badge: 'Aero' },
+    popculture: { icon: '🎬', name: 'Pop Culture & Anime', badge: 'Fandom' },
+    custom: { icon: '✨', name: 'Custom AI Topic', badge: 'AI Deck' }
+  };
 
   // Question Elements
   const qRoundLabel = document.getElementById('q-round-label');
@@ -659,6 +687,15 @@
       const count = state.players ? state.players.length : 0;
       lobbyPlayerCount.textContent = count;
 
+      const catKey = (state.settings && state.settings.category) || 'empathy';
+      const customTopic = (state.settings && state.settings.customTopic) || '';
+      const isAi = !!(state.settings && state.settings.useAi) || catKey === 'custom';
+      const meta = CATEGORY_META[catKey] || { icon: '🎯', name: catKey, badge: 'Pack' };
+
+      if (lobbyTopicIcon) lobbyTopicIcon.textContent = meta.icon;
+      if (lobbyTopicTitle) lobbyTopicTitle.textContent = customTopic ? `Custom: ${customTopic}` : meta.name;
+      if (lobbyTopicBadge) lobbyTopicBadge.textContent = isAi ? '✨ AI Fresh Deck' : '📦 Curated Pack';
+
       if (isHost) {
         lobbySettingsPanel.classList.remove('hidden');
         btnStartGame.classList.remove('hidden');
@@ -669,6 +706,12 @@
         if (state.settings) {
           settingDeepDive.checked = !!state.settings.deepDive;
           settingCleanMode.checked = !!state.settings.cleanMode;
+          if (settingAiDeck) settingAiDeck.checked = isAi;
+          if (lobbyCategorySelect) lobbyCategorySelect.value = catKey;
+          if (lobbyCustomTopicInput) lobbyCustomTopicInput.value = customTopic;
+          if (lobbyCustomTopicInputRow) {
+            lobbyCustomTopicInputRow.classList.toggle('hidden', catKey !== 'custom');
+          }
         }
       } else {
         lobbySettingsPanel.classList.add('hidden');
@@ -1092,7 +1135,7 @@
           <span class="lb-rank">#${item.rank}</span>
           <div class="lb-player">
             <span>${item.nickname}</span>
-            ${item.streak >= 2 ? `<span class="tag">Streak: ${item.streak}</span>` : ''}
+            ${item.streak >= 2 ? `<span class="tag">🔥 ${item.streak}</span>` : ''}
           </div>
           <span class="lb-score">${item.score} pts</span>
         `;
@@ -1159,18 +1202,190 @@
   // Landing Page -> Play Menu
   const btnLandingPlay = document.getElementById('btn-landing-play');
   const btnLandingPlayBottom = document.getElementById('btn-landing-play-bottom');
-  if (btnLandingPlay) {
-    btnLandingPlay.onclick = () => {
-      sound.playTap();
-      switchView('playMenu');
-    };
+  const btnLandingQuickHost = document.getElementById('btn-landing-quick-host');
+  const btnLandingQuickJoin = document.getElementById('btn-landing-quick-join');
+  const btnLandingQuickHostNav = document.getElementById('btn-landing-quick-host-nav');
+  const btnLandingQuickJoinNav = document.getElementById('btn-landing-quick-join-nav');
+  const btnLandingQuickHostBottom = document.getElementById('btn-landing-quick-host-bottom');
+  const btnLandingQuickJoinBottom = document.getElementById('btn-landing-quick-join-bottom');
+
+  const handleOpenPlayMenu = () => {
+    sound.playTap();
+    switchView('playMenu');
+  };
+
+  const handleOpenHost = () => {
+    sound.playTap();
+    switchView('hostSetup');
+    const nickInput = document.getElementById('host-nickname');
+    if (nickInput) nickInput.focus();
+  };
+
+  const handleOpenJoin = () => {
+    sound.playTap();
+    switchView('joinSetup');
+    const codeInput = document.getElementById('join-code');
+    if (codeInput) codeInput.focus();
+  };
+
+  if (btnLandingPlay) btnLandingPlay.onclick = handleOpenPlayMenu;
+  if (btnLandingPlayBottom) btnLandingPlayBottom.onclick = handleOpenPlayMenu;
+  if (btnLandingQuickHost) btnLandingQuickHost.onclick = handleOpenHost;
+  if (btnLandingQuickHostNav) btnLandingQuickHostNav.onclick = handleOpenHost;
+  if (btnLandingQuickHostBottom) btnLandingQuickHostBottom.onclick = handleOpenHost;
+  if (btnLandingQuickJoin) btnLandingQuickJoin.onclick = handleOpenJoin;
+  if (btnLandingQuickJoinNav) btnLandingQuickJoinNav.onclick = handleOpenJoin;
+  if (btnLandingQuickJoinBottom) btnLandingQuickJoinBottom.onclick = handleOpenJoin;
+
+  // -------------------------------------------------------------
+  // Interactive Mini-Game Demo on Landing Page
+  // -------------------------------------------------------------
+  const demoScenarios = {
+    shoes: {
+      topic: 'EMOTIONAL PERSPECTIVE',
+      scenario: '“Your best friend suddenly cancels weekend plans with a one-word text: ‘busy’.”',
+      prompt: 'What is the kindest, most empathetic move?',
+      options: [
+        { label: 'A', text: 'Spam them asking why they are ditching you', correct: false, explain: 'Leaving angry messages creates pressure and shuts down communication.' },
+        { label: 'B', text: 'Text back: “All good! Hope everything’s okay, here if you need me ❤️”', correct: true, explain: 'Giving space with zero guilt lets them know they are supported without feeling pressured.' },
+        { label: 'C', text: 'Post a passive-aggressive story about fake friends', correct: false, explain: 'Passive-aggressive social posts escalate misunderstandings and break trust.' }
+      ]
+    },
+    reel: {
+      topic: 'MEDIA LITERACY & SCIENCE',
+      scenario: '“A viral TikTok with 4M views claims holding in your tears makes you emotionally stronger.”',
+      prompt: 'Is this scientific fact or an online reel?',
+      options: [
+        { label: 'A', text: 'Real — crying releases stress chemicals you should keep inside', correct: false, explain: 'Suppressing emotional crying actually elevates heart rate and prolongs stress.' },
+        { label: 'B', text: 'Reel (Myth!) — crying activates the parasympathetic nervous system and eases pain', correct: true, explain: 'Medical research confirms emotional tears contain endorphins and oxytocin that relieve distress.' }
+      ]
+    },
+    smooth: {
+      topic: 'ASSERTIVE COMMUNICATION',
+      scenario: '“A close friend keeps pressuring you to share private gossip about someone else.”',
+      prompt: 'What is the smoothest way to set a boundary?',
+      options: [
+        { label: 'A', text: '“I don’t feel comfortable sharing their private stuff, let’s talk about something else!”', correct: true, explain: 'Direct, clear, and calm boundary setting without attacking the friend.' },
+        { label: 'B', text: 'Ghost them for two weeks so they get the hint', correct: false, explain: 'Ghosting creates confusion and damages friendships over time.' },
+        { label: 'C', text: 'Make up a fake rumor to distract them', correct: false, explain: 'Spreading false info damages integrity and creates more drama.' }
+      ]
+    },
+    caption: {
+      topic: 'HUMOR & CONNECTION',
+      scenario: '“You drop your entire lunch tray in a crowded cafeteria on your first day.”',
+      prompt: 'Pick the caption that turns embarrassment into connection:',
+      options: [
+        { label: 'A', text: '“Gravity check complete. Floors are 100% solid 👍”', correct: true, explain: 'Self-deprecating humor instantly diffuses social tension and invites shared laughter.' },
+        { label: 'B', text: '“Never coming to this school ever again.”', correct: false, explain: 'Catastrophizing amplifies feelings of isolation.' },
+        { label: 'C', text: '“Whoever laughed is on my enemy list.”', correct: false, explain: 'Defensiveness turns an innocent clumsy moment into hostility.' }
+      ]
+    }
+  };
+
+  let currentDemoTab = 'shoes';
+
+  function renderDemoScenario(tabKey) {
+    const data = demoScenarios[tabKey] || demoScenarios.shoes;
+    currentDemoTab = tabKey;
+
+    const demoBody = document.getElementById('demo-body-content');
+    if (!demoBody) return;
+
+    demoBody.innerHTML = `
+      <div class="demo-scenario">
+        <span class="demo-topic-pill">${data.topic}</span>
+        <p class="demo-scenario-text">${data.scenario}</p>
+      </div>
+
+      <div class="demo-prompt-label">${data.prompt}</div>
+
+      <div class="demo-options-list" id="demo-options-list">
+        ${data.options.map((opt, idx) => `
+          <button class="demo-opt-btn" data-index="${idx}" data-correct="${opt.correct}">
+            <span class="demo-opt-badge">${opt.label}</span>
+            <span class="demo-opt-text">${opt.text}</span>
+          </button>
+        `).join('')}
+      </div>
+
+      <div class="demo-reveal-box hidden" id="demo-reveal-box">
+        <div class="demo-reveal-header">
+          <span class="demo-reveal-badge" id="demo-reveal-badge">✓ KIND MOVE!</span>
+          <span class="demo-pts-badge" id="demo-pts-badge">+150 PTS</span>
+        </div>
+        <p class="demo-reveal-text" id="demo-reveal-text"></p>
+        <button class="btn btn-secondary btn-small" id="btn-demo-try-another">Try Another Scenario ↻</button>
+      </div>
+    `;
+
+    // Attach option listeners
+    const optButtons = demoBody.querySelectorAll('.demo-opt-btn');
+    const revealBox = demoBody.querySelector('#demo-reveal-box');
+    const revealBadge = demoBody.querySelector('#demo-reveal-badge');
+    const ptsBadge = demoBody.querySelector('#demo-pts-badge');
+    const revealText = demoBody.querySelector('#demo-reveal-text');
+    const btnTryAnother = demoBody.querySelector('#btn-demo-try-another');
+
+    optButtons.forEach(btn => {
+      btn.onclick = () => {
+        const isCorrect = btn.getAttribute('data-correct') === 'true';
+        const optIndex = parseInt(btn.getAttribute('data-index'), 10);
+        const optData = data.options[optIndex];
+
+        optButtons.forEach(b => b.disabled = true);
+
+        if (isCorrect) {
+          sound.playCorrect();
+          btn.classList.add('demo-opt-correct');
+          revealBadge.textContent = '✓ EMPATHIC CHOICE!';
+          revealBadge.className = 'demo-reveal-badge badge-success';
+          ptsBadge.textContent = '+150 PTS';
+          ptsBadge.className = 'demo-pts-badge pts-success';
+          updateEmpathyMeter(Math.min(100, (prevMeter || 0) + 15));
+        } else {
+          sound.playIncorrect();
+          btn.classList.add('demo-opt-incorrect');
+          revealBadge.textContent = '✗ MISSED OPPORTUNITY';
+          revealBadge.className = 'demo-reveal-badge badge-warning';
+          ptsBadge.textContent = '+0 PTS';
+          ptsBadge.className = 'demo-pts-badge pts-warning';
+        }
+
+        revealText.textContent = optData.explain;
+        revealBox.classList.remove('hidden');
+      };
+    });
+
+    if (btnTryAnother) {
+      btnTryAnother.onclick = () => {
+        sound.playTap();
+        const keys = Object.keys(demoScenarios);
+        const nextIndex = (keys.indexOf(currentDemoTab) + 1) % keys.length;
+        const nextKey = keys[nextIndex];
+
+        // Update tab buttons
+        document.querySelectorAll('.demo-tab').forEach(t => {
+          t.classList.toggle('active', t.getAttribute('data-tab') === nextKey);
+        });
+
+        renderDemoScenario(nextKey);
+      };
+    }
   }
-  if (btnLandingPlayBottom) {
-    btnLandingPlayBottom.onclick = () => {
+
+  // Demo tab switching
+  document.querySelectorAll('.demo-tab').forEach(tab => {
+    tab.onclick = () => {
       sound.playTap();
-      switchView('playMenu');
+      document.querySelectorAll('.demo-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const tabKey = tab.getAttribute('data-tab');
+      renderDemoScenario(tabKey);
     };
-  }
+  });
+
+  // Initialize demo on first load
+  renderDemoScenario('shoes');
 
   // Play Menu Navigation
   const btnBackToLanding = document.getElementById('btn-back-to-landing');
@@ -1207,6 +1422,24 @@
     };
   });
 
+  if (hostCategoryGrid) {
+    const catBtns = hostCategoryGrid.querySelectorAll('.category-card-btn');
+    catBtns.forEach((btn) => {
+      btn.onclick = () => {
+        sound.playTap();
+        catBtns.forEach((b) => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        selectedCategory = btn.getAttribute('data-category') || 'empathy';
+        if (selectedCategory === 'custom') {
+          if (hostCustomTopicGroup) hostCustomTopicGroup.classList.remove('hidden');
+          if (hostCustomTopicInput) hostCustomTopicInput.focus();
+        } else {
+          if (hostCustomTopicGroup) hostCustomTopicGroup.classList.add('hidden');
+        }
+      };
+    });
+  }
+
   if (formHost) {
     formHost.onsubmit = (e) => {
       e.preventDefault();
@@ -1216,8 +1449,16 @@
         showToast('Please enter a nickname.');
         return;
       }
+      const customTopic = hostCustomTopicInput ? hostCustomTopicInput.value.trim() : '';
+      const useAi = hostSettingAi ? hostSettingAi.checked : false;
+
       initWebSocket(() => {
-        sendEnvelope('create_room', { nickname });
+        sendEnvelope('create_room', {
+          nickname,
+          category: selectedCategory,
+          customTopic,
+          useAi
+        });
       });
     };
   }
@@ -1268,12 +1509,45 @@
 
   function updateHostSettings() {
     if (!currentState || currentState.yourPlayerId !== currentState.hostId) return;
+    const cat = lobbyCategorySelect ? lobbyCategorySelect.value : 'empathy';
+    const customTopic = lobbyCustomTopicInput ? lobbyCustomTopicInput.value.trim() : '';
+    const useAi = settingAiDeck ? settingAiDeck.checked : false;
+
     sendEnvelope('update_settings', {
+      category: cat,
+      customTopic,
+      useAi,
       deepDive: settingDeepDive.checked,
       cleanMode: settingCleanMode.checked,
       allowKick: true,
       allowCaptionRemoval: true
     });
+  }
+
+  if (lobbyCategorySelect) {
+    lobbyCategorySelect.onchange = () => {
+      sound.playTap();
+      if (lobbyCustomTopicInputRow) {
+        lobbyCustomTopicInputRow.classList.toggle('hidden', lobbyCategorySelect.value !== 'custom');
+        if (lobbyCategorySelect.value === 'custom' && lobbyCustomTopicInput) {
+          lobbyCustomTopicInput.focus();
+        }
+      }
+      updateHostSettings();
+    };
+  }
+
+  if (lobbyCustomTopicInput) {
+    lobbyCustomTopicInput.onchange = () => {
+      updateHostSettings();
+    };
+  }
+
+  if (settingAiDeck) {
+    settingAiDeck.onchange = () => {
+      sound.playTap();
+      updateHostSettings();
+    };
   }
 
   settingDeepDive.onchange = updateHostSettings;

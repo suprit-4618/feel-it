@@ -4,8 +4,8 @@ const path = require('path');
 const puppeteer = require('puppeteer-core');
 const { app, server, rooms } = require('../server');
 
-const chromePath = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
-const screenshotsDir = path.join(__dirname, '..', 'screenshots');
+const chromePath = process.env.CHROME_PATH || 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
+const screenshotsDir = process.env.SCREENSHOTS_DIR || path.join(__dirname, '..', 'screenshots');
 
 if (!fs.existsSync(screenshotsDir)) {
   fs.mkdirSync(screenshotsDir, { recursive: true });
@@ -15,7 +15,7 @@ async function captureAllScreens() {
   console.log('📸 Starting automated 360x640 screenshot capture with new minimalist landing page...');
 
   let testServer;
-  let port = 3110;
+  let port = parseInt(process.env.SCREENSHOT_PORT || process.env.PORT || '3110', 10);
   await new Promise((resolve) => {
     testServer = server.listen(port, () => {
       console.log(`Server listening on port ${port} for screenshots.`);
@@ -49,6 +49,7 @@ async function captureAllScreens() {
   // 1. Landing Page
   console.log('Capturing 01_home.png (Landing Page)...');
   await page.screenshot({ path: path.join(screenshotsDir, '01_home.png') });
+  await page.screenshot({ path: path.join(screenshotsDir, '01_home_full.png'), fullPage: true });
 
   // 2. Play Menu
   console.log('Capturing 02_play_menu.png...');

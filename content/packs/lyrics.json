@@ -1,0 +1,190 @@
+[
+  {
+    "id": "lyrics-001",
+    "type": "shoes",
+    "pack": "lyrics",
+    "topic": "auxcord",
+    "scene": "Your friend passes you the aux cord in a car full of people with completely different music tastes.",
+    "emojiScene": "🚗📻🎵",
+    "q1": {
+      "prompt": "What is the emotional pressure of having the aux cord?",
+      "options": [
+        "Heavy DJ anxiety: you want everyone to vibe without putting on something polarizing",
+        "Total absolute boredom",
+        "A desire to play pure static noise"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the safest crowd-pleasing move?",
+      "options": [
+        "Play a 12-minute experimental noise track",
+        "Start with an undisputed upbeat classic everyone knows the words to, then feel out the room",
+        "Unplug the car battery"
+      ],
+      "correct": 1
+    },
+    "explain": "A universally known upbeat anthem breaks the ice and gets the whole car singing together."
+  },
+  {
+    "id": "lyrics-002",
+    "type": "shoes",
+    "pack": "lyrics",
+    "topic": "concert",
+    "scene": "You are at a concert and the person in front of you is recording the entire 2-hour show with an iPad held above their head.",
+    "emojiScene": "🎤📱😤",
+    "q1": {
+      "prompt": "How are the people standing behind them feeling?",
+      "options": [
+        "Frustrated and blocked from actually experiencing the live show with their own eyes",
+        "Grateful for the iPad screen",
+        "Completely oblivious"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the smoothest, most polite way to ask them?",
+      "options": [
+        "Smack the iPad out of their hand",
+        "Tap their shoulder with a friendly smile: 'Hey, sorry to bother, could you lower it a bit? We can't see the stage back here!'",
+        "Scream lyrics directly into their microphone"
+      ],
+      "correct": 1
+    },
+    "explain": "A polite, direct request solves 95% of concert etiquette issues without confrontation."
+  },
+  {
+    "id": "lyrics-003",
+    "type": "shoes",
+    "pack": "lyrics",
+    "topic": "misheardlyrics",
+    "scene": "Your friend sings a misheard lyric at the top of their lungs with 100% genuine confidence (e.g., 'Starbucks lovers' instead of 'got a long list of ex-lovers').",
+    "emojiScene": "🎤☕😂",
+    "q1": {
+      "prompt": "How are they feeling in that moment?",
+      "options": [
+        "In the pure flow state of joyous musical bliss",
+        "Deeply suspicious of the grammar",
+        "Angry at Taylor Swift"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the most fun, supportive friendship reaction?",
+      "options": [
+        "Stop the music and lecture them about their hearing deficit",
+        "Sing the misheard version along with them, laugh about it, and make it an inside joke forever",
+        "Post their audio recording to criticize them online"
+      ],
+      "correct": 1
+    },
+    "explain": "Misheard lyrics (mondegreens) are one of music's greatest shared joys!"
+  },
+  {
+    "id": "lyrics-004",
+    "type": "reel",
+    "pack": "lyrics",
+    "topic": "bohemian",
+    "scene": "Freddie Mercury and Queen's record label originally refused to release 'Bohemian Rhapsody' as a single because at nearly 6 minutes it was 'too long to ever be played on the radio'.",
+    "emojiScene": "👑📻🎶",
+    "q1": {
+      "prompt": "Is this Real or Reel?",
+      "options": ["Real", "Reel"],
+      "correct": 0
+    },
+    "explain": "REAL! EMI executives told Queen the 5-minute 55-second opera-rock track would never be a hit. Queen leaked it to DJ Kenny Everett, who played it 14 times in two days due to listener demand!"
+  },
+  {
+    "id": "lyrics-005",
+    "type": "reel",
+    "pack": "lyrics",
+    "topic": "yesterday",
+    "scene": "Paul McCartney came up with the melody to The Beatles' hit 'Yesterday' in a dream, and used the working lyrics 'Scrambled eggs, oh my baby how I love your legs'.",
+    "emojiScene": "🍳🎵🛏️",
+    "q1": {
+      "prompt": "Is this Real or Reel?",
+      "options": ["Real", "Reel"],
+      "correct": 0
+    },
+    "explain": "REAL! McCartney woke up with the tune in his head and sang 'Scrambled eggs...' until he could write the real lyrics, worrying he had accidentally plagiarized someone else's song!"
+  },
+  {
+    "id": "lyrics-006",
+    "type": "reel",
+    "pack": "lyrics",
+    "topic": "mozart",
+    "scene": "Mozart composed full symphonies before the age of 8, but never wrote silly or joke songs.",
+    "emojiScene": "🎼🎹🎻",
+    "q1": {
+      "prompt": "Is this Real or Reel?",
+      "options": ["Real", "Reel"],
+      "correct": 1
+    },
+    "explain": "REEL! While Mozart was indeed a child prodigy, he also had a famously goofy sense of humor and wrote several playful canons with absurd, hilarious lyrics for his friends."
+  },
+  {
+    "id": "lyrics-007",
+    "type": "smooth",
+    "pack": "lyrics",
+    "topic": "finishthelyric",
+    "scene": "“Is this the real life? Is this just fantasy? Caught in a landslide...”",
+    "emojiScene": "👑🎤✨",
+    "q2": {
+      "prompt": "Finish the iconic Queen lyric:",
+      "options": [
+        "“No escape from reality.”",
+        "“Looking up to the galaxy.”",
+        "“Floating into the deep blue sea.”"
+      ],
+      "correct": 0
+    },
+    "explain": "“No escape from reality / Open your eyes, look up to the skies and see...” — Bohemian Rhapsody (1975)."
+  },
+  {
+    "id": "lyrics-008",
+    "type": "smooth",
+    "pack": "lyrics",
+    "topic": "taylorswift",
+    "scene": "“Cause darling, I'm a nightmare dressed like a...”",
+    "emojiScene": "👗✨🖤",
+    "q2": {
+      "prompt": "Finish the iconic Taylor Swift lyric from Blank Space:",
+      "options": [
+        "“...daydream.”",
+        "“...queen bee.”",
+        "“...movie screen.”"
+      ],
+      "correct": 0
+    },
+    "explain": "“Cause darling, I'm a nightmare dressed like a daydream.” — Blank Space (1989 album)."
+  },
+  {
+    "id": "lyrics-009",
+    "type": "caption",
+    "pack": "lyrics",
+    "mode": "write",
+    "topic": "karaoke",
+    "scene": "Your friend picks Adele's 'Someone Like You' at 1 AM karaoke and starts hitting notes that summon every dog in the neighborhood.",
+    "prompt": "Write the funniest caption for this karaoke performance (max 80 chars):",
+    "explain": "Vote on the best karaoke caption!"
+  },
+  {
+    "id": "lyrics-010",
+    "type": "caption",
+    "pack": "lyrics",
+    "mode": "pick",
+    "topic": "headphones",
+    "scene": "You take off your headphones after 3 hours of listening to aggressive rap and remember you're just sitting in a quiet dentist waiting room.",
+    "emojiScene": "🎧🦷😳",
+    "q2": {
+      "prompt": "Pick the most accurate caption:",
+      "options": [
+        "“Mentally I was in the trenches, physically I am getting a root canal 💀”",
+        "“Ready to buy dental floss”",
+        "“Classical music enthusiast”"
+      ],
+      "correct": 0
+    },
+    "explain": "The headphone transition back to mundane reality is always startling!"
+  }
+]

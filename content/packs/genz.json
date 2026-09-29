@@ -1,0 +1,190 @@
+[
+  {
+    "id": "genz-001",
+    "type": "shoes",
+    "pack": "genz",
+    "topic": "socialanxiety",
+    "scene": "Your friend posts a story with a tiny hidden text in font size 4 saying 'having a really hard time today'.",
+    "emojiScene": "📱🔎🥺",
+    "q1": {
+      "prompt": "Why did they hide the text so small instead of posting normally?",
+      "options": [
+        "They want to be heard, but feel terrified of being a burden or looking overly dramatic",
+        "It was just a typography mistake",
+        "They are testing your eyesight"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the kindest, lowest-pressure DM to send them?",
+      "options": [
+        "Screenshot it and post it on your story tagging everyone",
+        "Send a gentle private DM: 'Saw your story. No need to reply, just sending love and here if you want to vent ❤️'",
+        "Reply with a laughing crying emoji"
+      ],
+      "correct": 1
+    },
+    "explain": "Micro-cries for help on social media come from feeling vulnerable; a quiet private check-in gives comfort without pressure."
+  },
+  {
+    "id": "genz-002",
+    "type": "shoes",
+    "pack": "genz",
+    "topic": "fomo",
+    "scene": "You see your entire friend group hanging out on BeReal/Instagram stories without you.",
+    "emojiScene": "💔📱🍕",
+    "q1": {
+      "prompt": "What is the natural initial emotional sting?",
+      "options": [
+        "FOMO (Fear of Missing Out), feeling excluded and wondering if they dislike you",
+        "Pure euphoria",
+        "Complete indifference"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the most emotionally mature way to handle it?",
+      "options": [
+        "Post passive-aggressive TikToks about fake friends",
+        "Breathe, remember plans happen spontaneously, and calmly ask one close friend about it later without hostility",
+        "Block everyone in the group immediately"
+      ],
+      "correct": 1
+    },
+    "explain": "Most exclusions are accidental logistics rather than malice; calm communication prevents unnecessary friendship breakups."
+  },
+  {
+    "id": "genz-003",
+    "type": "shoes",
+    "pack": "genz",
+    "topic": "doxxing",
+    "scene": "A classmate's private cringey old middle school video is leaked in a large school group chat.",
+    "emojiScene": "📹😳🚫",
+    "q1": {
+      "prompt": "How does the person in the video feel?",
+      "options": [
+        "Humiliated, betrayed, and terrified of walking into school tomorrow",
+        "Excited to go viral",
+        "Unbothered"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the high-empathy group chat move?",
+      "options": [
+        "Forward it to 10 more chats",
+        "Change the subject, say 'Bro we were all cringe in middle school, delete this,' and DM them support",
+        "Make memes out of their face"
+      ],
+      "correct": 1
+    },
+    "explain": "Shutting down public humiliation in group chats protects mental health and shows real backbone."
+  },
+  {
+    "id": "genz-004",
+    "type": "reel",
+    "pack": "genz",
+    "topic": "slangorigin",
+    "scene": "Popular Gen-Z slang words like 'slay', 'periodt', 'no cap', and 'tea' were invented on TikTok in 2020.",
+    "emojiScene": "💅🗣️📜",
+    "q1": {
+      "prompt": "Is this Real or Reel?",
+      "options": ["Real", "Reel"],
+      "correct": 1
+    },
+    "explain": "REEL! These terms originated decades ago in African American Vernacular English (AAVE) and Black queer ballroom culture before being popularized on mainstream social apps."
+  },
+  {
+    "id": "genz-005",
+    "type": "reel",
+    "pack": "genz",
+    "topic": "algorithms",
+    "scene": "Social media algorithms are designed to maximize outrage and emotional reactions because anger drives higher watch times than calm content.",
+    "emojiScene": "🤖⚡🤬",
+    "q1": {
+      "prompt": "Is this Real or Reel?",
+      "options": ["Real", "Reel"],
+      "correct": 0
+    },
+    "explain": "REAL! Studies show high-arousal negative emotions (anger, shock) generate significantly higher algorithmic engagement and comment traffic."
+  },
+  {
+    "id": "genz-006",
+    "type": "reel",
+    "pack": "genz",
+    "topic": "dopaminedetox",
+    "scene": "A 'dopamine detox' where you avoid all fun completely resets your brain's dopamine production to zero.",
+    "emojiScene": "🧠📵✨",
+    "q1": {
+      "prompt": "Is this Real or Reel?",
+      "options": ["Real", "Reel"],
+      "correct": 1
+    },
+    "explain": "REEL! Dopamine is a vital neurotransmitter your brain constantly needs to function. 'Detoxing' breaks habit loops and reduces overstimulation, but dopamine is never depleted to zero."
+  },
+  {
+    "id": "genz-007",
+    "type": "smooth",
+    "pack": "genz",
+    "topic": "rizz",
+    "scene": "Your friend asks you to define 'Unspoken Rizz'.",
+    "emojiScene": "✨😎💬",
+    "q2": {
+      "prompt": "What is the most accurate definition of 'Unspoken Rizz'?",
+      "options": [
+        "Having natural charm and charisma purely through posture, eye contact, and confidence without saying a word",
+        "Talking continuously for 20 minutes",
+        "Sending 50 memes in a row"
+      ],
+      "correct": 0
+    },
+    "explain": "'Rizz' (short for charisma) when unspoken refers to effortless body language and quiet self-assurance."
+  },
+  {
+    "id": "genz-008",
+    "type": "smooth",
+    "pack": "genz",
+    "topic": "leavingonread",
+    "scene": "You open a message from a friend, get distracted, and leave them on 'Read' for 6 hours.",
+    "emojiScene": "👁️⌛💬",
+    "q2": {
+      "prompt": "What is the smoothest way to reply when you remember?",
+      "options": [
+        "“So sorry, opened this while rushing and got sidetracked! Responding now:”",
+        "Pretend your phone fell into the ocean",
+        "Leave it forever and start a new conversation next month"
+      ],
+      "correct": 0
+    },
+    "explain": "Honest, quick communication clears up anxiety and prevents misunderstandings."
+  },
+  {
+    "id": "genz-009",
+    "type": "caption",
+    "pack": "genz",
+    "mode": "write",
+    "topic": "screentime",
+    "scene": "Your Sunday Weekly Screen Time report pops up on your phone with '9 hours and 42 minutes per day (+18%)'.",
+    "prompt": "Write the funniest caption for seeing your screen time report (max 80 chars):",
+    "explain": "Vote on the most relatable screen time caption!"
+  },
+  {
+    "id": "genz-010",
+    "type": "caption",
+    "pack": "genz",
+    "mode": "pick",
+    "topic": "brainrot",
+    "scene": "Your younger cousin walks into the living room and speaks entirely in Skibidi, Ohio, Fanum Tax, and Mewing.",
+    "emojiScene": "🗣️🤯🚽",
+    "q2": {
+      "prompt": "Pick the most accurate caption for this moment:",
+      "options": [
+        "“Bro is communicating in pure dial-up internet frequencies 💀”",
+        "“Shakespeare has been real quiet since this dropped”",
+        "“Certified academic speech”"
+      ],
+      "correct": 0
+    },
+    "explain": "The evolution of internet slang moves at the speed of light!"
+  }
+]

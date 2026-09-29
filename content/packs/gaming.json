@@ -1,0 +1,190 @@
+[
+  {
+    "id": "gaming-001",
+    "type": "shoes",
+    "pack": "gaming",
+    "topic": "clutch",
+    "scene": "Your teammate is the last one alive (1v1) in Valorant/CS2 match point and whiffs their ultimate ability.",
+    "emojiScene": "🎮🎯💀",
+    "q1": {
+      "prompt": "How does your teammate feel hearing 4 dead spectators watching them?",
+      "options": [
+        "Tremendous performance anxiety, sweaty hands, and mortified by the miss",
+        "Overjoyed and full of confidence",
+        "Asleep"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the best comms to say on voice chat?",
+      "options": [
+        "“Nice try, we go next round together!”",
+        "Scream 'Uninstall the game immediately' into the microphone",
+        "Spam ping their body with question marks"
+      ],
+      "correct": 0
+    },
+    "explain": "Saying 'NT' (Nice Try) resets team mental and prevents tilt during competitive matches."
+  },
+  {
+    "id": "gaming-002",
+    "type": "shoes",
+    "pack": "gaming",
+    "topic": "toxiclobby",
+    "scene": "A random duo partner in an online lobby starts getting flamed with toxic insults by a hostile player.",
+    "emojiScene": "🎧🤬🛡️",
+    "q1": {
+      "prompt": "How is the targeted player feeling?",
+      "options": [
+        "Isolated, uncomfortable, and stressed out while just trying to relax",
+        "Entertained and loving the noise",
+        "Completely immune"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the kindest and most effective move?",
+      "options": [
+        "Join in on the flaming to fit in",
+        "Tell the toxic player 'Mute and report, let's focus on the game,' and give calm callouts to your partner",
+        "Quit the match instantly and abandon them"
+      ],
+      "correct": 1
+    },
+    "explain": "Backing up a teammate de-escalates toxicity and creates a safe, fun gaming environment."
+  },
+  {
+    "id": "gaming-003",
+    "type": "shoes",
+    "pack": "gaming",
+    "topic": "minecraft",
+    "scene": "Your friend accidentally knocks your dog or breaks your storage chest into a lava pit in Minecraft.",
+    "emojiScene": "⛏️🐕🔥",
+    "q1": {
+      "prompt": "How is your friend feeling after realizing their clumsy mistake?",
+      "options": [
+        "Mortified, panicked, and terrified you will hate them forever",
+        "Triumphant and victorious",
+        "Bored"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the best friendship response?",
+      "options": [
+        "Blow up their entire base with TNT and ban them from the server",
+        "Laugh it off, say 'Items can be mined again, friendships can't,' and help them clean up",
+        "Never speak to them in school again"
+      ],
+      "correct": 1
+    },
+    "explain": "Pixels and loot can always be regenerated, but shared laughs over game blunders last forever."
+  },
+  {
+    "id": "gaming-004",
+    "type": "reel",
+    "pack": "gaming",
+    "topic": "gta",
+    "scene": "The first Grand Theft Auto game (1997) was originally planned as a dinosaur racing game named 'Race'n'Chase'.",
+    "emojiScene": "🚗🦖🎮",
+    "q1": {
+      "prompt": "Is this Real or Reel?",
+      "options": ["Real", "Reel"],
+      "correct": 0
+    },
+    "explain": "REAL! The game was called 'Race'n'Chase'. A glitch caused the AI police cars to aggressively ram the player, which testers loved so much that the developers rebuilt the entire game around crime!"
+  },
+  {
+    "id": "gaming-005",
+    "type": "reel",
+    "pack": "gaming",
+    "topic": "mariomustache",
+    "scene": "Mario was given a mustache purely because 8-bit pixels in 1981 were too low resolution to draw a human mouth.",
+    "emojiScene": "🍄👨🏻🔧",
+    "q1": {
+      "prompt": "Is this Real or Reel?",
+      "options": ["Real", "Reel"],
+      "correct": 0
+    },
+    "explain": "REAL! Shigeru Miyamoto gave Mario a mustache and a hat because drawing hair and mouth movements on a 16x16 pixel sprite was technically impossible."
+  },
+  {
+    "id": "gaming-006",
+    "type": "reel",
+    "pack": "gaming",
+    "topic": "esports",
+    "scene": "Professional Esports players have reaction times slower than formula 1 drivers or table tennis pros.",
+    "emojiScene": "⚡🖱️🏆",
+    "q1": {
+      "prompt": "Is this Real or Reel?",
+      "options": ["Real", "Reel"],
+      "correct": 1
+    },
+    "explain": "REEL! Top tier FPS esports pros average 140-160ms visual reaction times, matching or exceeding Olympic athletes and fighter pilots."
+  },
+  {
+    "id": "gaming-007",
+    "type": "smooth",
+    "pack": "gaming",
+    "topic": "gamingslang",
+    "scene": "Your friend in Fortnite/Valorant shouts: 'Bro is 1HP! He is literally one-shot!'",
+    "emojiScene": "🎯💥❤️",
+    "q2": {
+      "prompt": "What does this actually mean in gaming reality 90% of the time?",
+      "options": [
+        "They hit him for 14 damage and he has full shields and health",
+        "He is strictly on exactly 1.00 hitpoints",
+        "The enemy has disconnected from the server"
+      ],
+      "correct": 0
+    },
+    "explain": "The universal gamer law: 'He's one shot' almost always means 'I missed most of my shots but I want you to push!' 😂"
+  },
+  {
+    "id": "gaming-008",
+    "type": "smooth",
+    "pack": "gaming",
+    "topic": "ggwp",
+    "scene": "Your team loses 0-13 in a clean sweep match.",
+    "emojiScene": "💀🏳️💬",
+    "q2": {
+      "prompt": "What is the smoothest way to end the match in all-chat?",
+      "options": [
+        "Type 'GG WP (Good Game, Well Played)' with respect",
+        "Report all 5 opposing players for hacking",
+        "Spam 'lucky lag lobby'"
+      ],
+      "correct": 0
+    },
+    "explain": "Ending with 'GG' shows true competitive maturity even on a rough loss."
+  },
+  {
+    "id": "gaming-009",
+    "type": "caption",
+    "pack": "gaming",
+    "mode": "write",
+    "topic": "darkmode",
+    "scene": "You open Discord on a pitch-black screen at 3 AM and accidentally turn on Flashbang Light Theme.",
+    "prompt": "Write the funniest caption for being flashbanged by light mode (max 80 chars):",
+    "explain": "Vote on the best gamer caption!"
+  },
+  {
+    "id": "gaming-010",
+    "type": "caption",
+    "pack": "gaming",
+    "mode": "pick",
+    "topic": "gamerstance",
+    "scene": "You were losing 0-5, but then you lean forward, rest your elbows on your knees, and stop laughing.",
+    "emojiScene": "🪑⚡😤",
+    "q2": {
+      "prompt": "Pick the true name of this gamer phenomenon:",
+      "options": [
+        "“The Serious Gamer Lean (Tryhard Mode Activated) 🔥”",
+        "“Yoga for Gamers”",
+        "“Posture Alignment Session”"
+      ],
+      "correct": 0
+    },
+    "explain": "The gamer lean forward increases focus and signals the comeback arc has officially begun."
+  }
+]

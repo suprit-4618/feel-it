@@ -1,0 +1,190 @@
+[
+  {
+    "id": "pop-001",
+    "type": "shoes",
+    "pack": "popculture",
+    "topic": "spoilers",
+    "scene": "You watched the series finale of a massive TV show at midnight and walk into school/work the next morning with friends who haven't watched it yet.",
+    "emojiScene": "🍿🤫📺",
+    "q1": {
+      "prompt": "How do your friends feel about unsolicited spoilers?",
+      "options": [
+        "Extremely protective of their viewing experience and wanting to experience plot twists organically",
+        "Eager to know who dies in the first 5 minutes",
+        "Indifferent"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the golden rule of spoiler etiquette?",
+      "options": [
+        "Scream the ending across the cafeteria",
+        "Ask 'Has everyone finished Episode 8?' before discussing, and take deep discussions to a private chat or 1-on-1",
+        "Post the ending on everyone's group chat wall"
+      ],
+      "correct": 1
+    },
+    "explain": "Respecting someone's narrative journey allows everyone to share genuine excitement without frustration."
+  },
+  {
+    "id": "pop-002",
+    "type": "shoes",
+    "pack": "popculture",
+    "topic": "recommendations",
+    "scene": "Your friend spent 3 weeks asking you to watch their favorite anime, and when you finally watch it, you find it confusing and boring.",
+    "emojiScene": "📺👀😬",
+    "q1": {
+      "prompt": "Why was your friend so eager for you to watch it?",
+      "options": [
+        "They felt deeply moved by it and wanted to share that emotional connection with you",
+        "They wanted to waste your weekend",
+        "They were testing your patience"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the kindest way to share your honest thoughts?",
+      "options": [
+        "Tell them their taste in media is trash",
+        "Acknowledge the cool animation and say 'I see why you loved the art and themes, even though the pacing wasn't quite for me!'",
+        "Pretend you watched all 500 episodes"
+      ],
+      "correct": 1
+    },
+    "explain": "Focusing on what they appreciated while being honest about personal preference validates their enthusiasm."
+  },
+  {
+    "id": "pop-003",
+    "type": "shoes",
+    "pack": "popculture",
+    "topic": "moviechoice",
+    "scene": "Four friends are on the couch scrolling Netflix for 45 minutes trying to pick a movie until everyone falls asleep.",
+    "emojiScene": "📺🍿😴",
+    "q1": {
+      "prompt": "What psychological trap is causing this indecision?",
+      "options": [
+        "Analysis Paralysis / Choice Overload: fear of picking a bad movie ruins the momentum",
+        "Pure hatred of cinema",
+        "TV remote malfunction"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the best movie night decision rule (The 5-3-1 Rule)?",
+      "options": [
+        "One person picks 5 options, group narrows to 3, final person picks 1 within 60 seconds",
+        "Scroll for 2 more hours until bedtime",
+        "Stare at the Netflix preview trailer on loop"
+      ],
+      "correct": 0
+    },
+    "explain": "The 5-3-1 rule eliminates decision fatigue and ensures movie night actually starts!"
+  },
+  {
+    "id": "pop-004",
+    "type": "reel",
+    "pack": "popculture",
+    "topic": "starwars",
+    "scene": "In Star Wars: The Empire Strikes Back (1980), Darth Vader's famous line is: 'Luke, I am your father.'",
+    "emojiScene": "⚔️🌌🎭",
+    "q1": {
+      "prompt": "Is this Real or Reel?",
+      "options": ["Real", "Reel"],
+      "correct": 1
+    },
+    "explain": "REEL! The Mandela Effect strikes again! The actual dialogue is: 'No, I am your father' in response to Luke saying Vader killed his father."
+  },
+  {
+    "id": "pop-005",
+    "type": "reel",
+    "pack": "popculture",
+    "topic": "avengers",
+    "scene": "Robert Downey Jr. hid real snacks all over the Marvel Avengers movie sets and ate them on camera during filming.",
+    "emojiScene": "🦾🫐🎬",
+    "q1": {
+      "prompt": "Is this Real or Reel?",
+      "options": ["Real", "Reel"],
+      "correct": 0
+    },
+    "explain": "REAL! RDJ secretly hid blueberries, snacks, and apples in the laboratory set. In the scene where Tony Stark offers Captain America and Bruce Banner blueberries, that was 100% unscripted!"
+  },
+  {
+    "id": "pop-006",
+    "type": "reel",
+    "pack": "popculture",
+    "topic": "spiritedaway",
+    "scene": "Hayao Miyazaki made the legendary anime film 'Spirited Away' entirely without an initial script or screenplay.",
+    "emojiScene": "🐉🏮🎨",
+    "q1": {
+      "prompt": "Is this Real or Reel?",
+      "options": ["Real", "Reel"],
+      "correct": 0
+    },
+    "explain": "REAL! Miyazaki develops Studio Ghibli stories directly through storyboards: 'I don't have the story finished and ready when we start work on a film. The story develops when I start drawing.'"
+  },
+  {
+    "id": "pop-007",
+    "type": "smooth",
+    "pack": "popculture",
+    "topic": "gandalf",
+    "scene": "“A wizard is never late, Frodo Baggins. Nor is he early...”",
+    "emojiScene": "🧙‍♂️💍🏰",
+    "q2": {
+      "prompt": "Finish the iconic Lord of the Rings quote by Gandalf:",
+      "options": [
+        "“...He arrives precisely when he means to.”",
+        "“...He is always caught in traffic.”",
+        "“...He follows the sunset.”"
+      ],
+      "correct": 0
+    },
+    "explain": "“A wizard is never late, Frodo Baggins. Nor is he early. He arrives precisely when he means to.” — The Fellowship of the Ring (2001)."
+  },
+  {
+    "id": "pop-008",
+    "type": "smooth",
+    "pack": "popculture",
+    "topic": "oppenheimer",
+    "scene": "Christopher Nolan recreated the Trinity nuclear explosion in Oppenheimer without using any CGI graphics.",
+    "emojiScene": "💣🎞️🎥",
+    "q2": {
+      "prompt": "How did Nolan's practical effects team film the massive explosion blast?",
+      "options": [
+        "By igniting magnesium, black powder, gasoline, and aluminum paste in high-speed miniature and macro practical filming",
+        "They dropped a live atomic warhead in the desert",
+        "They used a slow-motion kitchen microwave"
+      ],
+      "correct": 0
+    },
+    "explain": "Nolan's team used real practical pyrotechnics and optical forced perspective to achieve the stunning blinding flash effect without CGI."
+  },
+  {
+    "id": "pop-009",
+    "type": "caption",
+    "pack": "popculture",
+    "mode": "write",
+    "topic": "cliffhanger",
+    "scene": "A Netflix season finale ends on a massive cliffhanger and the next season won't be released until late 2028.",
+    "prompt": "Write the funniest caption for a 3-year season cliffhanger (max 80 chars):",
+    "explain": "Vote on the best cliffhanger caption!"
+  },
+  {
+    "id": "pop-010",
+    "type": "caption",
+    "pack": "popculture",
+    "mode": "pick",
+    "topic": "animefight",
+    "scene": "Two anime characters stare at each other on a cliff for 4 consecutive episodes thinking internal monologues before throwing a single punch.",
+    "emojiScene": "⚡🥷🏔️",
+    "q2": {
+      "prompt": "Pick the most accurate caption:",
+      "options": [
+        "“Average 12-minute anime flashback during a 3-second fight 😭”",
+        "“Speed of light combat”",
+        "“Direct dialogue masterclass”"
+      ],
+      "correct": 0
+    },
+    "explain": "The internal monologues during anime battles take longer than the universe's creation!"
+  }
+]

@@ -1,0 +1,190 @@
+[
+  {
+    "id": "cars-001",
+    "type": "shoes",
+    "pack": "cars",
+    "topic": "stickshift",
+    "scene": "You are teaching your friend to drive a manual stick-shift car, and they stall the engine 6 times in a row at a green light with cars honking behind them.",
+    "emojiScene": "🚗💥🚦",
+    "q1": {
+      "prompt": "How is the driver feeling with horns blaring behind them?",
+      "options": [
+        "Sweating profusely, panicked, overwhelmed, and wanting the ground to swallow them",
+        "Completely peaceful and enjoying the car horn concert",
+        "Excited for another stall"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the best, most calming copilot move?",
+      "options": [
+        "Scream 'LET GO OF THE CLUTCH' and grab the steering wheel",
+        "Put on hazard lights, say 'Take a breath, ignore the honking, clutch in, start engine, find bite point slowly'",
+        "Jump out of the car and run"
+      ],
+      "correct": 1
+    },
+    "explain": "Putting on hazards relieves immediate external pressure so learner drivers can restart with calm focus."
+  },
+  {
+    "id": "cars-002",
+    "type": "shoes",
+    "pack": "cars",
+    "topic": "curbedwheels",
+    "scene": "Your friend borrows your beloved car and returns it with a deep scrape along the passenger side rim (curb rash).",
+    "emojiScene": "🛞💥🥺",
+    "q1": {
+      "prompt": "How does your friend feel coming over to tell you?",
+      "options": [
+        "Anxious, guilty, and dreading your reaction",
+        "Proud of their parallel parking skill",
+        "Indifferent"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the best way to handle this as car owner & friend?",
+      "options": [
+        "Slash all four of their bicycle tyres in revenge",
+        "Appreciate that they told you honestly, check repair costs together, and agree on a fair way to fix it calmly",
+        "Cut off all contact forever"
+      ],
+      "correct": 1
+    },
+    "explain": "Valuing honest communication preserves friendships while finding practical solutions for physical damage."
+  },
+  {
+    "id": "cars-003",
+    "type": "shoes",
+    "pack": "cars",
+    "topic": "carmeet",
+    "scene": "A teenager arrives at their first local car meet in a beat-up, stock 2008 Honda Civic, feeling self-conscious next to rows of twin-turbo supercars.",
+    "emojiScene": "🚗🏎️👀",
+    "q1": {
+      "prompt": "How do they feel walking through the car meet?",
+      "options": [
+        "Intimidated, worried about being mocked as a 'ricer' or poser",
+        "Ready to challenge every Ferrari to a drag race",
+        "Bored"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What does a true car enthusiast say to them?",
+      "options": [
+        "“Nice daily driver! Everyone starts somewhere, what are your future project plans for it?”",
+        "“Park around the corner where nobody has to look at that”",
+        "“Why didn't you just buy a Porsche?”"
+      ],
+      "correct": 0
+    },
+    "explain": "Car culture is about shared passion for automotive machinery, regardless of budget or horsepower."
+  },
+  {
+    "id": "cars-004",
+    "type": "reel",
+    "pack": "cars",
+    "topic": "f1acceleration",
+    "scene": "The Bugatti Chiron Pur Sport accelerates from 0 to 400 km/h (249 mph) and brakes back to a complete stop in under 42 seconds.",
+    "emojiScene": "🏎️💨⏱️",
+    "q1": {
+      "prompt": "Is this Real or Reel?",
+      "options": ["Real", "Reel"],
+      "correct": 0
+    },
+    "explain": "REAL! In 2017, Juan Pablo Montoya drove the 1,500 hp Bugatti Chiron from 0 to 400 km/h and back to 0 in just 41.96 seconds over a distance of 3.1 kilometers!"
+  },
+  {
+    "id": "cars-005",
+    "type": "reel",
+    "pack": "cars",
+    "topic": "evbattery",
+    "scene": "Electric cars (EVs) catch fire significantly more often per mile driven than gasoline/petrol internal combustion cars.",
+    "emojiScene": "🔋⚡🔥",
+    "q1": {
+      "prompt": "Is this Real or Reel?",
+      "options": ["Real", "Reel"],
+      "correct": 1
+    },
+    "explain": "REEL! Insurance and fire data (AutoinsuranceEZ & NTSB) shows gas cars experience ~1,530 fires per 100k sales, compared to only ~25 fires per 100k sales for battery electric vehicles."
+  },
+  {
+    "id": "cars-006",
+    "type": "reel",
+    "pack": "cars",
+    "topic": "lamborghini",
+    "scene": "Lamborghini started as a luxury sports car company from day one to compete with Rolls-Royce.",
+    "emojiScene": "🚜🐂🏎️",
+    "q1": {
+      "prompt": "Is this Real or Reel?",
+      "options": ["Real", "Reel"],
+      "correct": 1
+    },
+    "explain": "REEL! Ferruccio Lamborghini was a wealthy tractor manufacturer. When his personal Ferrari clutch broke, Enzo Ferrari dismissed his feedback, inspiring Lamborghini to build his own sports cars!"
+  },
+  {
+    "id": "cars-007",
+    "type": "smooth",
+    "pack": "cars",
+    "topic": "jdmculture",
+    "scene": "Someone points at a Nissan Skyline R34 and calls it 'Godzilla'.",
+    "emojiScene": "🦖🇯🇵🏎️",
+    "q2": {
+      "prompt": "Why was the Nissan GT-R nicknamed 'Godzilla'?",
+      "options": [
+        "Australian motorsport journalists nicknamed the R32 GT-R 'Godzilla' after it destroyed all Australian touring car competition in the 1990s",
+        "It was featured in the 1954 original Godzilla movie",
+        "The exhaust sound sounds like a monster roar"
+      ],
+      "correct": 0
+    },
+    "explain": "Australian magazine 'Wheels' dubbed the R32 GT-R 'Godzilla' in 1989 because it was an unstoppable 'Monster from Japan' on the track."
+  },
+  {
+    "id": "cars-008",
+    "type": "smooth",
+    "pack": "cars",
+    "topic": "oversteer",
+    "scene": "Your friend asks what the difference is between Understeer and Oversteer.",
+    "emojiScene": "🚗🔄💨",
+    "q2": {
+      "prompt": "What is the famous Walter Röhrl quote that explains it?",
+      "options": [
+        "“Understeer is when you see the tree you hit. Oversteer is when you only hear it.”",
+        "“Understeer is fast, oversteer is slow.”",
+        "“There is no difference at all.”"
+      ],
+      "correct": 0
+    },
+    "explain": "Rally legend Walter Röhrl gave this iconic explanation: Understeer slides the front wheels (heading forward into the tree), Oversteer slides the tail (hitting backwards)!"
+  },
+  {
+    "id": "cars-009",
+    "type": "caption",
+    "pack": "cars",
+    "mode": "write",
+    "topic": "fartcan",
+    "scene": "A modified 2002 Honda Civic with a 5-inch straight pipe exhaust screams past your bedroom window at 3:15 AM going 23 mph.",
+    "prompt": "Write the funniest caption for 3 AM straight pipe exhausts (max 80 chars):",
+    "explain": "Vote on the best car enthusiast caption!"
+  },
+  {
+    "id": "cars-010",
+    "type": "caption",
+    "pack": "cars",
+    "mode": "pick",
+    "topic": "carwash",
+    "scene": "You spend 4 hours detailing, polishing, and waxing your black car to mirror perfection, and 10 minutes later a single rain cloud appears directly above your driveway.",
+    "emojiScene": "🧼🚗🌧️",
+    "q2": {
+      "prompt": "Pick the most accurate caption:",
+      "options": [
+        "“Rain dance completed successfully 🌧️💀”",
+        "“The weather forecast was never an option”",
+        "“Hydrophobic test passed”"
+      ],
+      "correct": 0
+    },
+    "explain": "Washing your car is the undisputed #1 method to summon immediate precipitation anywhere on Earth."
+  }
+]

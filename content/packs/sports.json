@@ -1,0 +1,190 @@
+[
+  {
+    "id": "sports-001",
+    "type": "shoes",
+    "pack": "sports",
+    "topic": "sportsmanship",
+    "scene": "Your teammate makes a game-losing blunder in the final 10 seconds of the championship match.",
+    "emojiScene": "⚽💔🏆",
+    "q1": {
+      "prompt": "How is your teammate feeling right now?",
+      "options": [
+        "Completely devastated, guilty, and blaming themselves",
+        "Proud and excited",
+        "Totally indifferent"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the best leadership move?",
+      "options": [
+        "Yell at them on the pitch so everyone knows it was their fault",
+        "Put an arm around them, say 'We win and lose as a team,' and walk off together",
+        "Ignore them completely in the locker room"
+      ],
+      "correct": 1
+    },
+    "explain": "True sportsmanship means sharing the weight of defeat as a team rather than scapegoating an individual mistake."
+  },
+  {
+    "id": "sports-002",
+    "type": "shoes",
+    "pack": "sports",
+    "topic": "fairplay",
+    "scene": "The referee accidentally awards your team a penalty goal that you know did not cross the line.",
+    "emojiScene": "⚽👀🚩",
+    "q1": {
+      "prompt": "How does the opposing team captain feel?",
+      "options": [
+        "Robbed and intensely frustrated by an unfair call",
+        "Happy for your good luck",
+        "Completely relaxed"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the greatest fair play gesture in football history (e.g. Robbie Fowler / Bielsa)?",
+      "options": [
+        "Mock the referee after the match",
+        "Acknowledge the error to the ref or kick the resulting restart out of bounds as a fair play gesture",
+        "Celebrate excessively in front of their bench"
+      ],
+      "correct": 1
+    },
+    "explain": "Legendary sporting moments are defined by athletes who valued honesty over an unearned victory."
+  },
+  {
+    "id": "sports-003",
+    "type": "shoes",
+    "pack": "sports",
+    "topic": "injuries",
+    "scene": "A star runner collapses with severe muscle cramps 50 meters before the Olympic finish line.",
+    "emojiScene": "🏃‍♂️💥🥈",
+    "q1": {
+      "prompt": "What emotional state is the athlete experiencing?",
+      "options": [
+        "Heartbroken after years of training for this exact moment",
+        "Relaxed and ready for a break",
+        "Mildly bored"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What iconic move did Derek Redmond's father do in the 1992 Barcelona Olympics?",
+      "options": [
+        "Walked onto the track, helped his son stand, and helped him cross the finish line together",
+        "Demanded a refund from the Olympic committee",
+        "Told him to quit running forever"
+      ],
+      "correct": 0
+    },
+    "explain": "Derek Redmond finishing the race supported by his father remains one of the most emotional moments in Olympic history."
+  },
+  {
+    "id": "sports-004",
+    "type": "reel",
+    "pack": "sports",
+    "topic": "formula1",
+    "scene": "Formula 1 drivers lose up to 3 to 4 kilograms (8 pounds) of body weight in sweat during a single two-hour race.",
+    "emojiScene": "🏎️🔥💦",
+    "q1": {
+      "prompt": "Is this Real or Reel?",
+      "options": ["Real", "Reel"],
+      "correct": 0
+    },
+    "explain": "REAL! Cockpit temperatures exceed 50°C (122°F) under extreme G-forces, causing drivers to lose 3-4 kg in fluid during a Grand Prix."
+  },
+  {
+    "id": "sports-005",
+    "type": "reel",
+    "pack": "sports",
+    "topic": "basketball",
+    "scene": "Michael Jordan was cut from his high school varsity basketball team as a sophomore.",
+    "emojiScene": "🏀👟📜",
+    "q1": {
+      "prompt": "Is this Real or Reel?",
+      "options": ["Real", "Reel"],
+      "correct": 0
+    },
+    "explain": "REAL! In 1978 at Laney High, 5'10\" Jordan was placed on the JV team because the varsity team needed taller players. He used that rejection to fuel his legendary work ethic."
+  },
+  {
+    "id": "sports-006",
+    "type": "reel",
+    "pack": "sports",
+    "topic": "olympics",
+    "scene": "Olympic gold medals today are made of 100% pure solid gold.",
+    "emojiScene": "🥇✨🔍",
+    "q1": {
+      "prompt": "Is this Real or Reel?",
+      "options": ["Real", "Reel"],
+      "correct": 1
+    },
+    "explain": "REEL! Modern Olympic gold medals are at least 92.5% silver, plated with only about 6 grams of pure gold. The last solid gold medals were in 1912!"
+  },
+  {
+    "id": "sports-007",
+    "type": "smooth",
+    "pack": "sports",
+    "topic": "pressconference",
+    "scene": "A reporter aggressively asks you why your team choked during the semi-finals.",
+    "emojiScene": "🎙️😤⚡",
+    "q2": {
+      "prompt": "What is the smoothest press response?",
+      "options": [
+        "“We fought hard, gave everything, and fell short. We take full accountability and will come back stronger.”",
+        "“You know nothing about sports, leave the room.”",
+        "“It was the referees and the bad weather, not our fault at all.”"
+      ],
+      "correct": 0
+    },
+    "explain": "Taking accountability while backing your squad shows true captain composure under media pressure."
+  },
+  {
+    "id": "sports-008",
+    "type": "smooth",
+    "pack": "sports",
+    "topic": "f1tactics",
+    "scene": "Your race engineer says: 'Box box, we are switching to Plan B due to incoming rain.'",
+    "emojiScene": "🏎️📻🌧️",
+    "q2": {
+      "prompt": "What does 'Box, Box' mean in motorsport radio?",
+      "options": [
+        "Come into the pit lane immediately for a tyre change",
+        "Fight the driver behind you",
+        "Park the car and retire"
+      ],
+      "correct": 0
+    },
+    "explain": "'Box' comes from the German 'Boxenstopp' (pit stop) and is used in F1 for clear, unambiguous radio communication."
+  },
+  {
+    "id": "sports-009",
+    "type": "caption",
+    "pack": "sports",
+    "mode": "write",
+    "topic": "celebration",
+    "scene": "A footballer tries an epic celebratory knee slide and immediately faceplants into the muddy turf.",
+    "prompt": "Write the funniest caption for this celebration fail (max 80 chars):",
+    "explain": "Vote on the best caption!"
+  },
+  {
+    "id": "sports-010",
+    "type": "caption",
+    "pack": "sports",
+    "mode": "pick",
+    "topic": "curry",
+    "scene": "Steph Curry hits a 35-foot three-pointer and turns around before the ball even enters the net.",
+    "emojiScene": "🏀🎯🔥",
+    "q2": {
+      "prompt": "Pick the most iconic caption for this moment:",
+      "options": [
+        "“Night Night! 😴💤”",
+        "“I hope that went in lol”",
+        "“Calculated miss”"
+      ],
+      "correct": 0
+    },
+    "explain": "Curry's signature 'Night Night' celebration became a worldwide sporting pop-culture staple."
+  }
+]

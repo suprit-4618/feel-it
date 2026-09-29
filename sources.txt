@@ -1,0 +1,34 @@
+# Feel It — Health & Body Source Citations
+# Generated automatically on validation (All status: unchecked)
+
+## ⚠️ General Hub / Landing Page Sources (source_specific: false) [11 cards]
+shoes-015 [attraction | deep | status: unchecked | source_specific: false]: https://www.plannedparenthood.org/learn/teens/relationships
+shoes-017 [attraction | deep | status: unchecked | source_specific: false]: https://www.plannedparenthood.org/learn/teens/puberty
+shoes-018 [contraception | deep | status: unchecked | source_specific: false]: https://www.nhs.uk/contraception/
+shoes-019 [periods | core | status: unchecked | source_specific: false]: https://www.nhs.uk/conditions/periods/
+reel-010 [attraction | deep | status: unchecked | source_specific: false]: https://www.plannedparenthood.org/learn/teens/relationships
+reel-013 [attraction | deep | status: unchecked | source_specific: false]: https://www.loveisrespect.org/
+smooth-006 [contraception | deep | status: unchecked | source_specific: false]: https://www.nhs.uk/contraception/
+smooth-008 [health | deep | status: unchecked | source_specific: false]: https://www.nhs.uk/nhs-services/gps/
+cap-pick-003 [contraception | deep | status: unchecked | source_specific: false]: https://www.plannedparenthood.org/learn/birth-control
+cap-pick-004 [periods | core | status: unchecked | source_specific: false]: https://www.nhs.uk/conditions/periods/
+cap-write-003 [communication | deep | status: unchecked | source_specific: false]: https://www.plannedparenthood.org/learn/teens/relationships
+
+## ✅ Specific Article / Condition Sources (source_specific: true) [17 cards]
+shoes-001 [periods | core | status: unchecked | source_specific: true]: https://www.nhs.uk/conditions/period-pain/
+shoes-007 [beauty | core | status: unchecked | source_specific: true]: https://www.nhs.uk/conditions/acne/
+shoes-011 [periods | core | status: unchecked | source_specific: true]: https://www.acog.org/womens-health/faqs/your-first-period
+shoes-013 [contraception | deep | status: unchecked | source_specific: true]: https://www.nhs.uk/contraception/methods-of-contraception/combined-pill/
+shoes-014 [vasectomy | deep | status: unchecked | source_specific: true]: https://www.mayoclinic.org/tests-procedures/vasectomy/about/pac-20384580
+shoes-016 [health | deep | status: unchecked | source_specific: true]: https://www.acog.org/womens-health/faqs/your-first-gynecologic-visit
+reel-002 [periods | core | status: unchecked | source_specific: true]: https://www.nhs.uk/conditions/period-pain/
+reel-005 [beauty | core | status: unchecked | source_specific: true]: https://www.fda.gov/cosmetics/cosmetics-labeling/cosmetic-ingredient-names
+reel-008 [contraception | deep | status: unchecked | source_specific: true]: https://www.mayoclinic.org/healthy-lifestyle/birth-control/in-depth/birth-control-pill/art-20045136
+reel-009 [vasectomy | deep | status: unchecked | source_specific: true]: https://www.nhs.uk/contraception/methods-of-contraception/vasectomy-male-sterilisation/
+reel-011 [health | deep | status: unchecked | source_specific: true]: https://www.nhs.uk/contraception/methods-of-contraception/condoms/
+reel-012 [contraception | deep | status: unchecked | source_specific: true]: https://www.plannedparenthood.org/learn/birth-control/withdrawal-pull-out-method
+reel-014 [health | deep | status: unchecked | source_specific: true]: https://www.plannedparenthood.org/learn/stds-hiv-safer-sex/get-tested
+reel-015 [vasectomy | deep | status: unchecked | source_specific: true]: https://www.mayoclinic.org/tests-procedures/vasectomy/about/pac-20384580
+smooth-005 [communication | deep | status: unchecked | source_specific: true]: https://www.loveisrespect.org/resources/what-are-my-boundaries/
+smooth-007 [attraction | deep | status: unchecked | source_specific: true]: https://www.loveisrespect.org/resources/what-are-my-boundaries/
+smooth-009 [periods | core | status: unchecked | source_specific: true]: https://www.mayoclinic.org/diseases-conditions/menstrual-cramps/diagnosis-treatment/drc-20374944

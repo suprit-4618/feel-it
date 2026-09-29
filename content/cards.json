@@ -1,0 +1,2003 @@
+[
+  {
+    "id": "shoes-001",
+    "type": "shoes",
+    "pack": "core",
+    "topic": "periods",
+    "scene": "Meera has bad period cramps and is quietly folding over her desk in class, trying to act like everything is fine.",
+    "emojiScene": "👧🥀🎒",
+    "q1": {
+      "prompt": "How is Meera feeling right now?",
+      "options": [
+        "Just looking for attention",
+        "In genuine physical pain and feeling self-conscious",
+        "Bored and daydreaming"
+      ],
+      "correct": 1
+    },
+    "q2": {
+      "prompt": "What is the kindest, most supportive move?",
+      "options": [
+        "Make a joke to distract the whole class",
+        "Quietly ask if she needs water, a heat pack, or quiet space, and don't make a big deal",
+        "Tell her she should just tough it out"
+      ],
+      "correct": 1
+    },
+    "explain": "Period cramps are real physical pain from uterine muscle contractions. Offering quiet support like a heat pack or water helps, and severe pain is always worth seeing a doctor about.",
+    "slang": [
+      {
+        "word": "lowkey",
+        "meaning": "subtly / without drawing unnecessary attention"
+      }
+    ],
+    "source": "https://www.nhs.uk/conditions/period-pain/",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": true
+  },
+  {
+    "id": "shoes-002",
+    "type": "shoes",
+    "pack": "core",
+    "topic": "crying",
+    "scene": "Arjun started crying after failing a difficult exam. A couple of classmates laughed and told him to 'man up.' He is now hiding in the corridor.",
+    "emojiScene": "🧑😢🏫",
+    "q1": {
+      "prompt": "How does Arjun feel in this moment?",
+      "options": [
+        "Embarrassed, overwhelmed, and alone",
+        "Angry and wanting to start a fight",
+        "Completely unbothered"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the kindest move?",
+      "options": [
+        "Follow him and tease him about it",
+        "Sit with him quietly, say 'It sucks, it is okay to be upset—want to talk?'",
+        "Broadcast to the group chat that he was crying"
+      ],
+      "correct": 1
+    },
+    "explain": "Crying is a normal, healthy emotional response to stress for everyone, and many people feel calmer after letting it out. A kind friend provides safe, non-judgmental company.",
+    "slang": [
+      {
+        "word": "real one",
+        "meaning": "a genuinely loyal and supportive friend"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "shoes-003",
+    "type": "shoes",
+    "pack": "core",
+    "topic": "consent",
+    "scene": "Sam asked Jordan for a hug goodbye. Jordan took a half-step back, crossed their arms, and stayed silent.",
+    "emojiScene": "🧍🤝🙅",
+    "q1": {
+      "prompt": "How is Jordan feeling?",
+      "options": [
+        "Excited for a big hug",
+        "Uncomfortable or unready, but feeling pressured",
+        "Looking for a fight"
+      ],
+      "correct": 1
+    },
+    "q2": {
+      "prompt": "What is the respectful move for Sam?",
+      "options": [
+        "Go in for the hug anyway because silence means yes",
+        "Step back with a warm smile and say 'All good, no worries! See you tomorrow'",
+        "Say 'Come on, don't be dramatic'"
+      ],
+      "correct": 1
+    },
+    "explain": "Hesitation or silence is not consent. Respecting body language and giving space with a smile builds trust.",
+    "slang": [
+      {
+        "word": "green flag",
+        "meaning": "a positive, healthy behavior or sign"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "shoes-004",
+    "type": "shoes",
+    "pack": "core",
+    "topic": "patriarchy",
+    "scene": "Kiran loves dance and signed up for a hip-hop & contemporary class. His older cousin teased him, saying 'Dance is only for girls.'",
+    "emojiScene": "🕺🪞💬",
+    "q1": {
+      "prompt": "How does Kiran feel about his cousin's comment?",
+      "options": [
+        "Excited about dancing, but discouraged by rigid gender expectations",
+        "Totally unbothered by anyone's opinion",
+        "Guilty for doing something wrong"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the best way to back Kiran up?",
+      "options": [
+        "Tell him maybe he should pick soccer instead to fit in",
+        "Tell him 'Dance takes huge athletic skill and creativity—own it!'",
+        "Agree with the cousin to avoid awkwardness"
+      ],
+      "correct": 1
+    },
+    "explain": "Patriarchy creates rigid rules that boys must be tough and girls must be quiet, which hurts everyone. Backing people up when they follow their passions breaks down outdated stereotypes.",
+    "slang": [
+      {
+        "word": "main character energy",
+        "meaning": "living authentically with confidence without worrying about haters"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "shoes-005",
+    "type": "shoes",
+    "pack": "core",
+    "topic": "water",
+    "scene": "During sports day, Tariq forgot his water bottle and is feeling dizzy from the heat, but he feels shy asking anyone who brought extra.",
+    "emojiScene": "🏃💧☀️",
+    "q1": {
+      "prompt": "How does Tariq feel?",
+      "options": [
+        "Physically drained and reluctant to ask for help",
+        "Energetic and completely fine",
+        "Greedy"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the kindest action?",
+      "options": [
+        "Pour him clean water in a cup or guide him straight to the shaded refilling cooler",
+        "Tell him to push through the dehydration",
+        "Charge him money for a sip of water"
+      ],
+      "correct": 0
+    },
+    "explain": "Clean drinking water is an essential need. Noticing when someone is struggling in the heat and sharing access keeps everyone safe and healthy.",
+    "slang": [
+      {
+        "word": "ate",
+        "meaning": "did something exceptionally well or nailed it"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "shoes-006",
+    "type": "shoes",
+    "pack": "core",
+    "topic": "environment",
+    "scene": "Maya spent an hour picking up plastic wrappers at the park. Someone walking past threw their empty chip bag onto the grass right next to her.",
+    "emojiScene": "🌳🗑️🚯",
+    "q1": {
+      "prompt": "How does Maya feel?",
+      "options": [
+        "Disrespected and tired of people treating shared spaces like garbage bins",
+        "Amused and unconcerned",
+        "Happy to have more trash to pick up"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What's the best way to handle this?",
+      "options": [
+        "Calmly say 'Hey, the bin is right over here, let's keep the park clean for everyone'",
+        "Throw the trash right back at them aggressively",
+        "Ignore it and let the litter wash into local waterways"
+      ],
+      "correct": 0
+    },
+    "explain": "Littering harms local ecosystems and wildlife. Speaking up calmly helps protect shared public spaces without escalating conflict.",
+    "slang": [
+      {
+        "word": "red flag",
+        "meaning": "a warning sign or disrespectful behavior"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "shoes-007",
+    "type": "shoes",
+    "pack": "core",
+    "topic": "beauty",
+    "scene": "Priya has natural acne breakouts on her forehead and noticed someone secretly whispering with a friend in the mirror.",
+    "emojiScene": "🪞👀😔",
+    "q1": {
+      "prompt": "How does Priya feel?",
+      "options": [
+        "Self-conscious and judged over a completely normal skin condition",
+        "Proud of being whispered about",
+        "Totally indifferent"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the kindest move if you are with Priya?",
+      "options": [
+        "Give unsolicited skincare advice on 10 products she should buy",
+        "Change the subject naturally, compliment her outfit or laugh at a meme together",
+        "Stare at the other person and start shouting"
+      ],
+      "correct": 1
+    },
+    "explain": "Acne is a natural biological occurrence caused by hormones, genetics, and oil glands. Treating people with warmth instead of pointing out skin features helps everyone feel at ease.",
+    "slang": [
+      {
+        "word": "delulu",
+        "meaning": "delusional / believing unrealistic beauty filters"
+      }
+    ],
+    "source": "https://www.nhs.uk/conditions/acne/",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": true
+  },
+  {
+    "id": "shoes-008",
+    "type": "shoes",
+    "pack": "core",
+    "topic": "animals",
+    "scene": "A rescue dog at a friend's house is trembling and hiding behind the sofa because people are shouting loudly and trying to pull it out for a selfie.",
+    "emojiScene": "🐕🛋️📸",
+    "q1": {
+      "prompt": "How is the dog feeling?",
+      "options": [
+        "Terrified and cornered",
+        "Playful and excited for photos",
+        "Stubborn for no reason"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What's the kindest action to take?",
+      "options": [
+        "Force the dog into the light for a quick photo",
+        "Tell everyone to give the dog quiet space, step back, and let it come out on its own terms",
+        "Poke it with a stick"
+      ],
+      "correct": 1
+    },
+    "explain": "Animals feel stress and fear when crowded or cornered. Respecting an animal's body boundaries and giving quiet space shows true compassion.",
+    "slang": [
+      {
+        "word": "ick",
+        "meaning": "a sudden feeling of distaste towards cringe or disrespectful behavior"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "shoes-009",
+    "type": "shoes",
+    "pack": "core",
+    "topic": "crush",
+    "scene": "Leo worked up the courage to tell his crush he liked them. They smiled kindly and said 'I value our friendship, but I don't feel that way romantically.'",
+    "emojiScene": "💌💭💔",
+    "q1": {
+      "prompt": "How does Leo feel?",
+      "options": [
+        "Stung by rejection and vulnerable, but appreciative of clear honesty",
+        "Entitled to force a relationship",
+        "Completely emotionless"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the healthiest, most mature move for Leo?",
+      "options": [
+        "Say 'Thanks for being upfront, I appreciate your honesty,' and take a little time to process",
+        "Spam their phone demanding an essay explaining why",
+        "Trash talk them to mutual friends"
+      ],
+      "correct": 0
+    },
+    "explain": "Rejection stings, but accepting a gentle 'no' with dignity shows emotional strength. Giving yourself time to process big feelings is healthy.",
+    "slang": [
+      {
+        "word": "rizz",
+        "meaning": "natural charm and ability to handle communication smoothly"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "shoes-010",
+    "type": "shoes",
+    "pack": "core",
+    "topic": "communication",
+    "scene": "Dev accidentally spilled tea on Anya's sketchbook, smudging a drawing she spent 3 days working on.",
+    "emojiScene": "☕📖😱",
+    "q1": {
+      "prompt": "How does Anya feel?",
+      "options": [
+        "Heartbroken and shocked that her hard work was damaged",
+        "Carefree because it was just paper",
+        "Angry at the table"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is Dev's most respectful move?",
+      "options": [
+        "Say 'It's not a big deal, you can just redraw it'",
+        "Take full ownership: 'I am so sorry, I was clumsy. Let me buy you a new sketchbook or help however I can'",
+        "Blame Anya for leaving her book on the table"
+      ],
+      "correct": 1
+    },
+    "explain": "A real apology takes genuine accountability without minimizing the other person's feelings or making excuses.",
+    "slang": [
+      {
+        "word": "gaslighting",
+        "meaning": "manipulating someone into doubting their valid feelings or reality"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "shoes-011",
+    "type": "shoes",
+    "pack": "core",
+    "topic": "periods",
+    "scene": "In a study group, Aisha notices a small red stain on the back of her jeans when getting up and immediately freezes with panic.",
+    "emojiScene": "👖🔴🫣",
+    "q1": {
+      "prompt": "How is Aisha feeling?",
+      "options": [
+        "Panicked about embarrassment and unwanted attention",
+        "Proud of her outfit",
+        "Indifferent"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the kindest way a friend can assist?",
+      "options": [
+        "Point at it loudly so everyone looks",
+        "Discreetly hand her a hoodie/jacket to tie around her waist and quietly let her know",
+        "Whisper to everyone else at the table"
+      ],
+      "correct": 1
+    },
+    "explain": "Period leaks happen to almost everyone who menstruates at some point. Discreet, calm support turns a stressful moment into an act of genuine allyship.",
+    "slang": [
+      {
+        "word": "no cap",
+        "meaning": "no lie / completely genuine truth"
+      }
+    ],
+    "source": "https://www.acog.org/womens-health/faqs/your-first-period",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": true
+  },
+  {
+    "id": "shoes-012",
+    "type": "shoes",
+    "pack": "core",
+    "topic": "patriarchy",
+    "scene": "Sara spoke up with an idea in a group project, but two guys talked right over her. When she tried to finish, they called her 'bossy.'",
+    "emojiScene": "🗣️👥📋",
+    "q1": {
+      "prompt": "How does Sara feel?",
+      "options": [
+        "Dismissed, frustrated, and unfairly labeled for showing initiative",
+        "Happy to be quiet",
+        "Excited that others are leading"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the best way for a teammate to step in?",
+      "options": [
+        "Say 'Hold on, let's hear Sara finish her point—it was a solid idea'",
+        "Tell Sara to lower her tone",
+        "Stay quiet and ignore her contribution"
+      ],
+      "correct": 0
+    },
+    "explain": "Labeling assertive women as 'bossy' is a double standard from patriarchal norms. Amplifying everyone's voice ensures fair, respectful teamwork.",
+    "slang": [
+      {
+        "word": "sus",
+        "meaning": "suspicious, questionable, or unfair behavior"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "shoes-013",
+    "type": "shoes",
+    "pack": "deep",
+    "topic": "contraception",
+    "scene": "Elena has been experiencing intense mood swings and nausea since starting hormonal birth control, and her partner brushed it off as 'overreacting.'",
+    "emojiScene": "💊📉💬",
+    "q1": {
+      "prompt": "How is Elena feeling?",
+      "options": [
+        "Physically drained, frustrated, and unsupported by her partner",
+        "Completely fine and exaggerating",
+        "Excited about side effects"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the supportive move for her partner?",
+      "options": [
+        "Validate her experience, offer to attend her doctor appointment for support, and listen without judgment",
+        "Tell her all medications are the same and to stop complaining",
+        "Demand she stay on it regardless of how she feels"
+      ],
+      "correct": 0
+    },
+    "explain": "Contraceptives affect hormone balances differently for every individual. Partners should share responsibility and support consulting a healthcare provider to find the right health plan.",
+    "slang": [
+      {
+        "word": "mid",
+        "meaning": "mediocre or lacking care and quality"
+      }
+    ],
+    "source": "https://www.nhs.uk/contraception/methods-of-contraception/combined-pill/",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": true
+  },
+  {
+    "id": "shoes-014",
+    "type": "shoes",
+    "pack": "deep",
+    "topic": "vasectomy",
+    "scene": "Marcus told his friends that he and his partner decided he would get a vasectomy after having children. One friend laughed and said 'Bro, that ruins your manhood.'",
+    "emojiScene": "👨‍⚕️🏥🤝",
+    "q1": {
+      "prompt": "How does Marcus feel about his friend's comment?",
+      "options": [
+        "Annoyed by myths and lack of mature understanding around shared family planning",
+        "Embarrassed that he made a mistake",
+        "Confused about what surgery means"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the most informed and mature response?",
+      "options": [
+        "Agree with the myth and make jokes about surgery",
+        "\"A vasectomy is a routine minor procedure where semen is still produced normally without sperm, and sharing reproductive responsibility is respect to Marcus\"",
+        "Tell him medical decisions shouldn't be talked about"
+      ],
+      "correct": 1
+    },
+    "explain": "A vasectomy is a minor procedure where semen is still produced normally without sperm, though a follow-up semen test at around 12 weeks is required to confirm effectiveness. Sharing reproductive responsibility shows great partnership.",
+    "slang": [
+      {
+        "word": "green flag",
+        "meaning": "a mature, healthy, and responsible choice"
+      }
+    ],
+    "source": "https://www.mayoclinic.org/tests-procedures/vasectomy/about/pac-20384580",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": true
+  },
+  {
+    "id": "shoes-015",
+    "type": "shoes",
+    "pack": "deep",
+    "topic": "attraction",
+    "scene": "Zack has strong physical feelings and a crush on someone, but knows they agreed to remain just good friends.",
+    "emojiScene": "🧠💓🧘",
+    "q1": {
+      "prompt": "What is Zack experiencing internally?",
+      "options": [
+        "Natural physical urges that require thoughtful self-control and respect for boundaries",
+        "An obligation to force a romance",
+        "Guilt for having biological feelings"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the healthiest way for Zack to manage these urges?",
+      "options": [
+        "Pressure the friend repeatedly until they give in",
+        "Acknowledge the feelings as normal, take healthy space when needed, and channel energy into sports or creative hobbies",
+        "Act cold and hostile toward the friend"
+      ],
+      "correct": 1
+    },
+    "explain": "Experiencing physical attraction and urges is completely normal. Emotional maturity means recognizing urges without letting them override respect and consent.",
+    "slang": [
+      {
+        "word": "main character energy",
+        "meaning": "having self-control and handling situations with maturity"
+      }
+    ],
+    "source": "https://www.plannedparenthood.org/learn/teens/relationships",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": false
+  },
+  {
+    "id": "shoes-016",
+    "type": "shoes",
+    "pack": "deep",
+    "topic": "health",
+    "scene": "Rhea has been feeling persistent pelvic pain and irregular cycles. A relative told her 'Don't visit a doctor, talking about that is taboo.'",
+    "emojiScene": "🏥🥀🗣️",
+    "q1": {
+      "prompt": "How does Rhea feel?",
+      "options": [
+        "Worried about her physical health, but hindered by social stigma",
+        "Completely unconcerned",
+        "Excited to ignore her symptoms"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the kindest, most responsible advice to give Rhea?",
+      "options": [
+        "\"Your health comes first. Seeing a doctor or gynecologist is routine, confidential, and safe. I'll support you.\"",
+        "\"Listen to the relative and ignore the pain.\"",
+        "\"Search unverified home remedies online instead.\""
+      ],
+      "correct": 0
+    },
+    "explain": "Reproductive and pelvic health is standard medical care. Consulting a doctor for persistent pain ensures early care and peace of mind.",
+    "slang": [
+      {
+        "word": "real one",
+        "meaning": "someone who puts your health and well-being first"
+      }
+    ],
+    "source": "https://www.acog.org/womens-health/faqs/your-first-gynecologic-visit",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": true
+  },
+  {
+    "id": "shoes-017",
+    "type": "shoes",
+    "pack": "deep",
+    "topic": "attraction",
+    "scene": "Dan experienced a sudden rush of physical attraction and a rapid heartbeat when sitting close to a classmate during a project.",
+    "emojiScene": "💓📖🧘‍♂️",
+    "q1": {
+      "prompt": "How should Dan understand his physiological response?",
+      "options": [
+        "As a normal biological surge that requires calm focus and respectful conduct",
+        "As permission to invade personal space",
+        "As a reason to panic"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the respectful move for Dan?",
+      "options": [
+        "Maintain comfortable personal space, take a breath, and focus on the project work with respect",
+        "Make unwanted physical contact",
+        "Stare intensely to make them uncomfortable"
+      ],
+      "correct": 0
+    },
+    "explain": "Feeling biological rushes of attraction is completely natural. Practicing mindful awareness and maintaining physical respect keeps interactions safe and comfortable.",
+    "slang": [
+      {
+        "word": "rizz",
+        "meaning": "maintaining effortless composure and self-control"
+      }
+    ],
+    "source": "https://www.plannedparenthood.org/learn/teens/puberty",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": false
+  },
+  {
+    "id": "shoes-018",
+    "type": "shoes",
+    "pack": "deep",
+    "topic": "contraception",
+    "scene": "A teenager wants to know more about how condoms and birth control work, but feels awkward asking at home.",
+    "emojiScene": "🩺📚💭",
+    "q1": {
+      "prompt": "How are they feeling?",
+      "options": [
+        "Curious about safe, responsible health facts, but worried about being judged",
+        "Careless about health",
+        "Angry at science"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the best guidance?",
+      "options": [
+        "Talk to a school nurse, trusted family doctor, or consult verified medical resources like NHS/CDC",
+        "Rely on rumors from the school hallway",
+        "Ignore sexual health completely"
+      ],
+      "correct": 0
+    },
+    "explain": "Seeking accurate, medical facts about contraception is a sign of maturity. Professional healthcare providers offer private, science-based guidance.",
+    "slang": [
+      {
+        "word": "green flag",
+        "meaning": "a proactive, responsible approach to personal health"
+      }
+    ],
+    "source": "https://www.nhs.uk/contraception/",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": false
+  },
+  {
+    "id": "shoes-019",
+    "type": "shoes",
+    "pack": "core",
+    "topic": "periods",
+    "scene": "A younger sibling notices mom resting on the couch with a heat pack on her stomach and asks why she looks tired.",
+    "emojiScene": "🛋️☕👵👧",
+    "q1": {
+      "prompt": "What is happening in this family moment?",
+      "options": [
+        "Mom has normal period cramps and needs a little quiet rest and comfort",
+        "Mom is angry at everyone",
+        "Nothing at all"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the kindest way to explain it to the younger sibling?",
+      "options": [
+        "\"Mom has period cramps today. Moms, sisters, and friends all get periods and it's totally normal. Let's make her tea!\"",
+        "\"Don't talk about that, it's gross.\"",
+        "\"Tell mom she is just being lazy.\""
+      ],
+      "correct": 0
+    },
+    "explain": "Moms, sisters, and friends all get periods. Normalizing menstrual health as a standard part of family life builds empathy and removes unnecessary awkwardness.",
+    "slang": [
+      {
+        "word": "no cap",
+        "meaning": "pure truth without any shame"
+      }
+    ],
+    "source": "https://www.nhs.uk/conditions/periods/",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": false
+  },
+  {
+    "id": "shoes-020",
+    "type": "shoes",
+    "pack": "core",
+    "topic": "consent",
+    "scene": "At 9 PM, Jamie says 'I need to head home now, my curfew is coming up.' Two friends block the door playfully and say 'Stay, don't be boring!'",
+    "emojiScene": "🚪⏰🚶",
+    "q1": {
+      "prompt": "How is Jamie feeling?",
+      "options": [
+        "Trapped and stressed about missing curfew or getting in trouble",
+        "Excited to party all night",
+        "Indifferent"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the respectful move for the friends?",
+      "options": [
+        "Step aside immediately: 'All good Jamie, get home safe! Catch you tomorrow'",
+        "Hide Jamie's bag so they can't leave",
+        "Make fun of them for having a curfew"
+      ],
+      "correct": 0
+    },
+    "explain": "Consent applies to leaving as well as participating. Letting friends leave when they need to without guilt shows genuine respect.",
+    "slang": [
+      {
+        "word": "green flag",
+        "meaning": "respecting boundaries cleanly"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "shoes-021",
+    "type": "shoes",
+    "pack": "core",
+    "topic": "crying",
+    "scene": "A dad gets teary-eyed when dropping his child off at their first day of university. A bystander smirks and says 'Dads shouldn't get emotional.'",
+    "emojiScene": "🚗📦👨‍👦😢",
+    "q1": {
+      "prompt": "How is the dad feeling?",
+      "options": [
+        "Overwhelmed with love, pride, and bittersweet emotion",
+        "Weak and incapable",
+        "Furious"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the kindest perspective to have?",
+      "options": [
+        "Tease the dad for crying",
+        "Recognize that big life milestones bring deep emotions, and expressing love through tears is beautiful",
+        "Tell him to hide in the car"
+      ],
+      "correct": 1
+    },
+    "explain": "Crying is okay for everyone, including parents and men. Expressing deep emotions during meaningful life moments is a sign of love, not weakness.",
+    "slang": [
+      {
+        "word": "real one",
+        "meaning": "someone who is unafraid to show authentic love"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "shoes-022",
+    "type": "shoes",
+    "pack": "core",
+    "topic": "water",
+    "scene": "In a shared dormitory bathroom, someone leaves the tap running at full pressure while texting on their phone for 10 minutes.",
+    "emojiScene": "🚰📱⏱️",
+    "q1": {
+      "prompt": "What is the impact of leaving the tap running?",
+      "options": [
+        "Wasting gallons of treated water and energy unnecessarily",
+        "Nothing, water is infinite and free",
+        "Improving the plumbing"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the kind, constructive move?",
+      "options": [
+        "Politely tap the faucet shut or say 'Hey, mind if we turn off the tap while texting to save water?'",
+        "Scream and cause a huge scene",
+        "Ignore it and let it run for hours"
+      ],
+      "correct": 0
+    },
+    "explain": "Clean tap water is not free—it takes electricity, chemical filtration, and pumping infrastructure to deliver. Turning off taps when not in use protects community water supplies.",
+    "slang": [
+      {
+        "word": "sus",
+        "meaning": "careless or wasteful behavior"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "shoes-023",
+    "type": "shoes",
+    "pack": "core",
+    "topic": "animals",
+    "scene": "A cat is flicking its tail rapidly, ears pinned back, while someone tries to pick it up and squeeze it for a video.",
+    "emojiScene": "🐱📱😾",
+    "q1": {
+      "prompt": "What is the cat's body language signaling?",
+      "options": [
+        "Stress, irritation, and a clear request for personal space",
+        "Extreme happiness and affection",
+        "Wanting to play rough"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What should the person do?",
+      "options": [
+        "Gently put the cat down and let it walk away to rest",
+        "Hold it tighter so it can't escape",
+        "Blow air in its face"
+      ],
+      "correct": 0
+    },
+    "explain": "Animals communicate boundaries through body language like tail flicking and pinned ears. Listening to pet signals prevents stress and scratches.",
+    "slang": [
+      {
+        "word": "green flag",
+        "meaning": "respecting animal consent and boundaries"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "shoes-024",
+    "type": "shoes",
+    "pack": "core",
+    "topic": "animals",
+    "scene": "A teenager finds a stunned songbird on the sidewalk that flew into a glass window.",
+    "emojiScene": "🪟🐦🤕",
+    "q1": {
+      "prompt": "How is the bird feeling?",
+      "options": [
+        "Disoriented, vulnerable to predators, and injured",
+        "Playing a game",
+        "Looking for human food"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the most compassionate action?",
+      "options": [
+        "Place it gently in a ventilated cardboard box in a quiet, dark spot and call a local wildlife rescue",
+        "Try to feed it bread and milk forcefully",
+        "Throw it in the air to make it fly"
+      ],
+      "correct": 0
+    },
+    "explain": "Injured wildlife needs quiet, dark, stress-free environments to recover from shock. Contacting wildlife rescue professionals gives animals the best chance of survival.",
+    "slang": [
+      {
+        "word": "real one",
+        "meaning": "someone who acts with genuine care for vulnerable creatures"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "reel-001",
+    "type": "reel",
+    "pack": "core",
+    "topic": "crying",
+    "scene": "Influencer Reel: 'Real alphas never shed a single tear. If you cry, your brain loses authority.'",
+    "emojiScene": "📱🦁❌",
+    "q1": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real (Fact)",
+        "Reel (Myth)"
+      ],
+      "correct": 1
+    },
+    "q2": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real",
+        "Reel"
+      ],
+      "correct": 1
+    },
+    "explain": "Crying is a normal, healthy emotional response to stress for everyone, and many people feel calmer after letting tears out. Bottling emotions up increases mental strain.",
+    "slang": [
+      {
+        "word": "delulu",
+        "meaning": "completely detached from factual reality"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "reel-002",
+    "type": "reel",
+    "pack": "core",
+    "topic": "periods",
+    "scene": "Viral Post: 'Period cramps are just a bad mood. Drink green tea and smile through it.'",
+    "emojiScene": "🍵🤦‍♀️⚡",
+    "q1": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real (Fact)",
+        "Reel (Myth)"
+      ],
+      "correct": 1
+    },
+    "q2": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real",
+        "Reel"
+      ],
+      "correct": 1
+    },
+    "explain": "Period cramps are real physical contractions of the uterine muscle wall. Supportive actions like heat packs, water, and rest help, and severe pain is always worth seeing a doctor about.",
+    "slang": [
+      {
+        "word": "mid",
+        "meaning": "low quality advice with no scientific basis"
+      }
+    ],
+    "source": "https://www.nhs.uk/conditions/period-pain/",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": true
+  },
+  {
+    "id": "reel-003",
+    "type": "reel",
+    "pack": "core",
+    "topic": "consent",
+    "scene": "Dating Advice Video: 'Keep asking until she says yes, that's persistence. If they say no 3 times, keep messaging!'",
+    "emojiScene": "📲⏰🚫",
+    "q1": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real (Fact)",
+        "Reel (Myth)"
+      ],
+      "correct": 1
+    },
+    "q2": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real",
+        "Reel"
+      ],
+      "correct": 1
+    },
+    "explain": "Repeatedly asking after someone says no is pressure, not persistence. Consent must be freely and enthusiastically given, and respecting boundaries is true confidence.",
+    "slang": [
+      {
+        "word": "red flag",
+        "meaning": "a clear warning sign of boundary violations"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "reel-004",
+    "type": "reel",
+    "pack": "core",
+    "topic": "water",
+    "scene": "Social Media Claim: 'Water is free and endless, so leaving taps running at full blast doesn't cost anything or impact reservoirs.'",
+    "emojiScene": "🚰🌊📉",
+    "q1": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real (Fact)",
+        "Reel (Myth)"
+      ],
+      "correct": 1
+    },
+    "q2": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real",
+        "Reel"
+      ],
+      "correct": 1
+    },
+    "explain": "Water is not free—cleaning, filtering, and pumping tap water takes immense energy and municipal resources. Conserving water protects local watersheds.",
+    "slang": [
+      {
+        "word": "no cap",
+        "meaning": "factual truth without exaggeration"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "reel-005",
+    "type": "reel",
+    "pack": "core",
+    "topic": "beauty",
+    "scene": "Viral Skincare Video: 'If a product label lists long scientific names, it means it contains dangerous toxic chemicals!'",
+    "emojiScene": "🧴🧪🔬",
+    "q1": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real (Fact)",
+        "Reel (Myth)"
+      ],
+      "correct": 1
+    },
+    "q2": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real",
+        "Reel"
+      ],
+      "correct": 1
+    },
+    "explain": "Cosmetic labeling rules require ingredients to be listed by standardized scientific, chemical, or botanical names (such as INCI nomenclature) for consistency and accuracy.",
+    "slang": [
+      {
+        "word": "sus",
+        "meaning": "suspicious and misleading marketing tactic"
+      }
+    ],
+    "source": "https://www.fda.gov/cosmetics/cosmetics-labeling/cosmetic-ingredient-names",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": true
+  },
+  {
+    "id": "reel-006",
+    "type": "reel",
+    "pack": "core",
+    "topic": "animals",
+    "scene": "Pet Trend Video: 'Feeding dogs cooked leftover bones and chocolate treats gives them calcium and quick energy.'",
+    "emojiScene": "🐶🍫⚠️",
+    "q1": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real (Fact)",
+        "Reel (Myth)"
+      ],
+      "correct": 1
+    },
+    "q2": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real",
+        "Reel"
+      ],
+      "correct": 1
+    },
+    "explain": "Chocolate contains theobromine which is toxic to dogs, and cooked bones splinter dangerously and can puncture digestive tracts. Always stick to vet-approved diets.",
+    "slang": [
+      {
+        "word": "ick",
+        "meaning": "an alarming and unsafe pet trend"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "reel-007",
+    "type": "reel",
+    "pack": "core",
+    "topic": "patriarchy",
+    "scene": "Meme: 'Patriarchy is just an imaginary internet buzzword; rules about masculinity never caused anyone stress.'",
+    "emojiScene": "👔📜🧠",
+    "q1": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real (Fact)",
+        "Reel (Myth)"
+      ],
+      "correct": 1
+    },
+    "q2": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real",
+        "Reel"
+      ],
+      "correct": 1
+    },
+    "explain": "Patriarchy means rules that say boys must be tough and girls must be quiet, which hurts everyone by discouraging emotional honesty and equality.",
+    "slang": [
+      {
+        "word": "gaslighting",
+        "meaning": "denying real social pressures and lived experiences"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "reel-008",
+    "type": "reel",
+    "pack": "deep",
+    "topic": "contraception",
+    "scene": "TikTok Clip: 'Birth control pills cause 100% permanent infertility after 6 months of use.'",
+    "emojiScene": "💊📱❌",
+    "q1": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real (Fact)",
+        "Reel (Myth)"
+      ],
+      "correct": 1
+    },
+    "q2": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real",
+        "Reel"
+      ],
+      "correct": 1
+    },
+    "explain": "Medical research confirms that fertility typically returns quickly after stopping birth control pills. Health decisions are worth talking to a doctor about.",
+    "slang": [
+      {
+        "word": "delulu",
+        "meaning": "spreading unfounded medical fear-mongering"
+      }
+    ],
+    "source": "https://www.mayoclinic.org/healthy-lifestyle/birth-control/in-depth/birth-control-pill/art-20045136",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": true
+  },
+  {
+    "id": "reel-009",
+    "type": "reel",
+    "pack": "deep",
+    "topic": "vasectomy",
+    "scene": "Forum Post: 'A vasectomy lowers testosterone, changes your voice, and stops your body from producing semen.'",
+    "emojiScene": "🩺📉🙅‍♂️",
+    "q1": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real (Fact)",
+        "Reel (Myth)"
+      ],
+      "correct": 1
+    },
+    "q2": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real",
+        "Reel"
+      ],
+      "correct": 1
+    },
+    "explain": "Semen fluid is still produced normally by the prostate and seminal vesicles, but it contains no sperm. A follow-up semen test around 12 weeks is required before it is considered effective.",
+    "slang": [
+      {
+        "word": "no cap",
+        "meaning": "verified clinical truth"
+      }
+    ],
+    "source": "https://www.nhs.uk/contraception/methods-of-contraception/vasectomy-male-sterilisation/",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": true
+  },
+  {
+    "id": "reel-010",
+    "type": "reel",
+    "pack": "deep",
+    "topic": "attraction",
+    "scene": "Podcast Clip: 'People cannot experience physical attraction without acting on it instantly; biology gives you zero choice.'",
+    "emojiScene": "🎙️🧠🧬",
+    "q1": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real (Fact)",
+        "Reel (Myth)"
+      ],
+      "correct": 1
+    },
+    "q2": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real",
+        "Reel"
+      ],
+      "correct": 1
+    },
+    "explain": "Human brains give us conscious self-control over our actions. We are fully capable of recognizing attraction while upholding respect, patience, and consent.",
+    "slang": [
+      {
+        "word": "rizz",
+        "meaning": "acting with genuine self-control and emotional intelligence"
+      }
+    ],
+    "source": "https://www.plannedparenthood.org/learn/teens/relationships",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": false
+  },
+  {
+    "id": "reel-011",
+    "type": "reel",
+    "pack": "deep",
+    "topic": "health",
+    "scene": "Health Infographic: 'Condoms greatly reduce the risk of unintended pregnancy and most STIs, though they do not 100% eliminate risk for skin-to-skin infections.'",
+    "emojiScene": "🛡️🩺✅",
+    "q1": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real (Fact)",
+        "Reel (Myth)"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real",
+        "Reel"
+      ],
+      "correct": 0
+    },
+    "explain": "This is Real. Condoms greatly reduce the risk of STIs and pregnancy, though they offer less protection against skin-to-skin infections like HPV or herpes. Using reliable protection is key.",
+    "slang": [
+      {
+        "word": "green flag",
+        "meaning": "essential health safety fact"
+      }
+    ],
+    "source": "https://www.nhs.uk/contraception/methods-of-contraception/condoms/",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": true
+  },
+  {
+    "id": "reel-012",
+    "type": "reel",
+    "pack": "deep",
+    "topic": "contraception",
+    "scene": "Viral Thread: 'The withdrawal method is just as effective as prescribed birth control and condoms.'",
+    "emojiScene": "⚠️📉💬",
+    "q1": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real (Fact)",
+        "Reel (Myth)"
+      ],
+      "correct": 1
+    },
+    "q2": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real",
+        "Reel"
+      ],
+      "correct": 1
+    },
+    "explain": "Withdrawal has a high failure rate (~22% in typical use) and offers zero STI protection. Prescribed methods and condoms are far more reliable.",
+    "slang": [
+      {
+        "word": "red flag",
+        "meaning": "a risky health misconception"
+      }
+    ],
+    "source": "https://www.plannedparenthood.org/learn/birth-control/withdrawal-pull-out-method",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": true
+  },
+  {
+    "id": "reel-013",
+    "type": "reel",
+    "pack": "deep",
+    "topic": "attraction",
+    "scene": "Social Media Claim: 'If you like someone, you should track their location and show up everywhere they go unannounced to prove love.'",
+    "emojiScene": "📍👀🚫",
+    "q1": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real (Fact)",
+        "Reel (Myth)"
+      ],
+      "correct": 1
+    },
+    "q2": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real",
+        "Reel"
+      ],
+      "correct": 1
+    },
+    "explain": "Tracking someone or showing up uninvited violates privacy and safety boundaries. Healthy connections grow through mutual invitations and consent.",
+    "slang": [
+      {
+        "word": "red flag",
+        "meaning": "a severe stalking behavior and boundary violation"
+      }
+    ],
+    "source": "https://www.loveisrespect.org/",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": false
+  },
+  {
+    "id": "reel-014",
+    "type": "reel",
+    "pack": "deep",
+    "topic": "health",
+    "scene": "Influencer Post: 'Regular STI screening is only needed if you have severe symptoms; otherwise you are definitely clear.'",
+    "emojiScene": "🩺📉⚠️",
+    "q1": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real (Fact)",
+        "Reel (Myth)"
+      ],
+      "correct": 1
+    },
+    "q2": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real",
+        "Reel"
+      ],
+      "correct": 1
+    },
+    "explain": "Many common STIs show no visible symptoms initially. Routine screening with a healthcare professional is standard and protects long-term health.",
+    "slang": [
+      {
+        "word": "sus",
+        "meaning": "unreliable and medically inaccurate advice"
+      }
+    ],
+    "source": "https://www.plannedparenthood.org/learn/stds-hiv-safer-sex/get-tested",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": true
+  },
+  {
+    "id": "reel-015",
+    "type": "reel",
+    "pack": "deep",
+    "topic": "vasectomy",
+    "scene": "Post: 'A vasectomy is a major surgery requiring a week in the hospital and permanent castration.'",
+    "emojiScene": "🏥✂️❌",
+    "q1": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real (Fact)",
+        "Reel (Myth)"
+      ],
+      "correct": 1
+    },
+    "q2": {
+      "prompt": "Is this claim Real or Reel?",
+      "options": [
+        "Real",
+        "Reel"
+      ],
+      "correct": 1
+    },
+    "explain": "A vasectomy is a quick 15-to-30 minute outpatient procedure done under local anesthesia. It only disconnects the tubes carrying sperm, leaving everything else intact.",
+    "slang": [
+      {
+        "word": "delulu",
+        "meaning": "spreading completely false surgical myths"
+      }
+    ],
+    "source": "https://www.mayoclinic.org/tests-procedures/vasectomy/about/pac-20384580",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": true
+  },
+  {
+    "id": "smooth-001",
+    "type": "smooth",
+    "pack": "core",
+    "topic": "communication",
+    "scene": "You want to start a conversation with someone you find interesting in your art or music class.",
+    "emojiScene": "🎨🎧💬",
+    "q1": {
+      "prompt": "Which line is confident, friendly, and respectful?",
+      "options": [
+        "\"You should smile more, you look way too serious.\"",
+        "\"Hey! I really like your playlist/art. What are you listening to lately?\"",
+        "\"Why don't you talk to people more? Are you shy?\""
+      ],
+      "correct": 1
+    },
+    "q2": {
+      "prompt": "Which line is confident, friendly, and respectful?",
+      "options": [
+        "\"You should smile more, you look way too serious.\"",
+        "\"Hey! I really like your playlist/art. What are you listening to lately?\"",
+        "\"Why don't you talk to people more? Are you shy?\""
+      ],
+      "correct": 1
+    },
+    "explain": "Starting chats around shared interests or positive creative work gives people a comfortable, pressure-free way to connect.",
+    "slang": [
+      {
+        "word": "rizz",
+        "meaning": "smooth, genuine charisma without being pushy"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "smooth-002",
+    "type": "smooth",
+    "pack": "core",
+    "topic": "consent",
+    "scene": "Your friend says no to a risky dare during a hangout with classmates.",
+    "emojiScene": "🙅‍♂️⚡🤝",
+    "q1": {
+      "prompt": "What is the best, most supportive line to back your friend up?",
+      "options": [
+        "\"Come on, don't ruin the fun!\"",
+        "\"All good, your call. Let's do something else!\"",
+        "\"Just do it quickly so we can see what happens.\""
+      ],
+      "correct": 1
+    },
+    "q2": {
+      "prompt": "What is the best, most supportive line to back your friend up?",
+      "options": [
+        "\"Come on, don't ruin the fun!\"",
+        "\"All good, your call. Let's do something else!\"",
+        "\"Just do it quickly so we can see what happens.\""
+      ],
+      "correct": 1
+    },
+    "explain": "Backing a friend's decision with 'All good, your call' reinforces safety and protects against peer pressure.",
+    "slang": [
+      {
+        "word": "real one",
+        "meaning": "a true friend who prioritizes your comfort over dares"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "smooth-003",
+    "type": "smooth",
+    "pack": "core",
+    "topic": "crush",
+    "scene": "You asked someone out for boba and they replied: 'Thanks for asking, but I just want to stay friends.'",
+    "emojiScene": "🧋💌🤝",
+    "q1": {
+      "prompt": "Which response is smooth, secure, and respectful?",
+      "options": [
+        "\"Totally understand! Thanks for letting me know upfront. See you in class!\"",
+        "\"Whatever, I was just asking as a joke anyway.\"",
+        "\"Give me three reasons what is wrong with me.\""
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "Which response is smooth, secure, and respectful?",
+      "options": [
+        "\"Totally understand! Thanks for letting me know upfront. See you in class!\"",
+        "\"Whatever, I was just asking as a joke anyway.\"",
+        "\"Give me three reasons what is wrong with me.\""
+      ],
+      "correct": 0
+    },
+    "explain": "Accepting rejection with grace shows high self-worth and ensures nobody feels uncomfortable for being honest.",
+    "slang": [
+      {
+        "word": "ate",
+        "meaning": "handled the situation flawlessly"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "smooth-004",
+    "type": "smooth",
+    "pack": "core",
+    "topic": "crying",
+    "scene": "Your close friend is tearing up in the library after a difficult family conversation.",
+    "emojiScene": "📚😢🫂",
+    "q1": {
+      "prompt": "What is the warmest, most supportive line to say?",
+      "options": [
+        "\"Stop crying before people stare.\"",
+        "\"I've got you. Take all the time you need, do you want water or some fresh air?\"",
+        "\"Cheer up, others have it worse.\""
+      ],
+      "correct": 1
+    },
+    "q2": {
+      "prompt": "What is the warmest, most supportive line to say?",
+      "options": [
+        "\"Stop crying before people stare.\"",
+        "\"I've got you. Take all the time you need, do you want water or some fresh air?\"",
+        "\"Cheer up, others have it worse.\""
+      ],
+      "correct": 1
+    },
+    "explain": "Validating pain without rushing someone to 'fix' their sadness provides emotional safety.",
+    "slang": [
+      {
+        "word": "lowkey",
+        "meaning": "gently and calmly supportive"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "smooth-005",
+    "type": "smooth",
+    "pack": "deep",
+    "topic": "communication",
+    "scene": "You and your dating partner want to talk about physical boundaries and pacing.",
+    "emojiScene": "🛋️💬🤝",
+    "q1": {
+      "prompt": "Which line opens a healthy, honest conversation without pressure?",
+      "options": [
+        "\"If you really liked me, we wouldn't have to talk about boundaries.\"",
+        "\"I really care about you and want us both to feel 100% comfortable. Can we talk about what pace feels right for us?\"",
+        "\"Let's just see what happens and not overthink it.\""
+      ],
+      "correct": 1
+    },
+    "q2": {
+      "prompt": "Which line opens a healthy, honest conversation without pressure?",
+      "options": [
+        "\"If you really liked me, we wouldn't have to talk about boundaries.\"",
+        "\"I really care about you and want us both to feel 100% comfortable. Can we talk about what pace feels right for us?\"",
+        "\"Let's just see what happens and not overthink it.\""
+      ],
+      "correct": 1
+    },
+    "explain": "Proactively discussing boundaries with care and mutual respect is the foundation of every healthy relationship.",
+    "slang": [
+      {
+        "word": "green flag",
+        "meaning": "a sign of genuine respect and emotional maturity"
+      }
+    ],
+    "source": "https://www.loveisrespect.org/resources/what-are-my-boundaries/",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": true
+  },
+  {
+    "id": "smooth-006",
+    "type": "smooth",
+    "pack": "deep",
+    "topic": "contraception",
+    "scene": "A couple is discussing sexual health and deciding which protection methods to use.",
+    "emojiScene": "🩺🗣️🛡️",
+    "q1": {
+      "prompt": "Which line reflects shared reproductive responsibility?",
+      "options": [
+        "\"That's strictly your job to handle.\"",
+        "\"Protection and sexual health are shared 50/50. Let's make sure we use reliable methods and talk to a doctor together if needed.\"",
+        "\"We don't need protection if we like each other.\""
+      ],
+      "correct": 1
+    },
+    "q2": {
+      "prompt": "Which line reflects shared reproductive responsibility?",
+      "options": [
+        "\"That's strictly your job to handle.\"",
+        "\"Protection and sexual health are shared 50/50. Let's make sure we use reliable methods and talk to a doctor together if needed.\"",
+        "\"We don't need protection if we like each other.\""
+      ],
+      "correct": 1
+    },
+    "explain": "Shared reproductive responsibility ensures both partners protect each other's physical well-being without shifting the burden onto one person.",
+    "slang": [
+      {
+        "word": "no cap",
+        "meaning": "complete truth"
+      }
+    ],
+    "source": "https://www.nhs.uk/contraception/",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": false
+  },
+  {
+    "id": "smooth-007",
+    "type": "smooth",
+    "pack": "deep",
+    "topic": "attraction",
+    "scene": "Someone you are on a date with moves in to kiss you, but you want to take things slower.",
+    "emojiScene": "🚶‍♀️🚶‍♂️🌙",
+    "q1": {
+      "prompt": "Which response communicates your boundary clearly and warmly?",
+      "options": [
+        "\"I'm having a great time getting to know you, but I want to take things slow physically. Thanks for respecting that.\"",
+        "Push them away aggressively without speaking.",
+        "Give in to avoid making things awkward."
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "Which response communicates your boundary clearly and warmly?",
+      "options": [
+        "\"I'm having a great time getting to know you, but I want to take things slow physically. Thanks for respecting that.\"",
+        "Push them away aggressively without speaking.",
+        "Give in to avoid making things awkward."
+      ],
+      "correct": 0
+    },
+    "explain": "Clear, honest communication about personal pacing establishes healthy mutual respect from the start.",
+    "slang": [
+      {
+        "word": "main character energy",
+        "meaning": "honoring your boundaries without apologizing for them"
+      }
+    ],
+    "source": "https://www.loveisrespect.org/resources/what-are-my-boundaries/",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": true
+  },
+  {
+    "id": "smooth-008",
+    "type": "smooth",
+    "pack": "deep",
+    "topic": "health",
+    "scene": "Your friend is nervous about visiting a healthcare provider for a routine reproductive or general checkup.",
+    "emojiScene": "🏥🤝🩺",
+    "q1": {
+      "prompt": "What is the most supportive thing to tell them?",
+      "options": [
+        "\"Doctors do routine checkups every day and keep everything confidential. I can wait in the lobby with you if you'd like!\"",
+        "\"Why go to a doctor? Just search TikTok.\"",
+        "\"That's weird, keep it to yourself.\""
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the most supportive thing to tell them?",
+      "options": [
+        "\"Doctors do routine checkups every day and keep everything confidential. I can wait in the lobby with you if you'd like!\"",
+        "\"Why go to a doctor? Just search TikTok.\"",
+        "\"That's weird, keep it to yourself.\""
+      ],
+      "correct": 0
+    },
+    "explain": "Normalizing healthcare visits and offering accompaniment reduces medical anxiety and promotes proactive well-being.",
+    "slang": [
+      {
+        "word": "real one",
+        "meaning": "a genuinely supportive friend"
+      }
+    ],
+    "source": "https://www.nhs.uk/nhs-services/gps/",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": false
+  },
+  {
+    "id": "smooth-009",
+    "type": "smooth",
+    "pack": "core",
+    "topic": "periods",
+    "scene": "Your friend is having bad menstrual cramps during study hall.",
+    "emojiScene": "📚🥀🍵",
+    "q1": {
+      "prompt": "Which line is practical, supportive, and kind?",
+      "options": [
+        "\"Hey, I have a heat pack and some water if you need it. Want to rest your eyes for 10 minutes?\"",
+        "\"Why are you making faces?\"",
+        "\"Just ignore it and do your homework.\""
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "Which line is practical, supportive, and kind?",
+      "options": [
+        "\"Hey, I have a heat pack and some water if you need it. Want to rest your eyes for 10 minutes?\"",
+        "\"Why are you making faces?\"",
+        "\"Just ignore it and do your homework.\""
+      ],
+      "correct": 0
+    },
+    "explain": "Simple supportive actions like offering a heat pack, water, or quiet company help people manage cramp discomfort respectfully.",
+    "slang": [
+      {
+        "word": "green flag",
+        "meaning": "considerate and caring behavior"
+      }
+    ],
+    "source": "https://www.mayoclinic.org/diseases-conditions/menstrual-cramps/diagnosis-treatment/drc-20374944",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": true
+  },
+  {
+    "id": "smooth-010",
+    "type": "smooth",
+    "pack": "core",
+    "topic": "consent",
+    "scene": "You are walking with someone you like and want to hold hands.",
+    "emojiScene": "🚶‍♀️🚶‍♂️🤝✨",
+    "q1": {
+      "prompt": "What is the smoothest, most respectful way to ask?",
+      "options": [
+        "\"Hey, can I hold your hand?\"",
+        "Grab their hand suddenly without looking.",
+        "Say 'If you don't hold my hand you don't like me.'"
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the smoothest, most respectful way to ask?",
+      "options": [
+        "\"Hey, can I hold your hand?\"",
+        "Grab their hand suddenly without looking.",
+        "Say 'If you don't hold my hand you don't like me.'"
+      ],
+      "correct": 0
+    },
+    "explain": "Asking simply and warmly for consent is confident, charming, and makes the other person feel safe and respected.",
+    "slang": [
+      {
+        "word": "rizz",
+        "meaning": "smooth, respectful charm"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "smooth-011",
+    "type": "smooth",
+    "pack": "core",
+    "topic": "animals",
+    "scene": "You visit a friend's house and their cat is sitting on a chair looking cautious.",
+    "emojiScene": "🏠🐱👀",
+    "q1": {
+      "prompt": "What is the best way to interact with a shy pet?",
+      "options": [
+        "\"Hey, do they like being petted or do they prefer their space?\"",
+        "Pick the cat up immediately and squeeze it.",
+        "Chase it under the bed."
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "What is the best way to interact with a shy pet?",
+      "options": [
+        "\"Hey, do they like being petted or do they prefer their space?\"",
+        "Pick the cat up immediately and squeeze it.",
+        "Chase it under the bed."
+      ],
+      "correct": 0
+    },
+    "explain": "Asking the owner about an animal's preferences and letting the pet approach first shows great respect for animal boundaries.",
+    "slang": [
+      {
+        "word": "green flag",
+        "meaning": "respectful and patient behavior"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "cap-pick-001",
+    "type": "caption",
+    "mode": "pick",
+    "pack": "core",
+    "topic": "environment",
+    "scene": "Someone walking along the beach tossing plastic bottles onto the sand near nesting birds.",
+    "emojiScene": "🧍🗑️🏖️🐦",
+    "q1": {
+      "prompt": "Which Gen Z caption hits with maximum empathy & wit?",
+      "options": [
+        "\"Main character energy? Nah, the beach is not your bin bestie 💀\"",
+        "\"Littering is cool actually!\"",
+        "\"Birds love plastic snacks.\""
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "Which Gen Z caption hits with maximum empathy & wit?",
+      "options": [
+        "\"Main character energy? Nah, the beach is not your bin bestie 💀\"",
+        "\"Littering is cool actually!\"",
+        "\"Birds love plastic snacks.\""
+      ],
+      "correct": 0
+    },
+    "explain": "Humor combined with a clear message about environmental responsibility encourages people to keep ecosystems clean.",
+    "slang": [
+      {
+        "word": "main character energy",
+        "meaning": "acting self-absorbed without awareness of surroundings"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "cap-pick-002",
+    "type": "caption",
+    "mode": "pick",
+    "pack": "core",
+    "topic": "crying",
+    "scene": "A guy crying after watching the ending of an emotional movie while his friend hands him a tissue box and a bowl of popcorn.",
+    "emojiScene": "🎬😭🍿📦",
+    "q1": {
+      "prompt": "Pick the best caption for this moment:",
+      "options": [
+        "\"Big feelings are valid, real ones pass the snacks and tissues no cap 🫂\"",
+        "\"Imagine having feelings 💀\"",
+        "\"Movies aren't real bro.\""
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "Pick the best caption for this moment:",
+      "options": [
+        "\"Big feelings are valid, real ones pass the snacks and tissues no cap 🫂\"",
+        "\"Imagine having feelings 💀\"",
+        "\"Movies aren't real bro.\""
+      ],
+      "correct": 0
+    },
+    "explain": "Expressing empathy during emotional stories is a healthy human reaction. Supportive friends celebrate connection.",
+    "slang": [
+      {
+        "word": "no cap",
+        "meaning": "pure truth / no exaggeration"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "cap-pick-003",
+    "type": "caption",
+    "mode": "pick",
+    "pack": "deep",
+    "topic": "contraception",
+    "scene": "A couple reading a healthcare brochure together on family planning and reproductive health options.",
+    "emojiScene": "📖💑🩺🛡️",
+    "q1": {
+      "prompt": "Pick the best caption:",
+      "options": [
+        "\"Sharing reproductive health decisions 50/50? Massive green flag energy ✨\"",
+        "\"Reading medical pamphlets is mid.\"",
+        "\"Let one person handle everything.\""
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "Pick the best caption:",
+      "options": [
+        "\"Sharing reproductive health decisions 50/50? Massive green flag energy ✨\"",
+        "\"Reading medical pamphlets is mid.\"",
+        "\"Let one person handle everything.\""
+      ],
+      "correct": 0
+    },
+    "explain": "Mutual participation in sexual health and healthcare conversations fosters partnership and mutual safety.",
+    "slang": [
+      {
+        "word": "green flag",
+        "meaning": "a sign of high emotional intelligence and maturity"
+      }
+    ],
+    "source": "https://www.plannedparenthood.org/learn/birth-control",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": false
+  },
+  {
+    "id": "cap-pick-004",
+    "type": "caption",
+    "mode": "pick",
+    "pack": "core",
+    "topic": "periods",
+    "scene": "Someone carrying period pads openly to the bathroom without hiding them inside a sleeve.",
+    "emojiScene": "🎒🩸🚶‍♀️✨",
+    "q1": {
+      "prompt": "Pick the best caption:",
+      "options": [
+        "\"Carrying period supplies without shame? Zero awkwardness, 100% normal ✨\"",
+        "\"Why aren't they hiding that? 💀\"",
+        "\"Periods should be a secret.\""
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "Pick the best caption:",
+      "options": [
+        "\"Carrying period supplies without shame? Zero awkwardness, 100% normal ✨\"",
+        "\"Why aren't they hiding that? 💀\"",
+        "\"Periods should be a secret.\""
+      ],
+      "correct": 0
+    },
+    "explain": "Menstruation is a normal biological process experienced by billions. Removing secrecy and stigma makes daily life easier for everyone.",
+    "slang": [
+      {
+        "word": "ate",
+        "meaning": "confidently normal and praiseworthy"
+      }
+    ],
+    "source": "https://www.nhs.uk/conditions/periods/",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": false
+  },
+  {
+    "id": "cap-pick-005",
+    "type": "caption",
+    "mode": "pick",
+    "pack": "core",
+    "topic": "animals",
+    "scene": "A rescue dog peacefully napping on a cozy bed after being adopted from the shelter.",
+    "emojiScene": "🐕🛏️💤💖",
+    "q1": {
+      "prompt": "Pick the best caption for this good boy:",
+      "options": [
+        "\"From shelter stress to five-star nap energy ✨ Ate and left no crumbs\"",
+        "\"Dogs sleep too much.\"",
+        "\"Mid nap.\""
+      ],
+      "correct": 0
+    },
+    "q2": {
+      "prompt": "Pick the best caption for this good boy:",
+      "options": [
+        "\"From shelter stress to five-star nap energy ✨ Ate and left no crumbs\"",
+        "\"Dogs sleep too much.\"",
+        "\"Mid nap.\""
+      ],
+      "correct": 0
+    },
+    "explain": "Giving shelter animals a safe, loving home transforms their lives with peace and security.",
+    "slang": [
+      {
+        "word": "ate and left no crumbs",
+        "meaning": "did it to absolute perfection"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "cap-write-001",
+    "type": "caption",
+    "mode": "write",
+    "pack": "core",
+    "topic": "crying",
+    "scene": "Your friend sitting on the bench taking a deep breath after an overwhelming day, supported by a kind companion.",
+    "emojiScene": "🧑😢🫂✨",
+    "prompt": "Caption this moment like a real one would (max 80 chars)",
+    "explain": "Being a steady presence for someone having a tough day is one of the kindest moves you can make.",
+    "slang": [
+      {
+        "word": "real one",
+        "meaning": "a dependable, compassionate friend"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "cap-write-002",
+    "type": "caption",
+    "mode": "write",
+    "pack": "core",
+    "topic": "water",
+    "scene": "Volunteers cleaning plastic debris from the local riverbank so turtles and ducks can swim safely.",
+    "emojiScene": "🦆🐢🌊🧤",
+    "prompt": "Write a punchy Gen Z caption for these eco-champions (max 80 chars)",
+    "explain": "Community action for clean water directly protects animal habitats and public health.",
+    "slang": [
+      {
+        "word": "ate",
+        "meaning": "did an outstanding, praiseworthy job"
+      }
+    ],
+    "needs_review": false
+  },
+  {
+    "id": "cap-write-003",
+    "type": "caption",
+    "mode": "write",
+    "pack": "deep",
+    "topic": "communication",
+    "scene": "Two partners having a calm, honest chat over hot cocoa about boundaries and respecting each other's pace.",
+    "emojiScene": "☕🛋️💬💖",
+    "prompt": "Caption this mature green-flag conversation (max 80 chars)",
+    "explain": "Clear, gentle communication turns potential misunderstandings into deeper trust.",
+    "slang": [
+      {
+        "word": "green flag",
+        "meaning": "a healthy, respectful relationship practice"
+      }
+    ],
+    "source": "https://www.plannedparenthood.org/learn/teens/relationships",
+    "needs_review": false,
+    "status": "unchecked",
+    "source_specific": false
+  },
+  {
+    "id": "cap-write-004",
+    "type": "caption",
+    "mode": "write",
+    "pack": "core",
+    "topic": "consent",
+    "scene": "Someone politely declining to be in a group photo, and the photographer respecting it immediately.",
+    "emojiScene": "📸🙅‍♀️👍✨",
+    "prompt": "Caption this boundary-respecting moment (max 80 chars)",
+    "explain": "Respecting someone's choice not to be photographed or posted online is digital consent in action.",
+    "slang": [
+      {
+        "word": "green flag",
+        "meaning": "respectful and safe conduct"
+      }
+    ],
+    "needs_review": false
+  }
+]

@@ -472,7 +472,7 @@
         <div class="card form-card">
           <button class="btn-back" data-back="view-play-menu">← Back</button>
           <h2>Host a New Game</h2>
-          <p class="subtitle">Pick your topic pack or generate a live AI deck!</p>
+          <p class="subtitle">Pick your favorite topic pack or create a custom theme!</p>
 
           <form id="form-host">
             <div class="input-group">
@@ -527,7 +527,7 @@
                 </button>
                 <button type="button" class="category-card-btn" data-category="custom">
                   <span class="cat-icon">✨</span>
-                  <span class="cat-name">Custom AI</span>
+                  <span class="cat-name">Custom Theme</span>
                   <span class="cat-badge">Any Topic</span>
                 </button>
               </div>
@@ -535,16 +535,16 @@
 
             <!-- Custom Topic Input -->
             <div id="host-custom-topic-group" class="input-group hidden">
-              <label for="host-custom-topic">Custom AI Topic Prompt</label>
-              <input type="text" id="host-custom-topic" maxlength="80" placeholder="e.g. Marvel Cinematic Universe, 90s Cartoons..." autocomplete="off">
-              <small class="helper-text">Gemini AI will craft a bespoke 10-round deck for this theme!</small>
+              <label for="host-custom-topic">Custom Theme or Topic</label>
+              <input type="text" id="host-custom-topic" maxlength="80" placeholder="e.g. Marvel Universe, 90s Cartoons, Formula 1..." autocomplete="off">
+              <small class="helper-text">Generates a bespoke 10-round deck for this theme!</small>
             </div>
 
-            <!-- AI Fresh Deck Generator Toggle -->
+            <!-- Fresh Rounds Generator Toggle -->
             <div class="toggle-row ai-toggle-row">
               <div class="toggle-info">
-                <span class="toggle-title">✨ AI Fresh Generation</span>
-                <span class="toggle-desc">Generate unique unrepeated rounds dynamically with Google Gemini</span>
+                <span class="toggle-title">✨ Fresh Round Generator</span>
+                <span class="toggle-desc">Generate brand-new, unrepeated rounds for every game</span>
               </div>
               <label class="switch">
                 <input type="checkbox" id="host-setting-ai" checked>
@@ -607,7 +607,7 @@
                 <span class="topic-title" id="lobby-topic-title">Empathy & Life</span>
               </div>
             </div>
-            <span class="topic-badge" id="lobby-topic-badge">✨ AI Fresh Deck</span>
+            <span class="topic-badge" id="lobby-topic-badge">✨ Fresh Deck</span>
           </div>
 
           <div class="lobby-players-section">
@@ -635,19 +635,19 @@
                 <option value="cars">🏎️ Cars & Automotive</option>
                 <option value="planes">✈️ Planes & Aviation</option>
                 <option value="popculture">🎬 Pop Culture & Anime</option>
-                <option value="custom">✨ Custom AI Topic...</option>
+                <option value="custom">✨ Custom Theme...</option>
               </select>
             </div>
 
             <div id="lobby-custom-topic-input-row" class="input-group hidden">
-              <label for="lobby-custom-topic-input">Custom Topic Prompt</label>
-              <input type="text" id="lobby-custom-topic-input" maxlength="80" placeholder="e.g. Formula 1, Marvel MCU..." autocomplete="off">
+              <label for="lobby-custom-topic-input">Custom Theme or Topic</label>
+              <input type="text" id="lobby-custom-topic-input" maxlength="80" placeholder="e.g. Formula 1, Marvel Universe..." autocomplete="off">
             </div>
 
             <div class="toggle-row">
               <div class="toggle-info">
-                <span class="toggle-title">✨ AI Fresh Generation</span>
-                <span class="toggle-desc">Generate unrepeated live rounds with Gemini</span>
+                <span class="toggle-title">✨ Fresh Round Generator</span>
+                <span class="toggle-desc">Generate brand-new, unrepeated rounds for every game</span>
               </div>
               <label class="switch">
                 <input type="checkbox" id="setting-ai-deck" checked>

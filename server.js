@@ -1449,8 +1449,37 @@ const pingInterval = setInterval(() => {
 }, 25000);
 pingInterval.unref();
 
-wss.on('close', () => {
+// Graceful shutdown handling (Render / Cloud container lifecycle)
+function gracefulShutdown(signal) {
+  console.log(`[Server] Received ${signal}. Closing HTTP and WebSocket server gracefully...`);
   clearInterval(pingInterval);
+  clearInterval(cleanupInterval);
+  wss.clients.forEach((ws) => {
+    try {
+      ws.close(1001, 'Server shutting down');
+    } catch {}
+  });
+  wss.close(() => {
+    server.close(() => {
+      console.log('[Server] Closed successfully.');
+      process.exit(0);
+    });
+  });
+  setTimeout(() => {
+    console.warn('[Server] Forcing shutdown after timeout.');
+    process.exit(0);
+  }, 5000).unref();
+}
+
+process.on('SIGTERM', () => gracefulShutdown('SIGTERM'));
+process.on('SIGINT', () => gracefulShutdown('SIGINT'));
+
+process.on('uncaughtException', (err) => {
+  console.error('[Server] Uncaught exception:', err);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('[Server] Unhandled rejection at:', promise, 'reason:', reason);
 });
 
 // Start listening when run directly

@@ -385,7 +385,7 @@
     cars: { icon: '🏎️', name: 'Cars & Automotive', badge: 'Speed' },
     planes: { icon: '✈️', name: 'Planes & Aviation', badge: 'Aero' },
     popculture: { icon: '🎬', name: 'Pop Culture & Anime', badge: 'Fandom' },
-    custom: { icon: '✨', name: 'Custom AI Topic', badge: 'AI Deck' }
+    custom: { icon: '✨', name: 'Custom Theme', badge: 'Custom' }
   };
 
   // Question Elements
@@ -694,7 +694,7 @@
 
       if (lobbyTopicIcon) lobbyTopicIcon.textContent = meta.icon;
       if (lobbyTopicTitle) lobbyTopicTitle.textContent = customTopic ? `Custom: ${customTopic}` : meta.name;
-      if (lobbyTopicBadge) lobbyTopicBadge.textContent = isAi ? '✨ AI Fresh Deck' : '📦 Curated Pack';
+      if (lobbyTopicBadge) lobbyTopicBadge.textContent = isAi ? '✨ Fresh Deck' : '📦 Curated Pack';
 
       if (isHost) {
         lobbySettingsPanel.classList.remove('hidden');
